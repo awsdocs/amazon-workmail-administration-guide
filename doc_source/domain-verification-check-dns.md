@@ -89,3 +89,5 @@ In this procedure, you first find the DNS servers that serve your domain, and th
       For the EU \(Ireland\) Region, the record must be: `10 inbound-smtp.eu-west-1.amazonaws.com`
 
       For the US West \(Oregon\) Region, the record must be: `10 inbound-smtp.us-west-2.amazonaws.com`
+**Note**  
+`10` represents the MX preference number or priority\.

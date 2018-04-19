@@ -1,11 +1,8 @@
 # Set up Amazon WorkMail with Quick Setup<a name="quick_setup"></a>
 
 Use the Quick setup to get an Amazon WorkMail organization in 2 minutes\. Amazon WorkMail does the following for you:
-
 + Creates a new WorkMail Directory for storing your users and groups\. You cannot view this type of directory in AWS Directory Service\.
-
 + Creates a free test domain\.
-
 + Uses the default KMS master key for encrypting your mailbox contents\.
 
 **To add an organization using the Quick setup option**

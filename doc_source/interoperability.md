@@ -7,33 +7,23 @@ Interoperability between Amazon WorkMail and Microsoft Exchange Server allows yo
 ## Prerequisites<a name="prerequisites"></a>
 
 Before you enable interoperability with Microsoft Exchange, complete the following tasks\. 
-
 + To configure the availability settings for Microsoft Exchange, you need to have at least one user enabled for Amazon WorkMail\. To enable a user, follow the steps in [Enable Email Routing for a User](setup-msexchange.md#enable_routing_user)\.
-
 + Set up an Active Directory \(AD\) Connector—Setting up an AD Connector with your on\-premises directory allows users to continue using their existing corporate credentials\. For more information, [Set up AD Connector](http://docs.aws.amazon.com/directoryservice/latest/admin-guide/create_directory.html#create_ad_connector) and [Integrate Amazon WorkMail with your on\-premises directory](http://docs.aws.amazon.com/workmail/latest/adminguide/premises_directory.html)\.
-
 + Set up your Amazon WorkMail organization—Create an Amazon WorkMail organization that uses the AD Connector referenced above\.
-
 + Add domains to your Amazon WorkMail organization—Add your corporate domains to Amazon WorkMail\. Ensure that your domain has been verified in the Amazon WorkMail console; otherwise, emails sent to this alias will bounce\. For more information, see [Working with Domains](http://docs.aws.amazon.com/workmail/latest/adminguide/domains_overview.html)\.
-
 + Migrate mailboxes—Enable users to provision and migrate mailboxes from your on\-premises environment to Amazon WorkMail\. For more information, see [Enable Existing Users](http://docs.aws.amazon.com/workmail/latest/adminguide/enable_existing_user.html) and see [Migrating to Amazon WorkMail](http://docs.aws.amazon.com/workmail/latest/adminguide/migration_overview.html)\. 
 **Note**  
 DNS records must not be updated to point to Amazon WorkMail\. This ensures that Microsoft Exchange remains the primary server for incoming email for as long as you would like to have interoperability between the two environments\.
-
 + Make sure that the User Principal Names \(UPNs\) in Active Directory match the users' primary SMTP addresses\.
 
 Amazon WorkMail makes HTTPS requests to the EWS URL on Microsoft Exchange to obtain calendar free/busy information\. 
-
 + Ensure that the relevant firewall settings are set up to allow access from the Internet\. The default port for HTTPS requests is port 443\.
-
 + Amazon WorkMail can only make successful HTTPS requests to the EWS URL on Microsoft Exchange when a certificate signed by a valid certificate authority \(CA\) is available on your Microsoft Exchange environment\. For more information, see [V\-Exchange](https://technet.microsoft.com/en-us/library/bb125165.aspx) on Microsoft TechNet\. For more information about importing a certificate, see [Importing Certificates](https://technet.microsoft.com/en-us/library/bb124424.aspx) on Microsoft TechNet\.
-
 + You need to enable **Basic Authentication** for EWS on your Microsoft Exchange\. For more information, see [Virtual Directories: Exchange 2013](https://blogs.msdn.microsoft.com/mvpawardprogram/2013/03/18/virtual-directories-                         exchange-2013/) on the Microsoft MVP Award Program Blog\.
 
 ## Add Domains and Enable Mailboxes<a name="add_domains_interop"></a>
 
 Add your corporate domains to Amazon WorkMail so that they can be used in email addresses\. Ensure that the domains added to Amazon WorkMail are verified, then enable users and groups to provision mailboxes on Amazon WorkMail\. Resources cannot be enabled in Amazon WorkMail while in interoperability mode, and should be re\-created in Amazon WorkMail after you disable interoperability mode\. However, you can still use them to schedule meetings while in interoperability mode\. Resources from Microsoft Exchange are always shown in the **Users** tab in Amazon WorkMail\. 
-
 + For more information, see [Add Domains](http://docs.aws.amazon.com/workmail/latest/adminguide/add_domain.html), [Enable Existing Users](http://docs.aws.amazon.com/workmail/latest/adminguide/enable_existing_user.html), and [Enable an Existing Group](http://docs.aws.amazon.com/workmail/latest/adminguide/enable_existing_group.html)\.
 
 **Note**  

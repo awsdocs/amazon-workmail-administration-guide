@@ -15,7 +15,7 @@ In Amazon WorkMail, your organization represents the users in your company\. In 
 |  **Requested**  |  Your organization creation request is in the queue and waiting to be created\.  | 
 |  **Validating**  |  All settings for the organization are being health\-checked\.  | 
 
-
+**Topics**
 + [Add an Organization](add_new_organization.md)
 + [Remove an Organization](remove_organization.md)
 + [Edit Your Organization's Mobile Device Policy](edit_organization_mobile_policy.md)

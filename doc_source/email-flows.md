@@ -4,7 +4,7 @@ You can set up *email flow rules* for handling incoming email based on a sender'
 
 To create an email flow rule, you specify a [*rule action*](#email-flows-rule-actions) to apply to an email when a specified [*sender pattern*](#email-flows-patterns) is matched\.
 
-
+**Topics**
 + [Rule Actions](#email-flows-rule-actions)
 + [Sender Patterns](#email-flows-patterns)
 + [Creating an Email Flow Rule](create-email-rules.md)
@@ -35,25 +35,21 @@ Incoming mail is first delivered to Amazon SES and then to Amazon WorkMail\. If 
 An email flow rule can apply to a specific email address, or all email addresses under a specific domain or set of domains\. You define a sender pattern to determine the email addresses to which a rule applies\.
 
 A sender pattern can take one of the following forms:
-
 + **An email address** matches a single email address; for example:
 
   ```
   mailbox@domain.com
   ```
-
 + **A domain name** matches all email addresses under that domain; for example:
 
   ```
   domain.com
   ```
-
 + **A wildcard domain** matches all email addresses under that domain and all of its subdomains\. A wildcard can only appear at the front of a domain; for example:
 
   ```
   *.domain.com
   ```
-
 + **Star** matches any email addresses under any domain\.
 
   ```

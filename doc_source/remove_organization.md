@@ -13,6 +13,10 @@ This operation cannot be undone, and you will not be able to recover your mailbo
 
 1. On the **Organizations** screen, in the list of organizations, select the organization to remove and choose **Remove**\.
 
-1. In the **Remove organization** dialog box, enter the name of the organization and choose **Remove**\.
+1. For **Remove organization**, enter the name of the organization, and then choose whether to keep the existing user directory or delete it\.
+
+1. Choose **Remove** to save these changes\.
+
 **Note**  
-Deleting your organization does not automatically delete the user directory\. To delete the directory, it cannot have any other AWS applications enabled\. For more information, see [Deleting a Simple AD Directory](http://docs.aws.amazon.com/directoryservice/latest/admin-guide/cloud_delete.html) or [Deleting an AD Connector Directory](http://docs.aws.amazon.com/directoryservice/latest/admin-guide/connect_delete.html) in the *AWS Directory Service Administration Guide*\. If your directory is no longer used by Amazon WorkMail, Amazon WorkDocs, or Amazon WorkSpaces, you will be charged for this directory\.
+If you didn't provide your own directory for Amazon WorkMail, then we created one for you\. If you keep this existing directory when you remove the organization, you will be charged for it unless it is being used by Amazon WorkMail, Amazon WorkDocs, or Amazon WorkSpaces\. For pricing information, see [Other Directory Types Pricing](https://aws.amazon.com/directoryservice/other-directories-pricing/)\.  
+To delete the directory, it cannot have any other AWS applications enabled\. For more information, see [Deleting a Simple AD Directory](http://docs.aws.amazon.com/directoryservice/latest/admin-guide/cloud_delete.html) or [Deleting an AD Connector Directory](http://docs.aws.amazon.com/directoryservice/latest/admin-guide/connect_delete.html) in the *AWS Directory Service Administration Guide*\.

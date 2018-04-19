@@ -25,11 +25,8 @@ As a best practice, you should add aliases for postmaster@ and abuse@\. You can 
    After all your users and distribution groups are created, and mailboxes are successfully migrated, you can switch the MX record to start delivering email to Amazon WorkMail\. Updates to the DNS record can take up to 72 hours to be processed and made active, however updates are often processed and made active sooner than this\.
 
 1. In the **Step 2: Finalize domain setup** section, the following records are listed:
-
    + The MX record to deliver incoming email to Amazon WorkMail\.
-
    + The CNAME autodiscover record that allows users to easily configure their Microsoft Outlook or mobile device knowing only their email address and password\.
-
    + The CNAME records for DKIM signing\. For more information about DKIM signing, see [Authenticating Email with DKIM](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/dkim.html) in the *Amazon Simple Email Service Developer Guide*\.
 
    We recommend that you set the Time to Live \(TTL\) to 3600 of the MX and autodiscover CNAME record\. Reducing the TTL ensures that your mail servers don't use outdated or invalid MX records after updating your MX records or migrating your mailboxes\.

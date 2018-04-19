@@ -2,7 +2,7 @@
 
 Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile email clients\. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native iOS and Android email applications\. You can integrate Amazon WorkMail with your existing corporate directory and control both the keys that encrypt your data and the location in which your data is stored\.
 
-
+**Topics**
 + [Amazon WorkMail Concepts](#workmail_concepts)
 + [Accessing Amazon WorkMail](#accessing_workmail)
 + [Amazon WorkMail Pricing](#workmail_pricing)
@@ -44,13 +44,9 @@ Various IT policy rules that control the security features and behavior of a mob
 Amazon WorkMail works with all major mobile devices and operating systems that support the Exchange ActiveSync protocol, including the Apple iPad, Apple iPhone, Amazon Kindle Fire, Android, Windows Phone, and BlackBerry 10\.
 
 You can access Amazon WorkMail from Microsoft Outlook on Windows\. You must have a valid Microsoft Outlook license to use it with Amazon WorkMail, which offers native support for the following versions:
-
 + Microsoft Outlook 2007, 2010, 2013, and 2016
-
 + Microsoft Outlook 2010 and 2013 Click\-to\-Run
-
 + Microsoft Outlook for Mac 2011
-
 + Microsoft Outlook 2016 for Mac
 
 Amazon WorkMail supports IMAP clients\. For the required configuration, see [Connect to your IMAP Client Application](http://docs.aws.amazon.com/workmail/latest/userguide/using_IMAP_client.html)\. POP3 clients are not currently supported\.
@@ -134,31 +130,20 @@ All messages that are sent to another user are considered when evaluating these 
 ## Related AWS Services<a name="related_services"></a>
 
 The following services are used along with Amazon WorkMail:
-
 + **AWS Directory Service**—You can integrate Amazon WorkMail with an existing AWS Simple AD, AWS Managed AD, or AD Connector\. Create a directory in the AWS Directory Service and then enable Amazon WorkMail for this directory\. After you've configured this integration, you can choose which users you would like to enable for Amazon WorkMail from a list of users in your existing directory, and users can log in using their existing Active Directory credentials\. For more information, see [AWS Directory Service Administration Guide](http://docs.aws.amazon.com/directoryservice/latest/admin-guide/)\.
-
 + **Amazon Simple Email Service**—Amazon WorkMail uses Amazon SES to send all outgoing email\. The test mail domain and your domains are available for management in the Amazon SES console\. There is no cost for outgoing email sent from Amazon WorkMail\. For more information, see [Amazon Simple Email Service Developer Guide](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/)\.
-
 + **AWS Identity and Access Management**—The AWS Management Console requires your user name and password so that any service you use can determine whether you have permission to access its resources\. We recommend that you avoid using AWS account credentials to access AWS because AWS account credentials cannot be revoked or limited in any way\. Instead, we recommend that you create an IAM user and add the user to an IAM group with administrative permissions\. You can then access the console using the IAM user credentials\.
 
   If you signed up for AWS but have not created an IAM user for yourself, you can create one using the IAM console\. For more information, see [Create Individual IAM Users](http://docs.aws.amazon.com/IAM/latest/UserGuide/IAMBestPractices.html#create-iam-users) in the *IAM User Guide*\.
-
 + **AWS Key Management Service**—Amazon WorkMail is integrated with AWS KMS for encryption of customer data\. Key management can be performed from the AWS KMS console\. For more information, see [What is the AWS Key Management Service](http://docs.aws.amazon.com/kms/latest/developerguide/overview.html) in the *AWS Key Management Service Developer Guide*\.
 
 ## Amazon WorkMail Resources<a name="RelatedResources"></a>
 
 The following related resources can help you as you work with this service\.
-
 + ** [Classes & Workshops](https://aws.amazon.com/training/course-descriptions/)** – Links to role\-based and specialty courses as well as self\-paced labs to help sharpen your AWS skills and gain practical experience\.
-
 + ** [AWS Developer Tools](https://aws.amazon.com/tools/)** – Links to developer tools, SDKs, IDE toolkits, and command line tools for developing and managing AWS applications\.
-
 + ** [AWS Whitepapers](https://aws.amazon.com/whitepapers/)** – Links to a comprehensive list of technical AWS whitepapers, covering topics such as architecture, security, and economics and authored by AWS Solutions Architects or other technical experts\.
-
 + ** [AWS Support Center](https://console.aws.amazon.com/support/home#/)** – The hub for creating and managing your AWS Support cases\. Also includes links to other helpful resources, such as forums, technical FAQs, service health status, and AWS Trusted Advisor\.
-
 + ** [AWS Support](https://aws.amazon.com/premiumsupport/)** – The primary web page for information about AWS Support, a one\-on\-one, fast\-response support channel to help you build and run applications in the cloud\.
-
 + ** [Contact Us](https://aws.amazon.com/contact-us/)** – A central contact point for inquiries concerning AWS billing, account, events, abuse, and other issues\. 
-
 + ** [AWS Site Terms](https://aws.amazon.com/terms/)** – Detailed information about our copyright and trademark; your account, license, and site access; and other topics\.

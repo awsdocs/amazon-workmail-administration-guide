@@ -2,7 +2,7 @@
 
 To use Amazon WorkMail you'll need an AWS account\. If you haven't signed up for AWS yet, complete the following tasks to get set up\.
 
-
+**Topics**
 + [Get an AWS Account and Your AWS Credentials](#getting-started-signup)
 + [Sign in to the Amazon WorkMail Console](workmail_signin.md)
 + [AWS Identity and Access Management Users and Groups](iam_users_groups.md)
@@ -38,9 +38,7 @@ The only time that you can view or download the secret access keys is when you c
 1. Choose the **Security credentials** tab and then choose **Create access key**\.
 
 1. To see the new access key, choose **Show**\. Your credentials will look something like this:
-
    + Access key ID: AKIAIOSFODNN7EXAMPLE
-
    + Secret access key: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 
 1. To download the key pair, choose **Download \.csv file**\. Store the keys in a secure location\.
@@ -48,7 +46,5 @@ The only time that you can view or download the secret access keys is when you c
    Keep the keys confidential in order to protect your AWS account, and never email them\. Do not share them outside your organization, even if an inquiry appears to come from AWS or Amazon\.com\. No one who legitimately represents Amazon will ever ask you for your secret key\.
 
 **Related topics**
-
 + [What Is IAM?](http://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) in the *IAM User Guide*
-
 + [AWS Security Credentials](http://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html) in *AWS General Reference* 

@@ -41,6 +41,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Create a Group](add_new_group.md)
    + [Enable an Existing Group](enable_existing_group.md)
    + [Disable a Group](remove_group.md)
++ [Working with Mailbox Permissions](mail_perms_overview.md)
 + [Working with Domains](domains_overview.md)
    + [Add a Domain](add_domain.md)
    + [Remove a Domain](remove_domain.md)

@@ -3,25 +3,18 @@
 AutoDiscover enables you to easily configure Microsoft Outlook and mobile clients with only your email address and password\. The service also maintains a connection to Amazon WorkMail and updates local settings whenever endpoint or settings changes are made\. In addition, AutoDiscover enables your client to use additional Amazon WorkMail features, such as the Offline Address Book, Out\-of\-Office Assistant, and the ability to view free/busy time in Calendar\. 
 
 The client performs the following AutoDiscover phases to detect the server endpoint URLs:
-
-+ Phase 1: The client performs a SCP lookup against the local Active Directory\. If your client isn’t domain\-joined, AutoDiscover skips this step\.
-
++ Phase 1: The client performs an SCP lookup against the local Active Directory\. If your client isn’t domain\-joined, AutoDiscover skips this step\.
 + Phase 2: The client sends a request to the following URLs and validates the results\. These endpoints are only available using HTTPS\.
-
   + https://company\.tld/autodiscover/autodiscover\.xml 
-
   + https://autodiscover\.company\.tld/autodiscover/autodiscover\.xml
-
-+ Phase 3: The client performs a DNS lookup and sends an unauthenticated GET request to the derived endpoint from the user’s email address\. If the server returns a 302 redirect, the client resends the AutoDiscover request against the returned HTTPS endpoint\. 
++ Phase 3: The client performs a DNS lookup to autodiscover\.company\.tld and sends an unauthenticated GET request to the derived endpoint from the user’s email address\. If the server returns a 302 redirect, the client resends the AutoDiscover request against the returned HTTPS endpoint\. 
 
 If all of these phases fail, the client can’t be configured automatically, and you must set up the client manually\. For information about manually configuring mobile devices, see [Manually Connect Your Device](http://docs.aws.amazon.com/workmail/latest/userguide/manually_connect_device.html)\.
 
 When you set up your domain in Amazon WorkMail, you are prompted to add the AutoDiscover DNS record\. This enables the client to perform phase 3 of the AutoDiscover process\. However, these steps don't work for all mobile devices, such as the stock Android email app, and you may need to set up AutoDiscover phase 2 manually\.
 
 There are two ways you can set up AutoDiscover phase 2 for your domain:
-
 + By using Route 53 and Amazon CloudFront \(recommended\)
-
 + By setting up an Apache web server with a reverse proxy
 
 **To enable AutoDiscover phase 2 with Route 53 and CloudFront**
@@ -38,56 +31,30 @@ For more information about applicable pricing, see [Amazon CloudFront Pricing](h
    1. Choose **Create Distribution**, **Web** and **Get Started**\.
 
    1. Fill in the following values for **Origin Settings**:
-
       + **Origin Domain Name**: autodiscover\-service\.mail\.us\-east\-1\.awsapps\.com, autodiscover\-service\.mail\.eu\-west\-1\.awsapps\.com, or autodiscover\-service\.mail\.us\-west\-2\.awsapps\.com 
-
-      + **Origin path**: Empty
-
-      + **Origin ID**: Empty
-
       + **Origin Protocol Policy**: Match Viewer
+**Note**  
+Leave **Origin path** blank, and do not change the auto\-populated value for **Origin ID**\.
 
    1. Fill in the following values for **Default Cache Behavior Settings**:
-
       + **Viewer Protocol Policy**: HTTPS Only
-
       + **Allowed HTTP Methods**: GET, HEAD, OPTIONS, PUT, POST, PATCH, DELETE 
-
-      + **Forward Headers**: Whitelist 
-
-      + **Whitelist Headers**:
-
-        + Pick from pre\-defined list "Authorization" 
-
-        + Add custom header "Content\-Type" 
-
-        + Add custom header "User\-Agent"
-
-        **Forward Cookies**: All 
-
-      + **Forward Query Strings**: No 
-
+      + **Cache Based on Selected Request Headers**: All 
+      + **Forward Cookies**: All 
+      + **Query String Forwarding and Caching**: None \(Improves Caching\) 
       + **Smooth Streaming**: No 
-
       + **Restrict Viewer Access**: No 
 
    1. Fill in the following values for **Distribution Settings**:
-
       + **Price Class**: Use only US, Canada, and Europe
-
       + **Alternate Domain Names \(CNAMEs\)**: autodiscover\.company\.tld \(or company\.tld\)
-
       + **SSL Certificate**: Custom SSL Certificate \(stored in IAM\)
-
       + **Custom SSL Client Support**: All Clients
-
-      + **Default Root Object**: Empty
-
-      + **Logging**: Optional
-
-      + **Comment**: AutoDiscover type2 for autodiscover\.company\.tld\. 
-
-      + **Distribution State**: Enabled
+**Note**  
+Leave **Default Root Object** blank\.
+      + **Logging**: Choose **On** or **Off**
+      + **Comment**: AutoDiscover type2 for autodiscover\.company\.tld 
+      + For **Distribution State**, choose **Enabled**
 
 1. In Route 53, connect the CloudFront distribution to DNS:
 **Note**  
@@ -96,17 +63,12 @@ These steps assume that the DNS record for company\.tld is hosted in Route 53\.
    1. In the Route 53 console, choose **Hosted Zones** and **company\.tld**\. 
 
    1. Choose **Create Record Set**, and then fill in the following fields:
-
       + **Name**: autodiscover\.company\.tld
-
       + **Type**: A \- IPv4 address
-
       + **Alias**: Yes
-
       + **Alias Target**: The CloudFront distribution created above
 **Note**  
 If the CloudFront distribution created above is not present, wait a while and try again later\. Change propagation for new CloudFront endpoints in Route 53 might take up to 1 hour\. 
-
       + **Evaluate Target Health**: No
 
    1. Choose **Create**\.
@@ -115,16 +77,15 @@ If the CloudFront distribution created above is not present, wait a while and tr
 
 1. Configure the following two directives on an SSL\-enabled Apache server: 
 
-   `SSLProxyEngine on ProxyPass /autodiscover/autodiscover.xml https://autodiscover- service.mail.REGION.awsapps.com/autodiscover/autodiscover.xml` 
+   ```
+   SSLProxyEngine on ProxyPass /autodiscover/autodiscover.xml
+   https://autodiscover-service.mail.REGION.awsapps.com/autodiscover/autodiscover.xml
+   ```
 
 1. If they are not already enabled, enable the following Apache modules:
-
    + proxy
-
    + proxy\_http
-
    + socache\_shmcb
-
    + ssl
 
 1. Confirm that the endpoint is SSL\-enabled and configured correctly\.
@@ -149,8 +110,7 @@ To do this, first create a request\.xml file with the following XML content:
      <Request>
             <EMailAddress>testuser@company.tld</EMailAddress>
             <AcceptableResponseSchema>
-             http://schemas.microsoft.com/exchange/autodiscover/mobilesync/
-             responseschema/2006
+             http://schemas.microsoft.com/exchange/autodiscover/mobilesync/responseschema/2006
             </AcceptableResponseSchema>
      </Request>
 </Autodiscover>
@@ -167,7 +127,7 @@ Enter host password for user 'testuser@company.tld':
     <Culture>en:us</Culture>
     <User>
         <DisplayName>User1</DisplayName>
-        <EMailAddress>user1@company.tld</EMailAddress>
+        <EMailAddress>testuser@company.tld</EMailAddress>
     </User>
     <Action>
         <Settings>

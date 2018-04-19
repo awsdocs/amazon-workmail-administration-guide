@@ -3,11 +3,8 @@
 When you enable email routing between Microsoft Exchange Server and Amazon WorkMail, users that are configured for Amazon WorkMail can continue using their existing email addresses to send and receive email on Amazon WorkMail\. When email routing is enabled, your Microsoft Exchange Server remains the primary SMTP server for incoming email\.
 
 Prerequisites for email routing: 
-
 + Interoperability mode is enabled for your organization\. For more information, see [Enable Interoperability](interoperability.md#enable_interoperability)\.
-
 + Your domain is added and verified in the Amazon WorkMail console\.
-
 + Your Microsoft Exchange Server can send email to the Internet\. You may need to configure a Send connector\. For more information, see [Create a Send connector for email sent to the Internet](https://technet.microsoft.com/en-us/library/jj657457.aspx) on Microsoft TechNet\.
 
 ## Enable Email Routing for a User<a name="enable_routing_user"></a>
@@ -17,9 +14,7 @@ We recommend that you carry out the following steps first for test users, before
 1. Enable the user you are migrating to Amazon WorkMail\. For more information, see [Enable Existing Users](http://docs.aws.amazon.com/workmail/latest/adminguide/enable_existing_user.html)\.
 
 1. In the Amazon WorkMail console, ensure that there are at least two email addresses associated with the enabled user\. 
-
    + **workmailuser@orgname\.awsapps\.com** \(this is added automatically, and can be used for tests without your Microsoft Exchange\.\)
-
    + **workmailuser@yourdomain\.com** \(this is added automatically, and is the primary Microsoft Exchange address\.\)
 
      For more information, see [Edit User Email Addresses](http://docs.aws.amazon.com/workmail/latest/adminguide/edit_user_email_addresses.html)\.
@@ -56,17 +51,12 @@ Microsoft Exchange remains the primary server for incoming email as long as you 
 ## Post Setup Configuration<a name="post_setup"></a>
 
 The above steps moves a user mailbox from Microsoft Exchange Server to Amazon WorkMail, while keeping the user in Microsoft Exchange as a contact\. Because the migrated user is now an external mail user, Microsoft Exchange Server imposes additional constraints and there may be additional configuration requirements to complete the migration\.
-
 + The user might not be able to send emails to groups by default\. To enable this functionality, the user needs to be added to a safe sender list for all groups\. For more information, see [Delivery management](https://technet.microsoft.com/en-us/library/bb123722.aspx#deliverymanagement) on Microsoft TechNet\.
-
 + The user also might not be able to book resources\. To enable this functionality, you need to set the `ProcessExternalMeetingMessages` of all resources that the user needs to access\. For more information, see [Set\-CalendarProcessing](https://technet.microsoft.com/en-us/library/dd335046.aspx) on Microsoft TechNet\.
 
 ## Mail Client Configuration<a name="mail_client_config"></a>
 
 Some mail clients do not switch seamlessly to Amazon WorkMail and require the user to perform additional setup\. Different mail clients require different actions to be taken\.
-
 + Microsoft Outlook on Windows—Requires MS Outlook to be restarted\. At startup, you are required to choose whether to keep using the old mailbox or use a temporary mailbox\. Choose the temporary mailbox option, and reconfigure the Microsoft Exchange mailbox from scratch\.
-
 + Microsoft Outlook on MacOS—When Outlook is restarted, you see the following message **Outlook was redirected to server orgname\.awsapps\.com\. Do you want this server to configure your settings?**\. Accept the suggestion\.
-
 + Mail on iOS—The mail app stops receiving emails and generates a **Cannot get mail** error\. Reconfigure the Microsoft Exchange mailbox from scratch\.

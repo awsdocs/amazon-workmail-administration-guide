@@ -32,6 +32,8 @@ Every incoming or outgoing email generates one journal record, regardless of the
 1. On the **Organization settings** screen, choose **Journaling Settings**, **Edit**, **On**\.
 
 1. For **Journaling email address**, enter the email address provided by your email journaling provider\.
+**Note**  
+We recommend using a dedicated journaling provider\.
 
 1. For **Report email address**, enter the email administrator's address\.
 

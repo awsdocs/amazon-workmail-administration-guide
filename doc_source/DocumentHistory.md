@@ -5,9 +5,9 @@ The following table describes the important changes to the Amazon WorkMail Admin
 
 | Change | Description | Release Date | 
 | --- | --- | --- | 
+| Mailbox permissions | You can use mailbox permissions in Amazon WorkMail to grant users or groups the right to work in other users' mailboxes\. For more information, see [Working with Mailbox Permissions](mail_perms_overview.md)\. | April 9, 2018 | 
 | Support for AWS CloudTrail | Amazon WorkMail is integrated with AWS CloudTrail\. For more information, see [Logging Amazon WorkMail API Calls with AWS CloudTrail](logging-using-cloudtrail.md)\. | December 12, 2017 | 
 | Support for email flows | You can set up email flow rules for handling incoming email based on a sender's email address or domain\. For more information, see [Managing Email Flows](email-flows.md)\. | July 5, 2017 | 
-|  |  |  | 
 | Updates to the Quick setup |  The Quick setup now creates an Amazon WorkMail directory for you\. For more information, see [Set up Amazon WorkMail with Quick Setup](quick_setup.md)\.  | May 10, 2017 | 
 | Support for a wider range of email clients |  You can now use Amazon WorkMail with Microsoft Outlook 2016 for Mac and IMAP email clients\. For more information, see [Accessing Amazon WorkMail](what_is.md#accessing_workmail)\.  | January 9, 2017 | 
 | Support for SMTP journaling |  You can set up journaling to record your email communication\. For more information, see [Using Email Journaling with Amazon WorkMail](journaling_overview.md)\.  | November 25, 2016 | 
