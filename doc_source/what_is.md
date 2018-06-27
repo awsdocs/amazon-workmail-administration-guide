@@ -31,10 +31,13 @@ A domain is automatically configured during setup that can be used for testing A
 An AWS Simple AD, AWS Managed AD, or AD Connector created in AWS Directory Service\. If you create an organization using the Amazon WorkMail Quick setup, we create a WorkMail directory for you\. You cannot view a WorkMail directory in AWS Directory Service\.
 
 **User**  
-A user created in the AWS Directory Service and enabled for Amazon WorkMail\.
+A user created in the AWS Directory Service\. When a user is enabled for Amazon WorkMail, they receive their own mailbox to access\. When a user is disabled, they cannot access Amazon WorkMail\.
 
 **Group**  
-A group used in AWS Directory Service used as distribution list or security group in Amazon WorkMail\.
+A group used in AWS Directory Service\. A group can be used as a distribution list or a security group in Amazon WorkMail\. Groups do not have their own mailboxes\.
+
+**Resource**  
+A resource represents a meeting room or equipment resource that can be booked by Amazon WorkMail users\.
 
 **Mobile device policy**  
 Various IT policy rules that control the security features and behavior of a mobile device\.
