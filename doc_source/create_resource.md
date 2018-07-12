@@ -1,4 +1,4 @@
-# Create a Resource<a name="create_resource"></a>
+# Creating a Resource<a name="create_resource"></a>
 
 You can add a new resource to your organization, and allow it to be reserved\.
 

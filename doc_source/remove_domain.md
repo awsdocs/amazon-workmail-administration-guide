@@ -1,4 +1,4 @@
-# Remove a Domain<a name="remove_domain"></a>
+# Removing a Domain<a name="remove_domain"></a>
 
 When you no longer need a domain, you can delete it\.
 

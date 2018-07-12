@@ -1,4 +1,4 @@
-# Choose the Default Domain<a name="default_domain"></a>
+# Choosing the Default Domain<a name="default_domain"></a>
 
 To use a domain as default in the email address of your users and groups, you can choose a default domain\. Making a domain the default does not change existing email addresses\.
 

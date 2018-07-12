@@ -1,4 +1,4 @@
-# Use AutoDiscover to Configure Endpoints<a name="autodiscover"></a>
+# Enabling AutoDiscover to Configure Endpoints<a name="autodiscover"></a>
 
 AutoDiscover enables you to easily configure Microsoft Outlook and mobile clients with only your email address and password\. The service also maintains a connection to Amazon WorkMail and updates local settings whenever endpoint or settings changes are made\. In addition, AutoDiscover enables your client to use additional Amazon WorkMail features, such as the Offline Address Book, Out\-of\-Office Assistant, and the ability to view free/busy time in Calendar\. 
 

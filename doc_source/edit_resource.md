@@ -1,4 +1,4 @@
-# Edit a Resource<a name="edit_resource"></a>
+# Editing a Resource<a name="edit_resource"></a>
 
 You can edit a resource's general details \(name, description, type, and email address\), booking options, and delegates\. 
 

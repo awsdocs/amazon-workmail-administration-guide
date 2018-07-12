@@ -10,7 +10,7 @@ Configure availability settings on Amazon WorkMail and Microsoft Exchange to ena
 
 1. Choose **Configure availability settings** and provide the following information: 
 + **Domain**—The domain for which to set interoperability between Amazon WorkMail and Microsoft Exchange\.
-+ **Exchange Web Services \(EWS\) URL**—The URL to which Amazon WorkMail sends HTTPS requests to access calendar free/busy information of users on Microsoft Exchange\. The EWS URL usually looks like the following: **https://**servername\.com**/EWS/Exchange\.asmx**\. You can obtain the EWS URL in one of the following ways:
++ **Exchange Web Services \(EWS\) URL**—The URL to which Amazon WorkMail sends HTTPS requests to access calendar free/busy information of users on Microsoft Exchange\. The EWS URL usually looks like the following: **https://*servername*\.com/EWS/Exchange\.asmx**\. You can obtain the EWS URL in one of the following ways:
   + 
 
 **Using Microsoft Outlook**

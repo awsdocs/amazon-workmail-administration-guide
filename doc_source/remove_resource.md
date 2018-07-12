@@ -1,4 +1,4 @@
-# Remove a Resource<a name="remove_resource"></a>
+# Removing a Resource<a name="remove_resource"></a>
 
 When you no longer need a resource, you can remove it\.
 

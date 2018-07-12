@@ -1,4 +1,4 @@
-# Remove an Organization<a name="remove_organization"></a>
+# Removing an Organization<a name="remove_organization"></a>
 
 If you no longer want to use Amazon WorkMail for your organization's email, you can delete your organization from Amazon WorkMail\. 
 

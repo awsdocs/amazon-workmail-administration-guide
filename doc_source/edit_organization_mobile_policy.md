@@ -1,4 +1,4 @@
-# Edit Your Organization's Mobile Device Policy<a name="edit_organization_mobile_policy"></a>
+# Editing Your Organization's Mobile Device Policy<a name="edit_organization_mobile_policy"></a>
 
 You can edit your organization's mobile device policy to change the way that mobile devices interact with Amazon WorkMail\.
 

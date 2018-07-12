@@ -1,4 +1,4 @@
-# Edit Domain Identity Policies<a name="editing_domains"></a>
+# Editing Domain Identity Policies<a name="editing_domains"></a>
 
 Domain identity policies specify permissions for email actions \(such as redirecting emails\)\. You can redirect email to any email address of your choosing; however, if your domain was added prior to October 13, 2016, you need to update the sending authorization policy manually to support that\.
 

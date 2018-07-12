@@ -1,19 +1,19 @@
 # Document History<a name="DocumentHistory"></a>
 
-The following table describes the important changes to the Amazon WorkMail Administrator Guide\. 
+The following table describes important changes in each release of the *Amazon WorkMail Administrator Guide*\. For notification about updates to this documentation, you can subscribe to an RSS feed\. 
 
-
-| Change | Description | Release Date | 
-| --- | --- | --- | 
-| Mailbox permissions | You can use mailbox permissions in Amazon WorkMail to grant users or groups the right to work in other users' mailboxes\. For more information, see [Working with Mailbox Permissions](mail_perms_overview.md)\. | April 9, 2018 | 
-| Support for AWS CloudTrail | Amazon WorkMail is integrated with AWS CloudTrail\. For more information, see [Logging Amazon WorkMail API Calls with AWS CloudTrail](logging-using-cloudtrail.md)\. | December 12, 2017 | 
-| Support for email flows | You can set up email flow rules for handling incoming email based on a sender's email address or domain\. For more information, see [Managing Email Flows](email-flows.md)\. | July 5, 2017 | 
-| Updates to the Quick setup |  The Quick setup now creates an Amazon WorkMail directory for you\. For more information, see [Set up Amazon WorkMail with Quick Setup](quick_setup.md)\.  | May 10, 2017 | 
-| Support for a wider range of email clients |  You can now use Amazon WorkMail with Microsoft Outlook 2016 for Mac and IMAP email clients\. For more information, see [Accessing Amazon WorkMail](what_is.md#accessing_workmail)\.  | January 9, 2017 | 
-| Support for SMTP journaling |  You can set up journaling to record your email communication\. For more information, see [Using Email Journaling with Amazon WorkMail](journaling_overview.md)\.  | November 25, 2016 | 
-| Support for email redirection to external email addresses |  You can set up email redirection rules by updating the Amazon SES identity policy for your domain\. For more information, see [Edit Domain Identity Policies](editing_domains.md)\.  | October 26, 2016 | 
-| Support for interoperability |  You can enable interoperability between Amazon WorkMail and Microsoft Exchange\. For more information, see [Interoperability Between Amazon WorkMail and Microsoft Exchange](interoperability.md)\.  | October 25, 2016 | 
-|  General Availability  |  The general availability release of Amazon WorkMail\.  | January 4, 2016 | 
-| Support for reserving resources | Support for reserving resources, such as meeting rooms and equipment\. For more information, see [Working with Resources](resources_overview.md)\. | October 19, 2015 | 
-|  Support for the email migration tool  |  Support for the email migration tool\. For more information, see [Migrating to Amazon WorkMail](migration_overview.md)\.  | August 16, 2015 | 
-|  Preview  |  The preview release of Amazon WorkMail\.  | January 28, 2015 | 
+| Change | Description | Date | 
+| --- |--- |--- |
+| Various Updates | Various updates to topic layout and organization\. | July 12, 2018 | 
+| Mailbox Permissions | You can use mailbox permissions in Amazon WorkMail to grant users or groups the right to work in other users' mailboxes\. For more information, see [Working with Mailbox Permissions](http://docs.aws.amazon.com/workmail/latest/adminguide/mail_perms_overview.html) in the *Amazon WorkMail Administrator Guide*\. | April 9, 2018 | 
+| Support for AWS CloudTrail | Amazon WorkMail is integrated with AWS CloudTrail\. For more information, see [Logging Amazon WorkMail API Calls with AWS CloudTrail](http://docs.aws.amazon.com/workmail/latest/adminguide/logging-using-cloudtrail.html) in the *Amazon WorkMail Administrator Guide*\. | December 12, 2017 | 
+| Support for email flows | You can set up email flow rules for handling incoming email based on a sender's email address or domain\. For more information, see [Managing Email Flows](http://docs.aws.amazon.com/workmail/latest/adminguide/email-flows.html) in the *Amazon WorkMail Administrator Guide*\. | July 5, 2017 | 
+| Updates to the Quick Setup | The Quick setup now creates an Amazon WorkMail directory for you\. For more information, see [Set up Amazon WorkMail with Quick Setup](http://docs.aws.amazon.com/workmail/latest/adminguide/quick_setup.html) in the *Amazon WorkMail Administrator Guide*\. | May 10, 2017 | 
+| Support for a Wider Range of Email Clients | You can now use Amazon WorkMail with Microsoft Outlook 2016 for Mac and IMAP email clients\. For more information, see [System Requirements for Amazon WorkMail](http://docs.aws.amazon.com/workmail/latest/adminguide/what_is.html#accessing_workmail) in the *Amazon WorkMail Administrator Guide*\. | January 9, 2017 | 
+| Support for SMTP Journaling | You can set up journaling to record your email communication\. For more information, see [Using Email Journaling with Amazon WorkMail](http://docs.aws.amazon.com/workmail/latest/adminguide/journaling_overview.html) in the *Amazon WorkMail Administrator Guide*\. | November 25, 2016 | 
+| Support for Email Redirection to External Email Addresses | You can set up email redirection rules by updating the Amazon SES identity policy for your domain\. For more information, see [Edit Domain Identity Policies](http://docs.aws.amazon.com/workmail/latest/adminguide/editing_domains.html) in the *Amazon WorkMail Administrator Guide*\. | October 26, 2016 | 
+| Support for Interoperability | You can enable interoperability between Amazon WorkMail and Microsoft Exchange\. For more information, see [Interoperability Between Amazon WorkMail and Microsoft Exchange](http://docs.aws.amazon.com/workmail/latest/adminguide/interoperability.html) in the *Amazon WorkMail Administrator Guide*\. | October 25, 2016 | 
+| General Availability | The general availability release of Amazon WorkMail\. | January 4, 2016 | 
+| Support for Reserving Resources | Support for reserving resources, such as meeting rooms and equipment\. For more information, see [Working with Resources](http://docs.aws.amazon.com/workmail/latest/adminguide/resources_overview.html) in the *Amazon WorkMail Administrator Guide*\. | October 19, 2015 | 
+| Support for the Email Migration Tool | Support for the email migration tool\. For more information, see [Migrating to Amazon WorkMail](http://docs.aws.amazon.com/workmail/latest/adminguide/migration_overview.html) in the *Amazon WorkMail Administrator Guide*\. | August 16, 2015 | 
+| Preview Release of Amazon WorkMail | The preview release of Amazon WorkMail\. | January 28, 2015 | 

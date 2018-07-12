@@ -1,4 +1,4 @@
-# Add a Domain<a name="add_domain"></a>
+# Adding a Domain<a name="add_domain"></a>
 
 You can add up to 100 domains to your organization\. When you add a new domain, an Amazon SES sending authorization policy is automatically added to the domain identity policy\. This provides Amazon WorkMail with access to all Amazon SES sending actions for your domain and allows you to redirect email to your domain as well as external domains\.
 
