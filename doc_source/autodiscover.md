@@ -9,7 +9,7 @@ The client performs the following AutoDiscover phases to detect the server endpo
   + https://autodiscover\.company\.tld/autodiscover/autodiscover\.xml
 + Phase 3: The client performs a DNS lookup to autodiscover\.company\.tld and sends an unauthenticated GET request to the derived endpoint from the user’s email address\. If the server returns a 302 redirect, the client resends the AutoDiscover request against the returned HTTPS endpoint\. 
 
-If all of these phases fail, the client can’t be configured automatically, and you must set up the client manually\. For information about manually configuring mobile devices, see [Manually Connect Your Device](http://docs.aws.amazon.com/workmail/latest/userguide/manually_connect_device.html)\.
+If all of these phases fail, the client can’t be configured automatically, and you must set up the client manually\. For information about manually configuring mobile devices, see [Manually Connect Your Device](https://docs.aws.amazon.com/workmail/latest/userguide/manually_connect_device.html)\.
 
 When you set up your domain in Amazon WorkMail, you are prompted to add the AutoDiscover DNS record\. This enables the client to perform phase 3 of the AutoDiscover process\. However, these steps don't work for all mobile devices, such as the stock Android email app, and you may need to set up AutoDiscover phase 2 manually\.
 
@@ -22,7 +22,7 @@ There are two ways you can set up AutoDiscover phase 2 for your domain:
 The following steps show how to proxy https://autodiscover\.company\.tld/autodiscover/autodiscover\.xml\. To proxy https://company\.tld/autodiscover/autodiscover\.xml, remove the "autodiscover\." prefix from the domains in the following steps\.  
 For more information about applicable pricing, see [Amazon CloudFront Pricing](https://aws.amazon.com/cloudfront/pricing/) and [Amazon Route 53 Pricing](https://aws.amazon.com/route53/pricing/)\.
 
-1. Get an SSL certificate for autodiscover\.company\.tld and upload it to IAM\. For more information, see [Working with Server Certificates](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_server-certs.html)\.
+1. Get an SSL certificate for autodiscover\.company\.tld and upload it to IAM\. For more information, see [Working with Server Certificates](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_server-certs.html)\.
 
 1. Create a new CloudFront distribution\.
 

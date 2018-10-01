@@ -2,7 +2,7 @@
 
 Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile email clients\. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native iOS and Android email applications\. You can integrate Amazon WorkMail with your existing corporate directory and control both the keys that encrypt your data and the location in which your data is stored\.
 
-For a list of supported AWS Regions and endpoints, see [AWS Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html#wm_region)\.
+For a list of supported AWS Regions and endpoints, see [AWS Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#wm_region)\.
 
 **Topics**
 + [Amazon WorkMail System Requirements](#accessing_workmail)
@@ -13,15 +13,14 @@ For a list of supported AWS Regions and endpoints, see [AWS Regions and Endpoint
 
 ## Amazon WorkMail System Requirements<a name="accessing_workmail"></a>
 
-Amazon WorkMail works with all major mobile devices and operating systems that support the Exchange ActiveSync protocol, including the Apple iPad, Apple iPhone, Amazon Kindle Fire, Android, Windows Phone, and BlackBerry 10\.
+Amazon WorkMail works with all major mobile devices and operating systems that support the Exchange ActiveSync protocol\. These include the iPad, iPhone, Amazon Fire, Android, Windows Phone, and BlackBerry 10\. Users of macOS can add their Amazon WorkMail account to their Mail, Calendar, and Contacts apps\.
 
-You can access Amazon WorkMail from Microsoft Outlook on Windows\. You must have a valid Microsoft Outlook license to use it with Amazon WorkMail, which offers native support for the following versions:
-+ Outlook 2007, Outlook 2010, Outlook 2013, and Outlook 2016
+You can access Amazon WorkMail from Microsoft Outlook\. You must have a valid Microsoft Outlook license to use it with Amazon WorkMail, which offers native support for the following versions:
++ Outlook 2007, Outlook 2010, Outlook 2013, Outlook 2016, and Outlook 2019
 + Outlook 2010 and Outlook 2013 Click\-to\-Run
-+ Outlook for Mac 2011
-+ Outlook 2016 for Mac
++ Outlook for Mac 2011, Outlook 2016 for Mac, and Outlook 2019 for Mac
 
-Amazon WorkMail supports IMAP clients\. For the required configuration, see [Connect to your IMAP Client Application](http://docs.aws.amazon.com/workmail/latest/userguide/using_IMAP_client.html)\. POP3 clients are not currently supported\.
+Amazon WorkMail supports IMAP clients\. For the required configuration, see [Connect to your IMAP Client Application](https://docs.aws.amazon.com/workmail/latest/userguide/using_IMAP_client.html)\. POP3 clients are not currently supported\.
 
 You can access Amazon WorkMail using the web application: https://*alias*\.awsapps\.com/mail\.
 
@@ -59,12 +58,12 @@ Various IT policy rules that control the security features and behavior of a mob
 ## Related AWS Services<a name="related_services"></a>
 
 The following services are used along with Amazon WorkMail:
-+ **AWS Directory Service**—You can integrate Amazon WorkMail with an existing AWS Simple AD, AWS Managed AD, or AD Connector\. Create a directory in the AWS Directory Service and then enable Amazon WorkMail for this directory\. After you've configured this integration, you can choose which users you would like to enable for Amazon WorkMail from a list of users in your existing directory, and users can log in using their existing Active Directory credentials\. For more information, see [AWS Directory Service Administration Guide](http://docs.aws.amazon.com/directoryservice/latest/admin-guide/)\.
-+ **Amazon Simple Email Service**—Amazon WorkMail uses Amazon SES to send all outgoing email\. The test mail domain and your domains are available for management in the Amazon SES console\. There is no cost for outgoing email sent from Amazon WorkMail\. For more information, see [Amazon Simple Email Service Developer Guide](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/)\.
++ **AWS Directory Service**—You can integrate Amazon WorkMail with an existing AWS Simple AD, AWS Managed AD, or AD Connector\. Create a directory in the AWS Directory Service and then enable Amazon WorkMail for this directory\. After you've configured this integration, you can choose which users you would like to enable for Amazon WorkMail from a list of users in your existing directory, and users can log in using their existing Active Directory credentials\. For more information, see [AWS Directory Service Administration Guide](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/)\.
++ **Amazon Simple Email Service**—Amazon WorkMail uses Amazon SES to send all outgoing email\. The test mail domain and your domains are available for management in the Amazon SES console\. There is no cost for outgoing email sent from Amazon WorkMail\. For more information, see [Amazon Simple Email Service Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/)\.
 + **AWS Identity and Access Management**—The AWS Management Console requires your user name and password so that any service you use can determine whether you have permission to access its resources\. We recommend that you avoid using AWS account credentials to access AWS because AWS account credentials cannot be revoked or limited in any way\. Instead, we recommend that you create an IAM user and add the user to an IAM group with administrative permissions\. You can then access the console using the IAM user credentials\.
 
-  If you signed up for AWS but have not created an IAM user for yourself, you can create one using the IAM console\. For more information, see [Create Individual IAM Users](http://docs.aws.amazon.com/IAM/latest/UserGuide/IAMBestPractices.html#create-iam-users) in the *IAM User Guide*\.
-+ **AWS Key Management Service**—Amazon WorkMail is integrated with AWS KMS for encryption of customer data\. Key management can be performed from the AWS KMS console\. For more information, see [What is the AWS Key Management Service](http://docs.aws.amazon.com/kms/latest/developerguide/overview.html) in the *AWS Key Management Service Developer Guide*\.
+  If you signed up for AWS but have not created an IAM user for yourself, you can create one using the IAM console\. For more information, see [Create Individual IAM Users](https://docs.aws.amazon.com/IAM/latest/UserGuide/IAMBestPractices.html#create-iam-users) in the *IAM User Guide*\.
++ **AWS Key Management Service**—Amazon WorkMail is integrated with AWS KMS for encryption of customer data\. Key management can be performed from the AWS KMS console\. For more information, see [What is the AWS Key Management Service](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html) in the *AWS Key Management Service Developer Guide*\.
 
 ## Amazon WorkMail Pricing<a name="workmail_pricing"></a>
 

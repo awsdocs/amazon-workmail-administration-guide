@@ -50,7 +50,7 @@ You also have the option to select a specific master key that Amazon WorkMail us
 
 If the existing directory is on\-premises, you must first set up an AD Connector in AWS Directory Service\. The AD Connector is used to synchronize your users and groups to the Amazon WorkMail address book and perform user authentication requests\.
 
-For information about setting up an AD Connector, see [Connecting to Your Existing Directory with AD Connector](http://docs.aws.amazon.com/directoryservice/latest/admin-guide/create_directory.html#connect_directory) in the *AWS Directory Service Administration Guide*\.
+For information about setting up an AD Connector, see [Connecting to Your Existing Directory with AD Connector](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/create_directory.html#connect_directory) in the *AWS Directory Service Administration Guide*\.
 
 **To perform a Standard setup**
 
@@ -64,12 +64,12 @@ For information about setting up an AD Connector, see [Connecting to Your Existi
 
 1. On the **Standard setup** screen, for **Available Directories**, select your existing directory\.
 **Note**  
-If you have an on\-premises Active Directory with Microsoft Exchange and an AWS AD Connector, choose **Enable interoperability** on the **Interoperability with Microsoft Exchange** screen\. Interoperability allows you to minimize disruption to your users as you migrate mailboxes to Amazon WorkMail, or use Amazon WorkMail for a subset of your corporate mailboxes\. For more information, see [Interoperability between Amazon WorkMail and Microsoft Exchange](http://docs.aws.amazon.com/workmail/latest/adminguide/interoperability.html)\. 
+If you have an on\-premises Active Directory with Microsoft Exchange and an AWS AD Connector, choose **Enable interoperability** on the **Interoperability with Microsoft Exchange** screen\. Interoperability allows you to minimize disruption to your users as you migrate mailboxes to Amazon WorkMail, or use Amazon WorkMail for a subset of your corporate mailboxes\. For more information, see [Interoperability between Amazon WorkMail and Microsoft Exchange](https://docs.aws.amazon.com/workmail/latest/adminguide/interoperability.html)\. 
 
 1. For **Master keys**, select a master key\. You can either select the default master key or create a custom master key in AWS Key Management Service\.
 **Note**  
-For information about creating a new master key, see [Creating Keys](http://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html) in the *AWS Key Management Service Developer Guide*\.  
-If you are logged on as an IAM user, make yourself a key administrator on the master key\. For more information, see [Enabling and Disabling Keys](http://docs.aws.amazon.com/kms/latest/developerguide/enabling-keys.html) in the *AWS Key Management Service Developer Guide*\.
+For information about creating a new master key, see [Creating Keys](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html) in the *AWS Key Management Service Developer Guide*\.  
+If you are logged on as an IAM user, make yourself a key administrator on the master key\. For more information, see [Enabling and Disabling Keys](https://docs.aws.amazon.com/kms/latest/developerguide/enabling-keys.html) in the *AWS Key Management Service Developer Guide*\.
 
 ## Integrating an Amazon WorkDocs or Amazon WorkSpaces Directory<a name="compatible"></a>
 
@@ -79,9 +79,9 @@ To use Amazon WorkMail with Amazon WorkDocs or Amazon WorkSpaces, create a compa
 
 1. Create a compatible directory using Amazon WorkDocs or Amazon WorkSpaces\.
 
-   1. For Amazon WorkDocs instructions, see [Creating a Simple AD Directory Using the Quick Start](http://docs.aws.amazon.com/workdocs/latest/adminguide//cloud_quick_start.html)\.
+   1. For Amazon WorkDocs instructions, see [Creating a Simple AD Directory Using the Quick Start](https://docs.aws.amazon.com/workdocs/latest/adminguide//cloud_quick_start.html)\.
 
-   1. For Amazon WorkSpaces instructions, see [Get Started with Amazon WorkSpaces Quick Setup](http://docs.aws.amazon.com/workspaces/latest/adminguide/getting-started.html)\.
+   1. For Amazon WorkSpaces instructions, see [Get Started with Amazon WorkSpaces Quick Setup](https://docs.aws.amazon.com/workspaces/latest/adminguide/getting-started.html)\.
 
 1. In the Amazon WorkMail console, set up Amazon WorkMail\. For more information, see [Standard Setup: Integrating with an Existing Directory](#premises_directory)\.
 

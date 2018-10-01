@@ -51,7 +51,7 @@ When Amazon WorkMail is integrated with your corporate Active Directory or you a
 
 You can assign multiple email addresses to a single user and the default email address is used as the default sending address for outgoing email\. 
 
-You can also add one or more email aliases, which can be used to send or receive email from a different address or domain\. For more information, see [Send as an Alias](http://docs.aws.amazon.com/workmail/latest/userguide/send_alias.html)\.
+You can also add one or more email aliases, which can be used to send or receive email from a different address or domain\. For more information, see [Send as an Alias](https://docs.aws.amazon.com/workmail/latest/userguide/send_alias.html)\.
 
 **To edit a user's email address**
 

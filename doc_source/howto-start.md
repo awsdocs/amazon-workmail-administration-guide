@@ -46,9 +46,9 @@ The web application URL is on the **General settings** tab and looks like this: 
 ## Step 3: Set up Amazon WorkMail User Access<a name="setup-user"></a>
 
 Choose from the following options to set up Amazon WorkMail user access\.
-+ Set up user access from an existing desktop client using the Microsoft Outlook client\. For more information, see [Connect Microsoft Outlook to Your Amazon WorkMail Account](http://docs.aws.amazon.com/workmail/latest/userguide/connect_mail_client.html)\.
-+ Set up user access from a mobile device, such as a Kindle, Android, iPad, iPhone, or Windows Phone\. For more information, see [Getting Started with a Mobile Device](http://docs.aws.amazon.com/workmail/latest/userguide/mobile-start.html)\.
-+ Set up user access with any IMAP\-compatible client software\. For more information, see [Connect IMAP Clients to Your Amazon WorkMail Account](http://docs.aws.amazon.com/workmail/latest/userguide/using_IMAP_client.html)\.
++ Set up user access from an existing desktop client using the Microsoft Outlook client\. For more information, see [Connect Microsoft Outlook to Your Amazon WorkMail Account](https://docs.aws.amazon.com/workmail/latest/userguide/connect_mail_client.html)\.
++ Set up user access from a mobile device, such as a Kindle, Android, iPad, iPhone, or Windows Phone\. For more information, see [Getting Started with a Mobile Device](https://docs.aws.amazon.com/workmail/latest/userguide/mobile-start.html)\.
++ Set up user access with any IMAP\-compatible client software\. For more information, see [Connect IMAP Clients to Your Amazon WorkMail Account](https://docs.aws.amazon.com/workmail/latest/userguide/using_IMAP_client.html)\.
 
 ## More Getting Started Topics<a name="more-getting-started"></a>
 + [Migrating to Amazon WorkMail](migration_overview.md)

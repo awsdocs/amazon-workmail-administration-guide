@@ -29,4 +29,4 @@ After you have migrated your email accounts to Amazon WorkMail, verify your DNS 
 **Note**  
 The DNS record update process may take several hours\. If any new items appear in a source mailbox while the MX records are being changed, run the migration tool again to migrate new items after the DNS records are updated\.
 
-1. For more information about configuring your desktop or mobile clients to use Amazon WorkMail, see [Connect Microsoft Outlook to Your Amazon WorkMail Account](http://docs.aws.amazon.com/workmail/latest/userguide/connect_mail_client.html) in the *Amazon WorkMail User Guide*\.
+1. For more information about configuring your desktop or mobile clients to use Amazon WorkMail, see [Connect Microsoft Outlook to Your Amazon WorkMail Account](https://docs.aws.amazon.com/workmail/latest/userguide/connect_mail_client.html) in the *Amazon WorkMail User Guide*\.
