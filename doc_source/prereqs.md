@@ -3,24 +3,24 @@
 To use Amazon WorkMail you'll need an AWS account\. If you haven't signed up for AWS yet, complete the following tasks to get set up\.
 
 **Topics**
-+ [Get an AWS Account and Your AWS Credentials](#getting-started-signup)
++ [Get an AWS Account and Your AWS account root user Credentials](#getting-started-signup)
 + [Create AWS Identity and Access Management Users and Groups](#iam_users_groups)
 
-## Get an AWS Account and Your AWS Credentials<a name="getting-started-signup"></a>
+## Get an AWS Account and Your AWS account root user Credentials<a name="getting-started-signup"></a>
 
-To access AWS, you will need to sign up for an AWS account\.
+To access AWS, you must sign up for an AWS account\.
 
 **To sign up for an AWS account**
 
 1. Open [https://aws\.amazon\.com/](https://aws.amazon.com/), and then choose **Create an AWS Account**\.
 **Note**  
-This might be unavailable in your browser if you previously signed into the AWS Management Console\. In that case, choose **Sign in to a different account**, and then choose **Create a new AWS account**\.
+If you previously signed in to the AWS Management Console using AWS account root user credentials, choose **Sign in to a different account**\. If you previously signed in to the console using IAM credentials, choose **Sign\-in using root account credentials**\. Then choose **Create a new AWS account**\.
 
 1. Follow the online instructions\.
 
-   Part of the sign\-up procedure involves receiving a phone call and entering a PIN using the phone keypad\.
+   Part of the sign\-up procedure involves receiving a phone call and entering a verification code using the phone keypad\.
 
-AWS sends you a confirmation e\-mail after the sign\-up process is complete\. At any time, you can view your current account activity and manage your account by going to [https://aws\.amazon\.com/](https://aws.amazon.com/) and clicking **My Account/Console**\.
+ AWS sends you a confirmation e\-mail after the sign\-up process is complete\. At any time, you can view your current account activity and manage your account by going to [https://aws\.amazon\.com/](https://aws.amazon.com/) and choosing **My Account**\.
 
 **To get the access key ID and secret access key for an IAM user**
 

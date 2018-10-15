@@ -4,6 +4,7 @@ The following table describes important changes in each release of the *Amazon W
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Debugging Tools for Custom Domains](#DocumentHistory) | Amazon WorkMail has added debugging tools for custom domains\. For more information, see [Adding a Domain](https://docs.aws.amazon.com/workmail/latest/adminguide/add_domain.html) in the *Amazon WorkMail Administrator Guide*\. | October 15, 2018 | 
 | [Support for Outlook 2019](#DocumentHistory) | Amazon WorkMail supports Outlook 2019 for Windows and macOS\. For more information, see [Amazon WorkMail System Requirements](https://docs.aws.amazon.com/workmail/latest/adminguide/what_is.html#accessing_workmail) in the *Amazon WorkMail Administrator Guide*\. | October 1, 2018 | 
 | [Various Updates](#DocumentHistory) | Various updates to topic layout and organization\. | July 12, 2018 | 
 | [Mailbox Permissions](#DocumentHistory) | You can use mailbox permissions in Amazon WorkMail to grant users or groups the right to work in other users' mailboxes\. For more information, see [Working with Mailbox Permissions](https://docs.aws.amazon.com/workmail/latest/adminguide/mail_perms_overview.html) in the *Amazon WorkMail Administrator Guide*\. | April 9, 2018 | 

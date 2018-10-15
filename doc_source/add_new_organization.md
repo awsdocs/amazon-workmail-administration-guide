@@ -64,7 +64,8 @@ For information about setting up an AD Connector, see [Connecting to Your Existi
 
 1. On the **Standard setup** screen, for **Available Directories**, select your existing directory\.
 **Note**  
-If you have an on\-premises Active Directory with Microsoft Exchange and an AWS AD Connector, choose **Enable interoperability** on the **Interoperability with Microsoft Exchange** screen\. Interoperability allows you to minimize disruption to your users as you migrate mailboxes to Amazon WorkMail, or use Amazon WorkMail for a subset of your corporate mailboxes\. For more information, see [Interoperability between Amazon WorkMail and Microsoft Exchange](https://docs.aws.amazon.com/workmail/latest/adminguide/interoperability.html)\. 
+If you have an on\-premises Active Directory with Microsoft Exchange and an AWS AD Connector, choose **Enable interoperability** on the **Interoperability with Microsoft Exchange** screen\. Interoperability allows you to minimize disruption to your users as you migrate mailboxes to Amazon WorkMail, or use Amazon WorkMail for a subset of your corporate mailboxes\. For more information, see [Interoperability between Amazon WorkMail and Microsoft Exchange](https://docs.aws.amazon.com/workmail/latest/adminguide/interoperability.html)\.   
+Amazon WorkMail does not currently support managed Microsoft Active Directory directory services that are shared with multiple accounts\.
 
 1. For **Master keys**, select a master key\. You can either select the default master key or create a custom master key in AWS Key Management Service\.
 **Note**  
