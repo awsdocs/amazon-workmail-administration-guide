@@ -40,7 +40,8 @@ When requesting a limit increase request only for a specific organization, inclu
 | Resource | Default Limit | 
 | --- | --- | 
 | Number of domains per Amazon WorkMail organization | 1,000This is a hard limit and cannot be changed\.  | 
-|  Number of sender patterns in email flow rules per organization  |  250 This is a hard limit and cannot be changed\.  | 
+|  Number of sender patterns in email flow rules per rule  |  250 This is a hard limit and cannot be changed\.  | 
+|  Number of sender patterns in email flow rules per organization  |  1,000 This is a hard limit and cannot be changed\.  | 
 
 ## Per\-User Limits<a name="per_user_limits"></a>
 
