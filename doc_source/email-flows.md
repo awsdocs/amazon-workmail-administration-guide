@@ -10,6 +10,7 @@ To create an email flow rule, specify a [*rule action*](#email-flows-rule-action
 + [Sender and Recipient Patterns](#email-flows-patterns)
 + [Creating an Email Flow Rule](create-email-rules.md)
 + [Configuring SMTP Gateways](smtp-gateway.md)
++ [Configuring AWS Lambda for Amazon WorkMail](lambda.md)
 + [Testing an Email Flow Rule](test-email-flow-rule.md)
 + [Modifying an Email Flow Rule](modify-email-flow-rule.md)
 + [Removing an Email Flow Rule](remove-email-flow-rule.md)
@@ -38,6 +39,8 @@ Inbound email is first delivered to Amazon SES and then to Amazon WorkMail\. If 
 
 Outbound email flow rules can be used to direct emails via SMTP gateways, or to block senders from sending emails to specified recipients\. For more information on SMTP gateways, see [Configuring SMTP Gateways](smtp-gateway.md)\.
 
+Outbound email flow rules can also be used to pass the email to an AWS Lambda function for processing after the email is sent\. For more information about using Lambda with Amazon WorkMail, see [Configuring Lambda for Amazon WorkMail](lambda.md)\. For more information about Lambda, see the [https://docs.aws.amazon.com/lambda/latest/dg/welcome.html](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)\.
+
 The following rule actions define how outbound email is handled\. For each rule, you specify [sender and recipient patterns](#email-flows-patterns) together with one of the following actions\. 
 
 
@@ -49,6 +52,7 @@ The following rule actions define how outbound email is handled\. For each rule,
 |  Drop  |  The email is dropped\. It is not sent, and the sender is not notified\.  | 
 | Bounce to sender |  The email is not sent, and the sender is notified with a message that the administrator blocked the email\.   | 
 |  Route to SMTP gateway  |  The email is sent via a configured SMTP gateway\.  | 
+|  Run Lambda  |  Passes the email to a Lambda function for processing after the email is sent\. Does not affect email sending\.  | 
 
 ## Sender and Recipient Patterns<a name="email-flows-patterns"></a>
 

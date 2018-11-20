@@ -24,7 +24,7 @@ The **Quick setup** option does not support nested groups, and it is not compati
 The Amazon WorkMail **Quick setup** option does the following for you:
 + Creates a new WorkMail Directory for storing your users and groups\. You cannot view this type of directory in AWS Directory Service\.
 + Creates a free test domain\.
-+ Uses the default KMS master key for encrypting your mailbox contents\.
++ Uses the KMS default AWS managed master key for encrypting your mailbox contents\.
 
 **To add an organization using the Quick setup option**
 
@@ -46,7 +46,7 @@ If you exceed the number of organizations you can create using the Quick setup, 
 
 You can integrate Amazon WorkMail with an existing directory such as an on\-premises Microsoft Active Directory, AWS Managed Active Directory, or AWS Simple Active Directory\. By integrating with your on\-premises directory, you can reuse your existing users and groups in Amazon WorkMail and users can log in with their existing credentials\.
 
-You also have the option to select a specific master key that Amazon WorkMail uses to encrypt the mailbox content\. You can either select the default master key for Amazon WorkMail or create a custom master key in AWS KMS to use with Amazon WorkMail\. 
+You also have the option to select a customer managed master key that Amazon WorkMail uses to encrypt the mailbox content\. You can either select the default AWS managed master key for Amazon WorkMail or select a customer managed master key in AWS KMS to use with Amazon WorkMail\. 
 
 If the existing directory is on\-premises, you must first set up an AD Connector in AWS Directory Service\. The AD Connector is used to synchronize your users and groups to the Amazon WorkMail address book and perform user authentication requests\.
 
@@ -67,9 +67,9 @@ For information about setting up an AD Connector, see [Connecting to Your Existi
 If you have an on\-premises Active Directory with Microsoft Exchange and an AWS AD Connector, choose **Enable interoperability** on the **Interoperability with Microsoft Exchange** screen\. Interoperability allows you to minimize disruption to your users as you migrate mailboxes to Amazon WorkMail, or use Amazon WorkMail for a subset of your corporate mailboxes\. For more information, see [Interoperability between Amazon WorkMail and Microsoft Exchange](https://docs.aws.amazon.com/workmail/latest/adminguide/interoperability.html)\.   
 Amazon WorkMail does not currently support managed Microsoft Active Directory directory services that are shared with multiple accounts\.
 
-1. For **Master keys**, select a master key\. You can either select the default master key or create a custom master key in AWS Key Management Service\.
+1. For **Master keys**, select either the default AWS managed master key or a customer managed master key in AWS Key Management Service\.
 **Note**  
-For information about creating a new master key, see [Creating Keys](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html) in the *AWS Key Management Service Developer Guide*\.  
+For information about creating a new customer managed master key, see [Creating Keys](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html) in the *AWS Key Management Service Developer Guide*\.  
 If you are logged on as an IAM user, make yourself a key administrator on the master key\. For more information, see [Enabling and Disabling Keys](https://docs.aws.amazon.com/kms/latest/developerguide/enabling-keys.html) in the *AWS Key Management Service Developer Guide*\.
 
 ## Integrating an Amazon WorkDocs or Amazon WorkSpaces Directory<a name="compatible"></a>
