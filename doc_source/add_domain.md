@@ -39,5 +39,3 @@ As a best practice, you should add aliases for postmaster@ and abuse@\. You can 
 The AutoDiscover domain verification also checks for correct AutoDiscover setup\. After Phase 2 and Phase 3 verification is complete, a checkmark appears next to the **Verified** status\.
 
    We recommend that you set the Time to Live \(TTL\) to 3600 of the MX and autodiscover CNAME record\. Reducing the TTL ensures that your mail servers don't use outdated or invalid MX records after updating your MX records or migrating your mailboxes\.
-
-   For more information about adding these DNS records to Amazon Route 53, see [Routing Queries to Amazon WorkMail \(Public Hosted Zones Only\)](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-workmail.html) in the *Amazon Route 53 Developer Guide*\.
