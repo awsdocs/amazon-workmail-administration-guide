@@ -1,6 +1,6 @@
 # Migrating to Amazon WorkMail<a name="migration_overview"></a>
 
-You can migrate to Amazon WorkMail from Microsoft Exchange, Microsoft Office 365, G Suite Basic \(formerly Google Apps for Work\), and many other platforms by working with one of our partners\. For more information about our partners, see [Migrate to Amazon WorkMail for Free](https://aws.amazon.com/workmail/details/)\.
+You can migrate to Amazon WorkMail from Microsoft Exchange, Microsoft Office 365, G Suite Basic \(formerly Google Apps for Work\), and many other platforms by working with one of our partners\. For more information about our partners, see [Amazon WorkMail Features](https://aws.amazon.com/workmail/features/)\.
 
 **Topics**
 + [Step 1: Create or Enable Users in Amazon WorkMail](#create_enable_users)
@@ -13,7 +13,7 @@ Before you can migrate your users, you must add the users in Amazon WorkMail to 
 
 ## Step 2: Migrate to Amazon WorkMail<a name="prepare_mail_server"></a>
 
-You can work with any of our migration partners to migrate to Amazon WorkMail\. For information about about these providers, see [Amazon WorkMail](https://aws.amazon.com/workmail/details/)\.
+You can work with any of our migration partners to migrate to Amazon WorkMail\. For information about about these providers, see [Amazon WorkMail Features](https://aws.amazon.com/workmail/features/)\.
 
 To migrate your mailboxes, you can assign an Amazon WorkMail user as the migration administrator\. You can specify the migration administrator in the following ways: 
 + Add the new user **migration\_admin** in the Amazon WorkMail console\. You can also create the user **migration\_admin** in your Active Directory and enable this user for Amazon WorkMail\.

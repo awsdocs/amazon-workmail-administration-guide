@@ -17,7 +17,9 @@ To create an email flow rule, specify a [*rule action*](#email-flows-rule-action
 
 ## Inbound Email Rule Actions<a name="email-flows-rule-actions"></a>
 
-Inbound email flow rules help prevent undesirable email from reaching your users' mailboxes\. Unlike email rules for individual mailboxes, inbound email flow rules, also called rule actions, automatically apply to all email sent to anyone inside the Amazon WorkMail organization\.
+Inbound email flow rules help prevent undesirable email from reaching your users' mailboxes\. You can use these rules with an AWS Lambda function to process incoming email before it is delivered to your users' mailboxes\. For more information about using Lambda with Amazon WorkMail, see [Configuring Lambda for Amazon WorkMail](lambda.md)\. For more information about Lambda, see the [https://docs.aws.amazon.com/lambda/latest/dg/welcome.html](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)\.
+
+Unlike email rules for individual mailboxes, inbound email flow rules, also called rule actions, automatically apply to all email sent to anyone inside the Amazon WorkMail organization\.
 
 The following rule actions define how inbound email is handled\. For each rule, you specify [sender patterns](#email-flows-patterns) together with one of the following actions\. 
 
@@ -31,6 +33,7 @@ The following rule actions define how inbound email is handled\. For each rule, 
 | Deliver to junk folder |  The email is delivered to users' spam, or junk, folders, even if it is not originally identified as spam by the Amazon WorkMail spam detection system\.   | 
 |  Default  |  The email is delivered after being checked by the Amazon WorkMail spam detection system\. Spam email is delivered to the junk folder\. All other emails are delivered to the inbox\. Other email flow rules with a less specific sender pattern are ignored\. To add exceptions to domain\-based email flow rules, configure the Default action with a more specific sender pattern\. For more information, see [Sender and Recipient Patterns](#email-flows-patterns)\.  | 
 |  Never deliver to junk folder  |  The email is always delivered to users' inboxes, even if it is identified as spam by the Amazon WorkMail spam detection system\. By not using the default spam detection system, you could expose your users to high\-risk content from the addresses that you specify\.  | 
+|  Run Lambda  |  Passes the email to a Lambda function for processing before it is delivered to users' inboxes\.  | 
 
 **Note**  
 Inbound email is first delivered to Amazon SES and then to Amazon WorkMail\. If Amazon SES blocks an incoming email, then rule actions won't apply\. For example, Amazon SES blocks an email when a known virus is detected or because of explicit IP filtering rules\. Specifying a rule action, such as **Default**, **Deliver to junk folder**, or **Never deliver to junk folder** has no effect\.
@@ -62,17 +65,17 @@ Both sender and recipient patterns take one of the following forms:
 + **An email address** matches a single email address; for example:
 
   ```
-  mailbox@domain.com
+  mailbox@example.com
   ```
 + **A domain name** matches all email addresses under that domain; for example:
 
   ```
-  domain.com
+  example.com
   ```
 + **A wildcard domain** matches all email addresses under that domain and all of its subdomains\. A wildcard appears only at the front of a domain; for example:
 
   ```
-  *.domain.com
+  *example.com
   ```
 + **Star** matches any email addresses under any domain\.
 

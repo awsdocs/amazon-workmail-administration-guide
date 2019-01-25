@@ -22,13 +22,15 @@ There are two ways you can set up AutoDiscover phase 2 for your domain:
 The following steps show how to proxy https://autodiscover\.company\.tld/autodiscover/autodiscover\.xml\. To proxy https://company\.tld/autodiscover/autodiscover\.xml, remove the "autodiscover\." prefix from the domains in the following steps\.  
 For more information about applicable pricing, see [Amazon CloudFront Pricing](https://aws.amazon.com/cloudfront/pricing/) and [Amazon Route 53 Pricing](https://aws.amazon.com/route53/pricing/)\.
 
-1. Get an SSL certificate for autodiscover\.company\.tld and upload it to IAM\. For more information, see [Working with Server Certificates](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_server-certs.html)\.
+1. Get an SSL certificate for autodiscover\.company\.tld and upload it to AWS Identity and Access Management or AWS Certificate Manager\. For more information, see [Working with Server Certificates](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_server-certs.html) in the *IAM User Guide*, or [Getting Started](https://docs.aws.amazon.com/acm/latest/userguide/gs.html) in the *AWS Certificate Manager User Guide*\.
 
 1. Create a new CloudFront distribution\.
 
    1. Open the CloudFront console at [ https://console\.aws\.amazon\.com/cloudfront/](https://console.aws.amazon.com/cloudfront/)\.
 
-   1. Choose **Create Distribution**, **Web** and **Get Started**\.
+   1. Choose **Create Distribution**\.
+
+   1. For **Web**, choose **Get Started**\. 
 
    1. Fill in the following values for **Origin Settings**:
       + **Origin Domain Name**: autodiscover\-service\.mail\.us\-east\-1\.awsapps\.com, autodiscover\-service\.mail\.eu\-west\-1\.awsapps\.com, or autodiscover\-service\.mail\.us\-west\-2\.awsapps\.com 
@@ -49,12 +51,12 @@ Leave **Origin path** blank, and do not change the auto\-populated value for **O
       + **Price Class**: Use only US, Canada, and Europe
       + **Alternate Domain Names \(CNAMEs\)**: autodiscover\.company\.tld \(or company\.tld\)
       + **SSL Certificate**: Custom SSL Certificate \(stored in IAM\)
-      + **Custom SSL Client Support**: All Clients
+      + **Custom SSL Client Support**: Choose **All Clients** or **Only Clients that Support Server Name Indication \(SNI\)**\. Older versions of Android might not work with the latter option\.
 **Note**  
-Leave **Default Root Object** blank\.
-      + **Logging**: Choose **On** or **Off**
+If you choose **All Clients**, leave **Default Root Object** blank\.
+      + **Logging**: Choose **On** or **Off**\.
       + **Comment**: AutoDiscover type2 for autodiscover\.company\.tld 
-      + For **Distribution State**, choose **Enabled**
+      + For **Distribution State**, choose **Enabled**\.
 
 1. In Route 53, connect the CloudFront distribution to DNS:
 **Note**  
@@ -92,7 +94,12 @@ If the CloudFront distribution created above is not present, wait a while and tr
 
 ## AutoDiscover Phase 2 Troubleshooting<a name="troubleshooting"></a>
 
-To make a basic unauthorized request, create an unauthenticated POST request to the AutoDiscover endpoint and see if it returns a “401 unauthorized” message:
+Post the following requests to your AutoDiscover endpoint to test it for correct configuration\. If your AutoDiscover endpoint is configured correctly, it responds with an unauthorized request message\.
+
+**To make a basic unauthorized request**
++ Create an unauthenticated POST request to the AutoDiscover endpoint\.
+
+If your endpoint is configured correctly, it should return a `401 unauthorized` message:
 
 ```
 $ curl -X POST -v https://autodiscover.''company.tld''/autodiscover/autodiscover.xml
@@ -100,45 +107,47 @@ $ curl -X POST -v https://autodiscover.''company.tld''/autodiscover/autodiscover
 HTTP/1.1 401 Unauthorized
 ```
 
-If the basic request is unsuccessful and returns a “401 unauthorized” message, run a real request that a mobile device would issue\.
+Next, run a real request that a mobile device would issue\.
 
-To do this, first create a request\.xml file with the following XML content: 
+**To run a real request**
 
-```
-<?xml version="1.0" encoding="utf-8"?>
-<Autodiscover xmlns="http://schemas.microsoft.com/exchange/autodiscover/mobilesync/requestschema/2006">
-     <Request>
-            <EMailAddress>testuser@company.tld</EMailAddress>
-            <AcceptableResponseSchema>
-             http://schemas.microsoft.com/exchange/autodiscover/mobilesync/responseschema/2006
-            </AcceptableResponseSchema>
-     </Request>
-</Autodiscover>
-```
+1. Create a request\.xml file with the following XML content:
 
-Second, make the request\.
+   ```
+   <?xml version="1.0" encoding="utf-8"?>
+   <Autodiscover xmlns="http://schemas.microsoft.com/exchange/autodiscover/mobilesync/requestschema/2006">
+        <Request>
+               <EMailAddress>testuser@company.tld</EMailAddress>
+               <AcceptableResponseSchema>
+                http://schemas.microsoft.com/exchange/autodiscover/mobilesync/responseschema/2006
+               </AcceptableResponseSchema>
+        </Request>
+   </Autodiscover>
+   ```
 
-```
-$ curl -d @request.xml -u testuser@company.tld -v https://autodiscover.company.tld/autodiscover/autodiscover.xml
-Enter host password for user 'testuser@company.tld':
-<?xml version="1.0" encoding="UTF-8"?>
-<Autodiscover xmlns="http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<Response xmlns="http://schemas.microsoft.com/exchange/autodiscover/mobilesync/responseschema/2006">
-    <Culture>en:us</Culture>
-    <User>
-        <DisplayName>User1</DisplayName>
-        <EMailAddress>testuser@company.tld</EMailAddress>
-    </User>
-    <Action>
-        <Settings>
-            <Server>
-                <Type>MobileSync</Type>
-                <Url>https://mobile.mail.us-east-1.awsapps.com/Microsoft-Server-ActiveSync</Url>
-                <Name>https://mobile.mail.us-east-1.awsapps.com/Microsoft-Server-ActiveSync</Name>
-            </Server>
-        </Settings>
-    </Action>
-</Response>
-```
+1. Make the request\.
+
+   ```
+   $ curl -d @request.xml -u testuser@company.tld -v https://autodiscover.company.tld/autodiscover/autodiscover.xml
+   Enter host password for user 'testuser@company.tld':
+   <?xml version="1.0" encoding="UTF-8"?>
+   <Autodiscover xmlns="http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <Response xmlns="http://schemas.microsoft.com/exchange/autodiscover/mobilesync/responseschema/2006">
+       <Culture>en:us</Culture>
+       <User>
+           <DisplayName>User1</DisplayName>
+           <EMailAddress>testuser@company.tld</EMailAddress>
+       </User>
+       <Action>
+           <Settings>
+               <Server>
+                   <Type>MobileSync</Type>
+                   <Url>https://mobile.mail.us-east-1.awsapps.com/Microsoft-Server-ActiveSync</Url>
+                   <Name>https://mobile.mail.us-east-1.awsapps.com/Microsoft-Server-ActiveSync</Name>
+               </Server>
+           </Settings>
+       </Action>
+   </Response>
+   ```
 
 If the response output is similar, your AutoDiscover endpoint is configured correctly\.

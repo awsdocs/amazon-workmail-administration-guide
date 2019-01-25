@@ -1,6 +1,12 @@
 # Configuring AWS Lambda for Amazon WorkMail<a name="lambda"></a>
 
-Use the **Run Lambda** outbound email flow rule to pass rule\-matching emails to a Lambda function for processing after the email is sent\. When you use the **Run Lambda** rule, it sends the email and triggers the Lambda function at the same time\. The Lambda function does not affect the sending of the email\. For more information about outbound email flow rules, see [Outbound Email Rule Actions](email-flows.md#email-flows-rule-outbound)\. For more information about Lambda, see the [https://docs.aws.amazon.com/lambda/latest/dg/welcome.html](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)\.
+Use the **Run Lambda** inbound and outbound email flow rules to pass emails that match the rules to a Lambda function for processing\.
+
+When you use the **Run Lambda** rule for inbound emails, incoming emails that match the rule are passed to a Lambda function for processing before the emails are delivered to users' mailboxes\.
+
+When you use the **Run Lambda** rule for outbound emails, outbound emails that match the rule are passed to a Lambda function for processing at the same time that the email is sent\.
+
+The Lambda function does not affect the sending or receiving of email\. For more information about inbound and outbound email flow rules, see [Managing Email Flows](email-flows.md)\. For more information about Lambda, see the [https://docs.aws.amazon.com/lambda/latest/dg/welcome.html](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)\.
 
 **Note**  
 Currently, Lambda email flow rules reference only Lambdas in the same AWS Region and AWS account as the Amazon WorkMail organization being configured\.
@@ -22,15 +28,15 @@ The Lambda function is triggered using the following event data\. The presentati
     "summaryVersion": "2018-10-10",
     "envelope": {
         "mailFrom" : {
-            "address" : "from@domain.test"
+            "address" : "from@example.com"
         },
         "recipients" : [
-           { "address" : "recipient1@domain.test" },
-           { "address" : "recipient2@domain.test" }
+           { "address" : "recipient1@example.com" },
+           { "address" : "recipient2@example.com" }
         ]
     },
     "sender" : {
-        "address" :  "sender@domain.test"
+        "address" :  "sender@example.com"
     },
     "subject" : "Hello From Amazon WorkMail!",
     "truncated": false
@@ -40,17 +46,18 @@ The Lambda function is triggered using the following event data\. The presentati
 The event JSON includes the following data\.
 
 **envelope**  
-The SMTP envelope of the email message, which includes the following fields:    
+The envelope of the email message, which includes the following fields:    
 **mailFrom**  
-The **From** address in the SMTP conversation\. It is usually the email address of the user who sent the message\. If the user sent the message as another user or on behalf of another user, the **mailFrom** field returns the email address of the user on whose behalf the email was sent, not the email address of the actual sender\.  
+The **From** address, which is usually the email address of the user who sent the message\. If the user sent the message as another user or on behalf of another user, the **mailFrom** field returns the email address of the user on whose behalf the email was sent, not the email address of the actual sender\.  
 **recipients**  
-The list of all recipient email addresses\. There is no distinction between **To**, **CC**, or **BCC**\.
+A list of recipient email addresses\. There is no distinction between **To**, **CC**, or **BCC**\.  
+For inbound email flow rules, this list includes recipients for each domain that is part of the Amazon WorkMail organization in which the rule is created\. The Lambda function is invoked separately for each SMTP conversation from the sender, and the contents of the recipients field match the recipients from that SMTP conversation\. Recipients with external domains are not included\.
 
 **sender**  
 The email address of the user who sent the email message on behalf of another user\. This field is set only when an email is sent on behalf of another user\.
 
 **subject**  
-The email subject line\.
+The email subject line\. Truncated when it exceeds the 256 character limit\.
 
 **truncated**  
-When `true`, the payload size exceeds the 128 KB limit, so the list of recipients is truncated in order to meet the limit\.
+Applies to the payload size, not the subject line length\. When `true`, the payload size exceeds the 128 KB limit, so the list of recipients is truncated in order to meet the limit\.
