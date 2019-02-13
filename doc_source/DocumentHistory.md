@@ -4,6 +4,7 @@ The following table describes important changes in each release of the *Amazon W
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Route 53 DNS Record Insertion](#DocumentHistory) | When setting up a domain that is managed in a Route 53 public hosted zone, Amazon WorkMail automatically inserts the DNS records for you\. For more information, see [Adding a Domain](https://docs.aws.amazon.com/workmail/latest/adminguide/add_domain.html) in the *Amazon WorkMail Administrator Guide*\. | February 13, 2019 | 
 | [Configuring Lambda for Inbound Email Rule Actions](#DocumentHistory) | Amazon WorkMail supports configuring Lambda functions to use with inbound email flow rules\. For more information, see [Managing Email Flows](https://docs.aws.amazon.com/workmail/latest/adminguide/email-flows.html) in the *Amazon WorkMail Administrator Guide*\. | January 24, 2019 | 
 | [Configuring Lambda for Amazon WorkMail](#DocumentHistory) | Amazon WorkMail supports configuring Lambda functions to use with outbound email flow rules\. For more information, see [Configuring Lambda for Amazon WorkMail](https://docs.aws.amazon.com/workmail/latest/adminguide/lambda.html) in the *Amazon WorkMail Administrator Guide*\. | November 19, 2018 | 
 | [SMTP Routing](#DocumentHistory) | Amazon WorkMail supports configuring SMTP gateways to use with outbound email flow rules\. For more information, see [Configuring SMTP Gateways](https://docs.aws.amazon.com/workmail/latest/adminguide/smtp-gateway.html) in the *Amazon WorkMail Administrator Guide*\. | November 1, 2018 | 

@@ -30,7 +30,7 @@ Amazon WorkMail retains disabled mailboxes for 30 days before permanently removi
 **Important**  
 Mailboxes cannot be restored if the organization containing them has been deleted\. To restore a user's disabled mailbox, the user must be still in the directory\. If the user isn't in the directory or if you've re\-created them, the mailbox cannot be restored because each mailbox is linked to a unique user ID\.
 
-**To restore a deleted mailbox**
+**To restore a disabled mailbox**
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 

@@ -18,11 +18,15 @@ As a best practice, you should add aliases for postmaster@ and abuse@\. You can 
 
 1. In the navigation pane, choose **Domains**, **Add domain**\.
 
-1. On the **Add domain** screen, enter the domain name to add,and choose **Add domain**\.
+1. On the **Add domain** screen, enter the domain name to add\.
+   + \(Optional\) If you have a domain that is managed in an Amazon Route 53 public hosted zone, you can choose it from the dropdown menu that appears\.
+
+1. Choose **Add domain**\.
+   + \(Optional\) If you add a domain that is managed in a Route 53 hosted zone, and it does not have any DNS records configured for Amazon WorkMail \(such as MX or SPF records\), you are redirected to the **Automatic Configuration** page\. Choose **Configure automatically** and follow the prompts to have Amazon WorkMail automatically insert the DNS records for you, and skip the following steps\.
 
 1. On the next screen, in the **Step 1: verify domain ownership** section, the TXT record verifies your ownership of the domain\.
 
-   After all your users and distribution groups are created, and mailboxes are successfully migrated, you can switch the MX record to start delivering email to Amazon WorkMail\. Updates to the DNS record can take up to 72 hours to be processed and made active, however updates are often processed and made active sooner than this\.
+   After all your users and distribution groups are created, and mailboxes are successfully migrated, you can switch the MX record to start delivering email to Amazon WorkMail\. Administrators must create the DNS records themselves\. Updates to DNS records can take up to 72 hours to be processed and made active, however updates are often processed and made active sooner than this\.
 
 1. In the **Step 2: Finalize domain setup** section and the **Step 3: Increase security \(recommended\)** section, the following records are listed:
    + The MX record to deliver incoming email to Amazon WorkMail\.
@@ -31,7 +35,7 @@ As a best practice, you should add aliases for postmaster@ and abuse@\. You can 
    + The TXT record for SPF verification\. For more information about SPF verification, see [Authenticating Email with SPF](authenticate_domain.md)\.
    + The TXT record for DMARC\. For more information about DMARC records in Amazon WorkMail, see [Complying with DMARC Using Amazon SES](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/dmarc.html) in the *Amazon Simple Email Service Developer Guide*\.
 
-   You can use the copy icon to copy these records for use with your domain registrar\. The record copies include the domain name\. Depending on which domain registrar you use, the domain name might already be added to the domain registrar record\.
+   You can use the copy icon to copy these records for use with your DNS service provider\. The record copies include the domain name\. Depending on which DNS service provider you use, the domain name might already be added to the domain's DNS record\.
 
    The records on the domain page also include the verification status\. After you create a record, choose the refresh icon to see the verification status and record value\. The following table shows the available verification statuses for each record type\.    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/workmail/latest/adminguide/add_domain.html)
