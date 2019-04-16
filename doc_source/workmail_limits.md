@@ -34,6 +34,8 @@ When requesting a limit increase request only for a specific organization, inclu
 | Recipients addressed per AWS account per day  | 100,000 recipients external to the organization, with no hard limit on recipients internal to the organization | There is no upper bound\. However, Amazon WorkMail is a business email service and not intended to be used for bulk email services\. For bulk email services, see [Amazon SES](https://aws.amazon.com/ses/) or [Amazon Pinpoint](https://aws.amazon.com/pinpoint/)\. | 
 | Recipients addressed per AWS account per day using any of the test domains | 200 recipients, regardless of destination | There is no upper bound\. However, the test mail domain is not intended for long\-term usage\. Instead, we recommend that you add your own domain and use it as the default domain\. | 
 
+Limits on groups are set by the underlying directory\.
+
 ## WorkMail Organization Setting Limits<a name="organization_limits"></a>
 
 

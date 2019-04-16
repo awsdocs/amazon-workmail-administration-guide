@@ -21,7 +21,7 @@ When you create new users, Amazon WorkMail creates mailboxes for them\. Users ca
 
 1. On the **Organizations** screen, in the list of organizations, select your organization's alias\.
 
-1. In the navigation pane on the left, choose **Users** to see a list of all users in the directory, including enabled, disabled, and system users\.
+1. In the navigation pane, choose **Users** to see a list of all users in the directory\. This includes enabled, disabled, and system users as defined by the underlying directory\.
 
 1. To create a new user, choose **Create User**\.
 

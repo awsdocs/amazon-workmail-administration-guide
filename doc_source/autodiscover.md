@@ -58,19 +58,19 @@ If you choose **All Clients**, leave **Default Root Object** blank\.
       + **Comment**: AutoDiscover type2 for autodiscover\.company\.tld 
       + For **Distribution State**, choose **Enabled**\.
 
-1. In Route 53, connect the CloudFront distribution to DNS:
+1. In Route 53, create a record that routes internet traffic for your domain name to your CloudFront distribution:
 **Note**  
-These steps assume that the DNS record for company\.tld is hosted in Route 53\.
+These steps assume that the DNS record for example\.com is hosted in Route 53\.
 
-   1. In the Route 53 console, choose **Hosted Zones** and **company\.tld**\. 
+   1. In the Route 53 console, choose **Hosted Zones** and **example\.com**\. 
 
    1. Choose **Create Record Set**, and then fill in the following fields:
-      + **Name**: autodiscover\.company\.tld
+      + **Name**: autodiscover\.example\.com
       + **Type**: A \- IPv4 address
       + **Alias**: Yes
       + **Alias Target**: The CloudFront distribution created above
 **Note**  
-If the CloudFront distribution created above is not present, wait a while and try again later\. Change propagation for new CloudFront endpoints in Route 53 might take up to 1 hour\. 
+If the CloudFront distribution created above is not present, wait a while and try again later\. Change propagation for a new CloudFront distribution can take up to 1 hour\. 
       + **Evaluate Target Health**: No
 
    1. Choose **Create**\.
