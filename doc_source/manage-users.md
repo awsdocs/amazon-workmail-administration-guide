@@ -8,6 +8,7 @@ Create new users or enable existing users and edit user email addresses, create 
 + [Editing User Email Addresses](#edit_user_email_addresses)
 + [Editing User Details](#edit_user_details)
 + [Resetting User Passwords](#reset_user_password)
++ [Troubleshooting Amazon WorkMail Password Policies](#password-policies)
 
 ## Creating New Users<a name="add_new_user"></a>
 
@@ -103,5 +104,33 @@ If a user forgets a password or is having trouble signing in to Amazon WorkMail,
 1. In the list of users, select the name of the user to edit and choose **Reset password**\.
 
 1. In the **Reset Password** dialog box, type the new password and choose **Reset**\.
-**Note**  
-Amazon WorkMail enforces password policies, but additional policies may be applicable\. If the attempt to reset the password is unsuccessful, verify any password policies that are set in the [directory](https://aws.amazon.com/directoryservice)\.
+
+## Troubleshooting Amazon WorkMail Password Policies<a name="password-policies"></a>
+
+If resetting the password is unsuccessful, verify that the new password meets the password policy requirements\.
+
+The password policy requirements depend on which directory type is used by your Amazon WorkMail organization\.
+
+**Amazon WorkMail Directory and Simple AD Directory Password Policy**  
+By default, passwords for an Amazon WorkMail directory or Simple AD directory must be:
++ Non\-empty\.
++ At least eight characters\.
++ Less than 64 characters\.
++ Composed of Basic Latin or Latin\-1 supplement characters\.
+
+Passwords must also contain characters from three out of five of the following groups:
++ Uppercase characters
++ Lowercase characters
++ Numerical digits
++ Special characters \(for example, `<`, `~`, or `!`\)
++ Latin\-1 supplement characters \(for example, `é`, `ü`, or `ñ`\)
+
+Amazon WorkMail directory password policies cannot be changed\.
+
+To change a Simple AD password policy, use the AD administration tools on an Amazon EC2 Windows instance of your Simple AD directory\. For more information, see [Installing the Active Directory Administration Tools](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/simple_ad_install_ad_tools.html) in the *AWS Directory Service Administration Guide*\.
+
+**AWS Managed Microsoft AD Directory Password Policy**  
+For information about the default password policy for an AWS Managed Microsoft AD directory, see [Manage Password Policies for AWS Managed Microsoft AD](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/ms_ad_password_policies.html) in the *AWS Directory Service Administration Guide*\.
+
+**AD Connector Password Policy**  
+AD Connector uses the password policy of the Active Directory domain that it is connected to\.
