@@ -70,7 +70,7 @@ You can also add one or more email aliases, which can be used to send or receive
 
 ## Editing User Details<a name="edit_user_details"></a>
 
-You can edit a user's first and last name, email address, display name, address, phone number, and company details\.
+You can edit a user's first and last name, email address, display name, address, phone number, and company details\. You can also set a user's mailbox quota to as little as 1 MB or as much as 51,200 MB \(50 GB\)\. Changing a user's mailbox quota does not affect pricing\. For more information about pricing, see [Amazon WorkMail Pricing](http://aws.amazon.com/workmail/pricing/)\.
 
 **Note**  
 If you are integrating Amazon WorkMail with an AD Connector directory, you can't edit these details from the AWS Management Console\. Instead, you must edit them using your Active Directory management tools\.
@@ -85,7 +85,9 @@ If you are integrating Amazon WorkMail with an AD Connector directory, you can't
 
 1. In the navigation pane, choose **Users** and select the name of the user to edit\.
 
-1. On the **General** tab, choose **Edit**, and then update any of the fields as appropriate\.
+1. On the **General** tab, choose **Edit**, and then update any of the fields as appropriate\. To update a user's mailbox quota, choose the **Quota** tab\.
+
+1. Choose **Save**\.
 
 ## Resetting User Passwords<a name="reset_user_password"></a>
 

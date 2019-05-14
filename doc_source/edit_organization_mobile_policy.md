@@ -6,13 +6,17 @@ You can edit your organization's mobile device policy to change the way that mob
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. If necessary, change the region\. From the navigation bar, select the region that meets your needs\. For more information, see [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+1. If necessary, change the Region\. From the navigation bar, select the appropriate Region\. For more information, see [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
 1. On the **Organizations** screen, in the **Alias** column, select the organization to edit\.
 
-1. In the navigation pane, choose **Mobile Policies**, and then on the **Default mobile policy** screen, choose **Edit**\.
+1. In the navigation pane, choose **Mobile Policies**, and then on the **Mobile policy** screen, choose **Edit**\.
 
 1. Update any of the following as necessary:
+
+   1. **Require encryption on device**: Encrypt email data on the mobile device\.
+
+   1. **Require encryption on storage card**: Encrypt email data on the mobile device's removable storage\.
 
    1. **Password required**: Require a password to lock a mobile device\.
 
@@ -31,9 +35,5 @@ You can edit your organization's mobile device policy to change the way that mob
    1. **Enable screen lock**: Specify the number of seconds that must elapse without user input to lock the user's screen\.
 
    1. **Enforce password history**: Specify the number of passwords that can be entered before repeating the same password\.
-
-   1. **Require encryption on device**: Encrypt email data on the mobile device\.
-
-   1. **Require encryption on storage card**: Encrypt email data on the mobile device's removable storage\.
 
 1. Choose **Save**\.

@@ -30,7 +30,7 @@ The following rule actions define how inbound email is handled\. For each rule, 
 | --- | --- | 
 |  Drop  |  The email is ignored\. It is not delivered, and the sender is not notified of the non\-delivery\.  | 
 |  Bounce  |  The email is not delivered, and the sender is notified of the non\-delivery in a bounce message\.  | 
-| Deliver to junk folder |  The email is delivered to users' spam, or junk, folders, even if it is not originally identified as spam by the Amazon WorkMail spam detection system\.   | 
+| Deliver to junk folder |  The email is delivered to users' spam or junk folders, even if it is not originally identified as spam by the Amazon WorkMail spam detection system\.   | 
 |  Default  |  The email is delivered after being checked by the Amazon WorkMail spam detection system\. Spam email is delivered to the junk folder\. All other emails are delivered to the inbox\. Other email flow rules with a less specific sender pattern are ignored\. To add exceptions to domain\-based email flow rules, configure the Default action with a more specific sender pattern\. For more information, see [Sender and Recipient Patterns](#email-flows-patterns)\.  | 
 |  Never deliver to junk folder  |  The email is always delivered to users' inboxes, even if it is identified as spam by the Amazon WorkMail spam detection system\. By not using the default spam detection system, you could expose your users to high\-risk content from the addresses that you specify\.  | 
 |  Run Lambda  |  Passes the email to a Lambda function for processing before it is delivered to users' inboxes\.  | 
@@ -87,7 +87,7 @@ Multiple patterns can be specified for one rule\. For more information, see [Inb
 
 Inbound email flow rules are applied if either the `Sender` or `From` header in an inbound email matches any patterns\. If present, the `Sender` address is matched first\. The `From` address is matched if there is no `Sender` header or if the `Sender` header doesn't match any rule\.
 
-Outbound email flow rules are applied if the recipient and either the `Sender` or `From` header in an outbound email matches any patterns\. If there are multiple recipients for the email that match different rules, then each rule applies for the matched recipients\.
+Outbound email flow rules are applied if the recipient and either the `Sender` or `From` header in an outbound email matches any patterns\. If there are multiple recipients for the email that match different rules, each rule applies for the matched recipients\.
 
 If multiple rules match, the action of the most specific rule is applied\. An example is when a rule for a specific email address takes precedence over a rule for an entire domain\. If multiple rules have the same specificity, the most restrictive action is applied\. An example is when a **Drop** action takes precedence over a **Bounce** action\. The order of precedence for actions is the same as the order in which they are listed in [Inbound Email Rule Actions](#email-flows-rule-actions) and [Outbound Email Rule Actions](#email-flows-rule-outbound)\.
 
