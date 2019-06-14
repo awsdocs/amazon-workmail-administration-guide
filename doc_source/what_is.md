@@ -1,6 +1,6 @@
 # What Is Amazon WorkMail?<a name="what_is"></a>
 
-Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile email clients\. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native iOS and Android email applications\. You can integrate Amazon WorkMail with your existing corporate directory and control both the keys that encrypt your data and the location in which your data is stored\.
+Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile email clients\. Amazon WorkMail users can access their email, contacts, and calendars using Microsoft Outlook, their browser, or their native iOS and Android email applications\. You can integrate Amazon WorkMail with your existing corporate directory and control both the keys that encrypt your data and the location in which your data is stored\.
 
 For a list of supported AWS Regions and endpoints, see [AWS Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#wm_region)\.
 
@@ -13,16 +13,14 @@ For a list of supported AWS Regions and endpoints, see [AWS Regions and Endpoint
 
 ## Amazon WorkMail System Requirements<a name="accessing_workmail"></a>
 
-Amazon WorkMail works with all major mobile devices and operating systems that support the Exchange ActiveSync protocol\. These include the iPad, iPhone, Amazon Fire, Android, Windows Phone, and BlackBerry 10\. Users of macOS can add their Amazon WorkMail account to their Mail, Calendar, and Contacts apps\.
+Amazon WorkMail works with all major mobile devices and operating systems that support the Exchange ActiveSync protocol\. These devices include the iPad, iPhone, Android, and Windows Phone\. Users of macOS can add their Amazon WorkMail account to their Mail, Calendar, and Contacts apps\.
 
-You can access Amazon WorkMail from Microsoft Outlook\. You must have a valid Microsoft Outlook license to use it with Amazon WorkMail, which offers native support for the following versions:
+If you have a valid Microsoft Outlook license, you can access Amazon WorkMail using the following versions of Microsoft Outlook:
 + Outlook 2007, Outlook 2010, Outlook 2013, Outlook 2016, and Outlook 2019
 + Outlook 2010 and Outlook 2013 Click\-to\-Run
 + Outlook for Mac 2011, Outlook 2016 for Mac, and Outlook 2019 for Mac
 
-Amazon WorkMail supports IMAP clients\. For the required configuration, see [Connect to your IMAP Client Application](https://docs.aws.amazon.com/workmail/latest/userguide/using_IMAP_client.html)\. POP3 clients are not currently supported\.
-
-You can access Amazon WorkMail using the web application: https://*alias*\.awsapps\.com/mail\.
+The Amazon WorkMail web application is accessed at `https://alias.awsapps.com/mail`\. Amazon WorkMail can also be used with IMAP clients\. For more information, see [Setting Up Email Clients for Amazon WorkMail](https://docs.aws.amazon.com/workmail/latest/userguide/clients.html) in the *Amazon WorkMail User Guide*\.
 
 ## Amazon WorkMail Concepts<a name="workmail_concepts"></a>
 

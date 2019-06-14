@@ -36,7 +36,9 @@ Some DNS providers automatically append the domain name to the end of DNS record
 
    You can copy these records for use with your DNS service\. The record names that are copied include the domain name\. Depending on which DNS service you use, the domain name might already be added to the domain's DNS record\.
 
-   The records on the domain page also include the verification status\. After you create a record, choose the refresh icon to see the verification status and record value\. The following table shows the available verification statuses for each record type\.    
+   The records on the domain page also include the verification status\. After you create a record, choose the refresh icon to see the verification status and record value\. For more information about verifying domains, see [Verifying Domains](domain_verification.md)\.
+
+   The following table shows the available verification statuses for each record type\.    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/workmail/latest/adminguide/add_domain.html)
 **Note**  
 The AutoDiscover domain verification also checks for correct AutoDiscover setup\. After Phase 2 and Phase 3 verification is complete, a checkmark appears next to the **Verified** status\.

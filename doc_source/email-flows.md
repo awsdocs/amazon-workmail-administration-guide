@@ -28,8 +28,8 @@ The following rule actions define how inbound email is handled\. For each rule, 
 
 | Action | Description | 
 | --- | --- | 
-|  Drop  |  The email is ignored\. It is not delivered, and the sender is not notified of the non\-delivery\.  | 
-|  Bounce  |  The email is not delivered, and the sender is notified of the non\-delivery in a bounce message\.  | 
+|  Drop email  |  The email is ignored\. It is not delivered, and the sender is not notified of the non\-delivery\.  | 
+|  Send bounce response  |  The email is not delivered, and the sender is notified of the non\-delivery in a bounce message\.  | 
 | Deliver to junk folder |  The email is delivered to users' spam or junk folders, even if it is not originally identified as spam by the Amazon WorkMail spam detection system\.   | 
 |  Default  |  The email is delivered after being checked by the Amazon WorkMail spam detection system\. Spam email is delivered to the junk folder\. All other emails are delivered to the inbox\. Other email flow rules with a less specific sender pattern are ignored\. To add exceptions to domain\-based email flow rules, configure the Default action with a more specific sender pattern\. For more information, see [Sender and Recipient Patterns](#email-flows-patterns)\.  | 
 |  Never deliver to junk folder  |  The email is always delivered to users' inboxes, even if it is identified as spam by the Amazon WorkMail spam detection system\. By not using the default spam detection system, you could expose your users to high\-risk content from the addresses that you specify\.  | 
@@ -52,8 +52,8 @@ The following rule actions define how outbound email is handled\. For each rule,
 | Action | Description | 
 | --- | --- | 
 |  Default  |  The email is sent via the normal flow\.  | 
-|  Drop  |  The email is dropped\. It is not sent, and the sender is not notified\.  | 
-| Bounce to sender |  The email is not sent, and the sender is notified with a message that the administrator blocked the email\.   | 
+|  Drop email  |  The email is dropped\. It is not sent, and the sender is not notified\.  | 
+| Send bounce response |  The email is not sent, and the sender is notified with a message that the administrator blocked the email\.   | 
 |  Route to SMTP gateway  |  The email is sent via a configured SMTP gateway\.  | 
 |  Run Lambda  |  Passes the email to a Lambda function for processing after the email is sent\. Does not affect email sending\.  | 
 

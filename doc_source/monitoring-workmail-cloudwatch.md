@@ -58,6 +58,8 @@ This event is logged when an incoming or outgoing message triggers an email flow
 |  ruleName  |  The name of the rule\.  | 
 |  ruleType  |  The type of rule applied \(INBOUND\_RULE, OUTBOUND\_RULE, MAILBOX\_RULE\)\. Inbound and outbound rules apply to your Amazon WorkMail organization\. Mailbox rules apply only to specified mailboxes\. For more information, see [Managing Email Flows](email-flows.md)\.  | 
 |  ruleActions  |  Actions taken based on the rule\. Different recipients of the message might have different actions, such as a bounced email or a successfully delivered email\.  | 
+| targetFolder | Intended destination folder for a `Move` or `Copy` MAILBOX\_RULE\. | 
+| targetRecipient | Intended recipient of a `Forward` or `Redirect` MAILBOX\_RULE\. | 
 
 **`JOURNALING_INITIATED`**  
 This event is logged when Amazon WorkMail sends an email to the journaling address specified by your organization administrator\. This is only transmitted if journaling is configured for your organization\. For more information, see [Using Email Journaling with Amazon WorkMail](journaling_overview.md)\.
@@ -117,9 +119,9 @@ The following code example demonstrates how to query for an outgoing email sent 
 ```
 fields @timestamp, traceId
 | sort @timestamp asc
-| filter (event.from = "userA@example.com"
+| filter (event.from like /(?i)userA@example.com/
 and event.eventName = "OUTGOING_EMAIL_SUBMITTED"
-and event.recipients.0 = "userB@example.com")
+and event.recipients.0 like /(?i)userB@example.com/)
 ```
 This returns the sent message and trace ID\. Use the trace ID in the following code example to query the event logs for the sent message\.  
 
@@ -150,7 +152,7 @@ The following code example demonstrates how to query for all mail received from 
 ```
 fields @timestamp, event.eventName
 | sort @timestamp asc
-| filter (event.from = "user@example.com" and event.eventName = "ORGANIZATION_EMAIL_RECEIVED")
+| filter (event.from like /(?i)user@example.com/ and event.eventName = "ORGANIZATION_EMAIL_RECEIVED")
 ```
 The following code example demonstrates how to query for all mail received from a specified domain\.  
 
@@ -198,7 +200,7 @@ The following code example demonstrates how to query for emails identified as sp
 ```
 fields @timestamp, event.recipients.0, event.spamVerdict, event.spfVerdict, event.dkimVerdict, event.dmarcVerdict
 | sort @timestamp asc
-| filter event.subject = "$SUBJECT" and event.eventName = "ORGANIZATION_EMAIL_RECEIVED"
+| filter event.subject like /(?i)$SUBJECT/ and event.eventName = "ORGANIZATION_EMAIL_RECEIVED"
 ```
 You can also query by the email trace ID to see all events for the email\.
 
