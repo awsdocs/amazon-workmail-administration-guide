@@ -55,6 +55,8 @@ Amazon's trademarks and trade dress may not be used in
 + [Working with Groups](groups_overview.md)
    + [Create a Group](add_new_group.md)
    + [Enable an Existing Group](enable_existing_group.md)
+   + [Add Users to a Group](add-group-users.md)
+   + [Remove Users from a Group](remove-group-users.md)
    + [Disable a Group](remove_group.md)
 + [Working with Mailbox Permissions](mail_perms_overview.md)
 + [Working with Resources](resources_overview.md)

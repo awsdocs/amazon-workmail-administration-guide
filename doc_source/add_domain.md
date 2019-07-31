@@ -15,7 +15,7 @@ As a best practice, you should add aliases for postmaster@ and abuse@\. You can 
 
 1. In the navigation pane, choose **Domains**, **Add domain**\.
 
-1. On the **Add domain** screen, enter the domain name to add\.
+1. On the **Add domain** screen, enter the domain name to add\. Domain names can contain Basic Latin \(ASCII\) characters\.
    + \(Optional\) If you have a domain that is managed in an Amazon Route 53 public hosted zone, you can choose it from the dropdown menu that appears\.
 
 1. Choose **Add domain**\.

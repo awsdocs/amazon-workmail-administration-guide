@@ -23,6 +23,9 @@ You can disable user mailboxes when they are no longer needed\. Amazon WorkMail 
 
 1. In the **Disable user\(s\)** dialog box, choose **Disable**\.
 
+**Note**  
+To permanently delete a user and their data, use the `DeleteUser` API action for Amazon WorkMail\. For more information, see [DeleteUser](https://docs.aws.amazon.com/workmail/latest/APIReference/API_DeleteUser.html) in the *Amazon WorkMail API Reference*\.
+
 ## Restoring Disabled Mailboxes<a name="restore_deleted_mailbox"></a>
 
 Amazon WorkMail retains disabled mailboxes for 30 days before permanently removing them\. To restore a mailbox, use the same steps as enabling an existing user\.

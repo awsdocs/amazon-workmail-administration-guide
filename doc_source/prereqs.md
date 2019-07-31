@@ -61,20 +61,17 @@ By default, IAM users don't have permissions to manage Amazon WorkMail resources
 The following customer managed policy statement grants an IAM user full access to Amazon WorkMail resources\. This customer managed policy gives the same level of access as the AWS managed policy **AmazonWorkMailFullAccess**\. Either policy gives the user access to all Amazon WorkMail, AWS Key Management Service, Amazon Simple Email Service, and AWS Directory Service operations, as well as several Amazon EC2 operations that Amazon WorkMail needs to be able to perform on your behalf\.
 
 ```
-"amazonWorkMailFullAccess": {
-  "name": "Amazon WorkMail Full Access",
-  "description": "Provides full access to WorkMail, Directory Service, SES, EC2 and read access to KMS metadata.",
-  "policyDocument": {
+{
         "Version": "2012-10-17",
         "Statement": [
                         {
                           "Effect": "Allow",
                           "Action": [
-                                     "workmail:*",
                                      "ds:AuthorizeApplication",
                                      "ds:CheckAlias",
                                      "ds:CreateAlias",
                                      "ds:CreateDirectory",
+                                     "ds:CreateIdentityPoolDirectory",
                                      "ds:CreateDomain",
                                      "ds:DeleteAlias",
                                      "ds:DeleteDirectory",
@@ -83,51 +80,92 @@ The following customer managed policy statement grants an IAM user full access t
                                      "ds:GetDirectoryLimits",
                                      "ds:ListAuthorizedApplications",
                                      "ds:UnauthorizeApplication",
-                                     "ses:*",
                                      "ec2:AuthorizeSecurityGroupEgress",
                                      "ec2:AuthorizeSecurityGroupIngress",
                                      "ec2:CreateNetworkInterface",
                                      "ec2:CreateSecurityGroup",
-                                     "ec2:DeleteSecurityGroup",
                                      "ec2:CreateSubnet",
-                                     "ec2:DeleteSubnet",
+                                     "ec2:CreateTags",
                                      "ec2:CreateVpc",
+                                     "ec2:DeleteSecurityGroup",
+                                     "ec2:DeleteSubnet",
                                      "ec2:DeleteVpc",
+                                     "ec2:DescribeAvailabilityZones",
+                                     "ec2:DescribeDomains",
                                      "ec2:DescribeRouteTables",
                                      "ec2:DescribeSubnets",
                                      "ec2:DescribeVpcs",
-                                     "ec2:DescribeAvailabilityZones",
-                                     "ec2:CreateTags",
                                      "ec2:RevokeSecurityGroupEgress",
                                      "ec2:RevokeSecurityGroupIngress",
                                      "kms:DescribeKey",
                                      "kms:ListAliases"
+                                     "lambda:ListFunctions",
+                                     "route53:ChangeResourceRecordSets",
+                                     "route53:ListHostedZones",
+                                     "route53:ListResourceRecordSets",
+                                     "route53domains:CheckDomainAvailability",
+                                     "route53domains:ListDomains",
+                                     "ses:*",
+                                     "workmail:*",
+                                     "iam:ListRoles",
+                                     "logs:DescribeLogGroups",
+                                     "logs:CreateLogGroup",
+                                     "logs:PutRetentionPolicy",
+                                     "cloudwatch:GetMetricData"
                                      ],
                          "Resource": "*"
-                       }
-                  ]
-  }
+                       },
+                       {
+                         "Effect": "Allow",
+                         "Action": "iam:CreateServiceLinkedRole",
+                         "Resource": "*",
+                         "Condition": {
+                             "StringEquals": {
+                                 "iam:AWSServiceName": "events.workmail.amazonaws.com"
+                             }
+                         }
+                       },
+                       {
+                         "Effect": "Allow",
+                         "Action": [
+                             "iam:DeleteServiceLinkedRole",
+                             "iam:GetServiceLinkedRoleDeletionStatus"
+                          ],
+                         "Resource": "arn:aws:iam::*:role/aws-service-role/events.workmail.amazonaws.com/AWSServiceRoleForAmazonWorkMailEvents*"
+                       },
+                       {
+                         "Effect": "Allow",
+                         "Action": "iam:PassRole",
+                         "Resource": "arn:aws:iam::*:role/*workmail*",
+                         "Condition": {
+                             "StringLike": {
+                                 "iam:PassedToService": "events.workmail.amazonaws.com"
+                             }
+                         }
+                        }
+    ]
 }
 ```
 
 The following customer managed policy statement grants an IAM user read\-only access to Amazon WorkMail resources\. This customer managed policy gives the same level of access as the AWS managed policy **AmazonWorkMailReadOnlyAccess**\. Either policy gives the user access to all of the Amazon WorkMail Describe operations\. Access to the two Amazon EC2 operations are necessary so Amazon WorkMail can obtain a list of your VPCs and subnets\. Access to the AWS Directory Service `DescribeDirectories` operation is needed to obtain information about your AWS Directory Service directories\. Access to the Amazon SES service is needed to obtain information about the configured domains and access to AWS Key Management Service is needed to obtain information about the used encryption keys\.
 
 ```
-"amazonWorkMailROAccess": {
-  "name": "Amazon WorkMail Read Only Access",
-  "description": "Provides read only access to WorkMail and SES.",
-  "policyDocument": {
+{
         "Version": "2012-10-17",
         "Statement": [
                         {
                          "Effect": "Allow",
                          "Action": [
+                                    "ses:Describe*"
+                                    "ses:Get*",
+                                    "workmail:Describe*",
                                     "workmail:Get*",
                                     "workmail:List*",
-                                    "workmail:Describe*",
                                     "workmail:Search*",
-                                    "ses:Get*",
-                                    "ses:Describe*"
+                                    "lambda:ListFunctions",
+                                    "iam:ListRoles",
+                                    "logs:DescribeLogGroups",
+                                    "cloudwatch:GetMetricData"
                                    ],
                          "Resource": "*"
                         }

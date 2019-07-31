@@ -6,7 +6,7 @@ When you no longer need a group, you can disable it\.
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. If necessary, change the region\. From the navigation bar, select the region that meets your needs\. For more information, see [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+1. If you require a different AWS Region, change it from the navigation bar\. For more information, see [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
 1. On the **Organizations** screen, in the **Alias** column, select the name of the organization from which to remove a group\.
 
@@ -15,3 +15,6 @@ When you no longer need a group, you can disable it\.
 1. In the list of groups, select the group to disable, and then choose **Disable group**\.
 
 1. In the **Disable group\(s\)** dialog box, choose **Disable**\.
+
+**Note**  
+To permanently delete a group, use the `DeleteGroup` API action for Amazon WorkMail\. For more information, see [DeleteGroup](https://docs.aws.amazon.com/workmail/latest/APIReference/API_DeleteGroup.html) in the *Amazon WorkMail API Reference*\.

@@ -25,7 +25,7 @@ For the Amazon WorkMail web application and other email clients, users with full
 
 ## Mailbox and Folder Permissions<a name="mail_vs_folder"></a>
 
-Mailbox permissions apply to all folders in a mailbox\. These permissions can only be enabled by the AWS account holder or the IAM user authorized to call the Amazon WorkMail management API\. To apply the permissions to mailboxes or groups as a whole, log in to the AWS Management Console or use the Amazon WorkMail API\.
+Mailbox permissions apply to all folders in a mailbox\. These permissions can only be enabled by the AWS account holder or the IAM user authorized to call the Amazon WorkMail management API\. To apply the permissions to mailboxes or groups as a whole, log in to the AWS Management Console or use the Amazon WorkMail API\. You can manage up to 100 mailbox and group permissions from the console\. To manage more permissions, use the Amazon WorkMail API\.
 
 Folder permissions apply only to a single folder\. These permissions can be set by end users, either by using an email client or by using the Amazon WorkMail web application\.
 

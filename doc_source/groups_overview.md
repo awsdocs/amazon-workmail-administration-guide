@@ -9,4 +9,6 @@ Groups do not have their own mailboxes\. For information about setting up group 
 **Topics**
 + [Create a Group](add_new_group.md)
 + [Enable an Existing Group](enable_existing_group.md)
++ [Add Users to a Group](add-group-users.md)
++ [Remove Users from a Group](remove-group-users.md)
 + [Disable a Group](remove_group.md)

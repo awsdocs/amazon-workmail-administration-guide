@@ -6,9 +6,9 @@ Create groups in the Amazon WorkMail console\. You can also create aliases for y
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. If necessary, change the region\. From the navigation bar, select the region that meets your needs\. For more information, see [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+1. If you require a different AWS Region, change it from the navigation bar\. For more information, see [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
-1. On the **Organizations** screen, in the **Alias** column, select the name of the organization to which to add a group\.
+1. On the **Organizations** screen, in the **Alias** column, select the name of the organization that you want to add a group to\.
 
 1. In the navigation pane, choose **Groups** to see a list of enabled, disabled, and system groups\.
 
@@ -20,15 +20,15 @@ Create groups in the Amazon WorkMail console\. You can also create aliases for y
 
 1. In the list of directory users and groups, select the user or groups to add as a member\.
 
-1. Choose the right arrow button to add them to the list of selected users/groups and then choose **Finish**\.
+1. Choose the right arrow button to add them to the list of selected users/groups, and then choose **Finish**\.
 
 **To create a group alias**
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. If necessary, change the region\. From the navigation bar, select the region that meets your needs\. For more information, see [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+1. If you require a different AWS Region, change it from the navigation bar\. For more information, see [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
-1. On the **Organizations** screen, in the **Alias** column, select the name of the organization to which your group belongs\.
+1. On the **Organizations** screen, in the **Alias** column, select the name of the organization that your group belongs to\.
 
 1. In the navigation pane, choose **Groups** to see a list of enabled, disabled, and system groups\.
 
