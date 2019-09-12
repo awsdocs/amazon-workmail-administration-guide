@@ -14,7 +14,7 @@ For an ongoing record of events in your AWS account, including events for Amazon
 + [Configuring Amazon SNS Notifications for CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/getting_notifications_top_level.html)
 + [Receiving CloudTrail Log Files from Multiple Regions](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/receive-cloudtrail-log-files-from-multiple-regions.html) and [Receiving CloudTrail Log Files from Multiple Accounts](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-receive-logs-from-multiple-accounts.html)
 
-All Amazon WorkMail actions are logged by CloudTrail and are documented in the [Amazon WorkMail API Reference](https://docs.aws.amazon.com/workmail/latest/APIReference/Welcome.html)\. For example, calls to the `ListUsers`, `RegisterToWorkMail` and `DescribeGroup` APIs generate entries in the CloudTrail log files\. 
+All Amazon WorkMail actions are logged by CloudTrail and are documented in the [Amazon WorkMail API Reference](https://docs.aws.amazon.com/workmail/latest/APIReference/Welcome.html)\. For example, calls to the `CreateUser`, `CreateAlias`, and `GetRawMessageContent` API operations generate entries in the CloudTrail log files\. 
 
 Every event or log entry contains information about who generated the request\. The identity information helps you determine the following: 
 + Whether the request was made with root or IAM user credentials\.
@@ -27,7 +27,7 @@ For more information, see the [CloudTrail userIdentity Element](https://docs.aws
 
 A trail is a configuration that enables delivery of events as log files to an Amazon S3 bucket that you specify\. CloudTrail log files contain one or more log entries\. An event represents a single request from any source and includes information about the requested action, the date and time of the action, request parameters, and so on\. CloudTrail log files are not an ordered stack trace of the public API calls, so they do not appear in any specific order\. 
 
-The following example shows a CloudTrail log entry that demonstrates the `CreateUser` action\.
+The following example shows a CloudTrail log entry that demonstrates the `CreateUser` action from the Amazon WorkMail API\.
 
 ```
 {
@@ -61,7 +61,7 @@ The following example shows a CloudTrail log entry that demonstrates the `Create
 }
 ```
 
-The following example shows a CloudTrail log entry that demonstrates the `CreateAlias` action\.
+The following example shows a CloudTrail log entry that demonstrates the `CreateAlias` action from the Amazon WorkMail API\.
 
 ```
 {
@@ -88,6 +88,37 @@ The following example shows a CloudTrail log entry that demonstrates the `Create
   "responseElements": null,
   "requestID": "dec81e4a-EXAMPLE",
   "eventID": "9f2f09c5-EXAMPLE",
+  "eventType": "AwsApiCall",
+  "recipientAccountId": "111111111111"
+}
+```
+
+The following example shows a CloudTrail log entry that demonstrates the `GetRawMessageContent` action from the Amazon WorkMail Message Flow API\.
+
+```
+{
+  "eventVersion": "1.05",
+  "userIdentity": {
+    "type": "IAMUser",
+    "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+    "arn": "arn:aws:iam::111111111111:user/WMSDK",
+    "accountId": "111111111111",
+    "accessKeyId": "AKIAIOSFODNN7EXAMPLE",
+    "userName": "WMSDK"
+  },
+  "eventTime": "2017-12-12T18:13:44Z",
+  "eventSource": "workmailMessageFlow.amazonaws.com",
+  "eventName": "GetRawMessageContent",
+  "awsRegion": "us-west-2",
+  "sourceIPAddress": "203.0.113.12",
+  "userAgent": "aws-sdk-java/1.11.205 Mac_OS_X/10.11.6 Java_HotSpot(TM)_64-Bit_Server_VM/25.151-b12 java/1.8.0_151",
+  "requestParameters": {
+    "messageId": "123A4A5A-67B8-90C1-D23E-45FG67H890J1"
+  },
+  "responseElements": null,
+  "requestID": "dec81e4a-EXAMPLE",
+  "eventID": "9f2f09c5-EXAMPLE",
+  "readOnly": true,
   "eventType": "AwsApiCall",
   "recipientAccountId": "111111111111"
 }

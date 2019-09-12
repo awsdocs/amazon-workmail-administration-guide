@@ -11,6 +11,8 @@ The Lambda function does not affect the sending or receiving of email\. For more
 **Note**  
 Currently, Lambda email flow rules reference only Lambdas in the same AWS Region and AWS account as the Amazon WorkMail organization being configured\.
 
+## Getting Started with Lambda for Amazon WorkMail<a name="start-lambda"></a>
+
 To start using Lambda with Amazon WorkMail, deploy [the example Lambda function](https://console.aws.amazon.com/lambda/home#/create/app?applicationId=arn:aws:serverlessrepo:us-east-1:489970191081:applications/workmail-hello-world-python) from the AWS Serverless Application Repository to your account\. Permissions for the example Lambda function are already configured for you\.
 
 If you choose to create your own Lambda function to use with Amazon WorkMail, you must configure permissions using the AWS Command Line Interface \(AWS CLI\)\. In the following example command, replace `MY_FUNCTION_NAME` with the name of your Lambda function, and replace `REGION` with your Amazon WorkMail Region\. Available Amazon WorkMail Regions include `us-east-1`, `us-west-2`, and `eu-west-1`\.
@@ -20,6 +22,8 @@ aws --region REGION lambda add-permission --function-name MY_FUNCTION_NAME --sta
 ```
 
 For more information about using the AWS CLI, see the [https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html)\.
+
+## Lambda Event Data<a name="lambda-data"></a>
 
 The Lambda function is triggered using the following event data\. The presentation of the data varies depending on which programming language is used for the Lambda function\.
 
@@ -61,3 +65,7 @@ The email subject line\. Truncated when it exceeds the 256 character limit\.
 
 **truncated**  
 Applies to the payload size, not the subject line length\. When `true`, the payload size exceeds the 128 KB limit, so the list of recipients is truncated in order to meet the limit\.
+
+## More Information about Using Lambda with Amazon WorkMail<a name="lambda-more"></a>
+
+You can also access the full content of the email message that triggers the Lambda\. For more information, see [Retrieving Message Content with AWS Lambda](lambda-content.md)\. 

@@ -11,6 +11,7 @@ To create an email flow rule, specify a [*rule action*](#email-flows-rule-action
 + [Creating an Email Flow Rule](create-email-rules.md)
 + [Configuring SMTP Gateways](smtp-gateway.md)
 + [Configuring AWS Lambda for Amazon WorkMail](lambda.md)
++ [Retrieving Message Content with AWS Lambda](lambda-content.md)
 + [Testing an Email Flow Rule](test-email-flow-rule.md)
 + [Modifying an Email Flow Rule](modify-email-flow-rule.md)
 + [Removing an Email Flow Rule](remove-email-flow-rule.md)
