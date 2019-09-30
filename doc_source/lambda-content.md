@@ -8,10 +8,10 @@ The following example shows how a Lambda function using the Python runtime envir
 
 ```
 import boto3
-from email
+import email
 
 def email_handler(event, context):
-    workmail = boto3.client('workmailmessageflow', region_name=AWS_REGION)
+    workmail = boto3.client('workmailmessageflow', region_name=os.environ["AWS_REGION"])
     msg_id = event['message_id']
     raw_msg = workmail.get_raw_message_content(msg_id)
 

@@ -43,6 +43,7 @@ The Lambda function is triggered using the following event data\. The presentati
         "address" :  "sender@example.com"
     },
     "subject" : "Hello From Amazon WorkMail!",
+    "messageId": "00000000-0000-0000-0000-000000000000",
     "truncated": false
 }
 ```
@@ -62,6 +63,9 @@ The email address of the user who sent the email message on behalf of another us
 
 **subject**  
 The email subject line\. Truncated when it exceeds the 256 character limit\.
+
+**messageId**  
+A unique ID used to access the full content of the email message when using the Amazon WorkMail Message Flow SDK\.
 
 **truncated**  
 Applies to the payload size, not the subject line length\. When `true`, the payload size exceeds the 128 KB limit, so the list of recipients is truncated in order to meet the limit\.

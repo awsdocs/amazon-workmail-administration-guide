@@ -1,4 +1,4 @@
-# Monitoring Amazon WorkMail<a name="monitoring-overview"></a>
+# Logging and Monitoring in Amazon WorkMail<a name="monitoring-overview"></a>
 
 Monitoring your email flow is important to maintaining the health of your Amazon WorkMail organization\. Monitoring the email sending activity for your organization helps protect your domain reputation\. Monitoring can also help you track emails that are sent and received\. For more information about how to enable email event logging, see [Tracking Messages](tracking.md)\.
 
