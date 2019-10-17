@@ -37,6 +37,7 @@ This event is logged when your Amazon WorkMail organization receives an email me
 |  spamVerdict  |  Indicates whether the message is marked as spam by Amazon SES\. For more information, see [Contents of Notifications for Amazon SES Email Receiving](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-notifications-contents.html) in the *Amazon Simple Email Service Developer Guide*\.  | 
 |  dkimVerdict  |  Indicates whether the DomainKeys Identified Mail \(DKIM\) check passed\. For more information, see [Contents of Notifications for Amazon SES Email Receiving](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-notifications-contents.html) in the *Amazon Simple Email Service Developer Guide*\.  | 
 |  dmarcVerdict  |  Indicates whether the Domain\-based Message Authentication, Reporting & Conformance \(DMARC\) check passed\. For more information, see [Contents of Notifications for Amazon SES Email Receiving](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-notifications-contents.html) in the *Amazon Simple Email Service Developer Guide*\.  | 
+|  dmarcPolicy  | Appears only when the dmarcVerdict field contains "FAIL"\. Indicates the action to take on the email when the DMARC check fails \(NONE, QUARANTINE, or REJECT\)\. This is set by the owner of the sending email domain\.  | 
 |  spfVerdict  |  Indicates whether the Sender Policy Framework \(SPF\) check passed\. For more information, see [Contents of Notifications for Amazon SES Email Receiving](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-notifications-contents.html) in the *Amazon Simple Email Service Developer Guide*\.  | 
 |  messageTimestamp  |  Indicates when the message is received\.  | 
 
@@ -58,8 +59,8 @@ This event is logged when an incoming or outgoing message triggers an email flow
 |  ruleName  |  The name of the rule\.  | 
 |  ruleType  |  The type of rule applied \(INBOUND\_RULE, OUTBOUND\_RULE, MAILBOX\_RULE\)\. Inbound and outbound rules apply to your Amazon WorkMail organization\. Mailbox rules apply only to specified mailboxes\. For more information, see [Managing Email Flows](email-flows.md)\.  | 
 |  ruleActions  |  Actions taken based on the rule\. Different recipients of the message might have different actions, such as a bounced email or a successfully delivered email\.  | 
-| targetFolder | Intended destination folder for a `Move` or `Copy` MAILBOX\_RULE\. | 
-| targetRecipient | Intended recipient of a `Forward` or `Redirect` MAILBOX\_RULE\. | 
+|  targetFolder  |  Intended destination folder for a `Move` or `Copy` MAILBOX\_RULE\.  | 
+|  targetRecipient  |  Intended recipient of a `Forward` or `Redirect` MAILBOX\_RULE\.  | 
 
 **`JOURNALING_INITIATED`**  
 This event is logged when Amazon WorkMail sends an email to the journaling address specified by your organization administrator\. This is only transmitted if journaling is configured for your organization\. For more information, see [Using Email Journaling with Amazon WorkMail](journaling_overview.md)\.
@@ -106,6 +107,16 @@ This event is logged when an outgoing message cannot be delivered to a target re
 | Field | Description | 
 | --- | --- | 
 |  bouncedRecipient  |  The intended recipient for which the destination mail server bounced the message\.  | 
+
+**`DMARC_POLICY_APPLIED`**  
+This event is logged when a DMARC policy is applied to an email sent to your organization\.
+
+
+| Field | Description | 
+| --- | --- | 
+| from |  The From address, which is usually the email address of the user who sent the message\. If the user sent the message as another user or on behalf of another user, this field returns the email address of the user on whose behalf the email was sent, not the email address of the actual sender\. | 
+| recipients |  The intended recipients of the message\. | 
+| policy | The applied DMARC policy, indicating the action to take on the email when the DMARC check fails \(NONE, QUARANTINE, or REJECT\)\. This is the same as the dmarcPolicy field in the ORGANIZATION\_EMAIL\_RECEIVED event\. | 
 
 ## Using CloudWatch Insights with Amazon WorkMail<a name="cw-insights"></a>
 
