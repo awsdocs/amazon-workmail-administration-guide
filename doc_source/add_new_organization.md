@@ -40,7 +40,7 @@ The Amazon WorkMail **Quick setup** option does the following for you:
 
    After your organization is created, you can add domains, users, and groups\.
 **Note**  
-If you exceed the number of organizations that you can create using the Quick setup, you receive the error 'You have reached the maximum number of organizations you can create'\. For more information, see [Amazon WorkMail Limits](workmail_limits.md)\.
+If you exceed the number of organizations that you can create using the Quick setup, you receive the error 'You have reached the maximum number of organizations you can create'\. For more information, see [Amazon WorkMail Quotas](workmail_limits.md)\.
 
 ## Standard Setup: Integrating with an Existing Directory<a name="premises_directory"></a>
 

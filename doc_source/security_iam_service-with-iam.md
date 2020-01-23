@@ -38,7 +38,37 @@ To see a list of Amazon WorkMail actions, see [Actions Defined by Amazon WorkMai
 
 ### Resources<a name="security_iam_service-with-iam-id-based-policies-resources"></a>
 
-Amazon WorkMail does not support specifying resource ARNs in a policy\.
+The `Resource` element specifies the object or objects to which the action applies\. Statements must include either a `Resource` or a `NotResource` element\. You specify a resource using an ARN or using the wildcard \(\*\) to indicate that the statement applies to all resources\.
+
+Amazon WorkMail supports resource\-level permissions for Amazon WorkMail organizations\.
+
+The Amazon WorkMail organization resource has the following ARN:
+
+```
+arn:aws:workmail:${Region}:${Account}:organization/${OrganizationId}
+```
+
+For more information about the format of ARNs, see [Amazon Resource Names \(ARNs\) and AWS Service Namespaces](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html)\.
+
+For example, to specify the `m-n1pq2345678r901st2u3vx45x6789yza` organization in your statement, use the following ARN\.
+
+```
+"Resource": "arn:aws:workmail:us-east-1:111122223333:organization/m-n1pq2345678r901st2u3vx45x6789yza"
+```
+
+To specify all organizations that belong to a specific account, use the wildcard \(\*\):
+
+```
+"Resource": "arn:aws:workmail:us-east-1:111122223333:organization/*"
+```
+
+Some Amazon WorkMail actions, such as those for creating resources, cannot be performed on a specific resource\. In those cases, you must use the wildcard \(\*\)\.
+
+```
+"Resource": "*"
+```
+
+To see a list of Amazon WorkMail resource types and their ARNs, see [Resources Defined by Amazon WorkMail](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonworkmail.html#amazonworkmail-resources-for-iam-policies) in the *IAM User Guide*\. To learn with which actions you can specify for the ARN of each resource, see [Actions, Resources, and Condition Keys for Amazon WorkMail](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonworkmail.html)\.
 
 ### Condition Keys<a name="security_iam_service-with-iam-id-based-policies-conditionkeys"></a>
 
@@ -103,7 +133,7 @@ Amazon WorkMail does not support resource\-based policies\.
 
 ## Authorization Based on Amazon WorkMail Tags<a name="security_iam_service-with-iam-tags"></a>
 
-Amazon WorkMail does not support tagging resources or controlling access based on tags\.
+You can attach tags to Amazon WorkMail resources or pass tags in a request to Amazon WorkMail\. To control access based on tags, you provide tag information in the [condition element](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html) of a policy using the `workmail:ResourceTag/key-name`, `aws:RequestTag/key-name`, or `aws:TagKeys` condition keys\. For more information about tagging Amazon WorkMail resources, see [Tagging an Organization](org-tag.md)\.
 
 ## Amazon WorkMail IAM Roles<a name="security_iam_service-with-iam-roles"></a>
 

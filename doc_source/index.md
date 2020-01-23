@@ -1,7 +1,7 @@
 # Amazon WorkMail Administrator Guide
 
 -----
-*****Copyright &copy; 2019 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -37,10 +37,11 @@ Amazon's trademarks and trade dress may not be used in
       + [Configure Availability Settings in Microsoft Exchange](enable_interop_ms.md)
       + [Disabling Interoperability and Decommissioning Your Mail Server](disable_interop.md)
       + [Troubleshooting](troubleshooting_interop.md)
-   + [Amazon WorkMail Limits](workmail_limits.md)
+   + [Amazon WorkMail Quotas](workmail_limits.md)
 + [Working with Organizations](organizations_overview.md)
    + [Adding an Organization](add_new_organization.md)
    + [Removing an Organization](remove_organization.md)
+   + [Tagging an Organization](org-tag.md)
    + [Editing Your Organization's Mobile Device Policy](edit_organization_mobile_policy.md)
    + [Managing Email Flows](email-flows.md)
       + [Creating an Email Flow Rule](create-email-rules.md)

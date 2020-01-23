@@ -4,6 +4,7 @@ The following table describes important changes in each release of the *Amazon W
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Tagging an Organization](#DocumentHistory) | Tag an Amazon WorkMail organization to differentiate between organizations in the AWS Billing and Cost Management console, or to control access to organization resources\. For more information, see [Tagging an Organization](https://docs.aws.amazon.com/workmail/latest/adminguide/org-tag.html) in the *Amazon WorkMail Administrator Guide*\. | January 23, 2020 | 
 | [Enforce DMARC policies on incoming email](#DocumentHistory) | For more information, see [Enforcing DMARC Policies on Incoming Email](https://docs.aws.amazon.com/workmail/latest/adminguide/inbound-dmarc.html) in the *Amazon WorkMail Administrator Guide*\. | October 17, 2019 | 
 | [Retrieving Message Content with Lambda](#DocumentHistory) | Use the Amazon WorkMail Message Flow API with AWS Lambda to retrieve message content\. For more information, see [Retrieving Message Content with Lambda](https://docs.aws.amazon.com/workmail/latest/adminguide/lambda-content.html) in the *Amazon WorkMail Administrator Guide*\. | September 12, 2019 | 
 | [Logging Amazon WorkMail Email Events](#DocumentHistory) | Enable email event logging in the Amazon WorkMail console to track email messages for your organization\. For more information, see [Tracking Messages](https://docs.aws.amazon.com/workmail/latest/adminguide/tracking.html) in the *Amazon WorkMail Administrator Guide*\. | May 13, 2019 | 

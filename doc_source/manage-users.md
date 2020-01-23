@@ -70,10 +70,12 @@ You can also add one or more email aliases, which can be used to send or receive
 
 ## Editing User Details<a name="edit_user_details"></a>
 
-You can edit a user's first and last name, email address, display name, address, phone number, and company details\. You can also set a user's mailbox quota to as little as 1 MB or as much as 51,200 MB \(50 GB\)\. Changing a user's mailbox quota does not affect pricing\. For more information about pricing, see [Amazon WorkMail Pricing](http://aws.amazon.com/workmail/pricing/)\.
+You can edit a user's first and last name, email address, display name, address, phone number, and company details\. You can also set a user's mailbox quota to as little as 1 MB or as much as 51,200 MB \(50 GB\)\. Users are notified when they reach 90 percent of their set mailbox quota\.
+
+Changing a user's mailbox quota does not affect pricing\. For more information about pricing, see [Amazon WorkMail Pricing](http://aws.amazon.com/workmail/pricing/)\.
 
 **Note**  
-If you are integrating Amazon WorkMail with an AD Connector directory, you can't edit these details from the AWS Management Console\. Instead, you must edit them using your Active Directory management tools\.
+If you are integrating Amazon WorkMail with an AD Connector directory, you can't edit these details from the AWS Management Console\. Instead, you must edit them using your Active Directory management tools\. Limitations apply when your organization is in interoperability mode\. For more information, see [Limitations in Interoperability Mode](interoperability.md#interop_limitations)\.
 
 **To edit a user's details**
 

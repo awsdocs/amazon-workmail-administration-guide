@@ -84,7 +84,7 @@ In this procedure for the `nslookup` tool, you first find the DNS servers that s
 
       For the US East \(N\. Virginia\) Region, the record must be: `10 inbound-smtp.us-east-1.amazonaws.com`
 
-      For the EU \(Ireland\) Region, the record must be: `10 inbound-smtp.eu-west-1.amazonaws.com`
+      For the Europe \(Ireland\) Region, the record must be: `10 inbound-smtp.eu-west-1.amazonaws.com`
 
       For the US West \(Oregon\) Region, the record must be: `10 inbound-smtp.us-west-2.amazonaws.com`
 **Note**  
@@ -104,7 +104,7 @@ In this procedure for the `nslookup` tool, you first find the DNS servers that s
 
    For the US East \(N\. Virginia\) Region, the record must be: `10 inbound-smtp.us-east-1.amazonaws.com`
 
-   For the EU \(Ireland\) Region, the record must be: `10 inbound-smtp.eu-west-1.amazonaws.com`
+   For the Europe \(Ireland\) Region, the record must be: `10 inbound-smtp.eu-west-1.amazonaws.com`
 
    For the US West \(Oregon\) Region, the record must be: `10 inbound-smtp.us-west-2.amazonaws.com`
 **Note**  

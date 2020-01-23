@@ -36,7 +36,7 @@ A globally unique name to identify your organization\. The alias is used to acce
 The web address that comes after the @ symbol in an email address\. You can add a domain that receives mail and delivers it to mailboxes in your organization\.
 
 **Test mail domain**  
-A domain is automatically configured during setup that can be used for testing Amazon WorkMail\. The test mail domain is *alias*\.awsapps\.com and is used as the default domain if you do not configure your own domain\. The test mail domain is subject to different limits\. For more information, see [Amazon WorkMail Limits](workmail_limits.md)\.
+A domain is automatically configured during setup that can be used for testing Amazon WorkMail\. The test mail domain is *alias*\.awsapps\.com and is used as the default domain if you do not configure your own domain\. The test mail domain is subject to different limits\. For more information, see [Amazon WorkMail Quotas](workmail_limits.md)\.
 
 **Directory**  
 An AWS Simple AD, AWS Managed AD, or AD Connector created in AWS Directory Service\. If you create an organization using the Amazon WorkMail Quick setup, we create a WorkMail directory for you\. You cannot view a WorkMail directory in AWS Directory Service\.

@@ -13,13 +13,13 @@ Use the following information to help you diagnose and fix common issues that yo
 
 If the AWS Management Console tells you that you're not authorized to perform an action, then you must contact your administrator for assistance\. Your administrator is the person that provided you with your user name and password\.
 
-The following example error occurs when the `mateojackson` IAM user tries to use the console to view details about a *widget* but does not have `workmail:GetWidget` permissions\.
+The following example error occurs when the `mateojackson` IAM user tries to use the console to view details about a group but does not have `workmail:DescribeGroup` permissions\.
 
 ```
-User: arn:aws:iam::123456789012:user/mateojackson is not authorized to perform: workmail:GetWidget on resource: my-example-widget
+User: arn:aws:iam::123456789012:user/mateojackson is not authorized to perform: workmail:DescribeGroup on resource: group
 ```
 
-In this case, Mateo asks his administrator to update his policies to allow him to access the `my-example-widget` resource using the `workmail:GetWidget` action\.
+In this case, Mateo asks his administrator to update his policies to allow him to access the `group` resource using the `workmail:DescribeGroup` action\.
 
 ## I Am Not Authorized to Perform iam:PassRole<a name="security_iam_troubleshoot-passrole"></a>
 
