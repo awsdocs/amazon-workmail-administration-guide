@@ -80,7 +80,7 @@ To use Amazon WorkMail with Amazon WorkDocs or Amazon WorkSpaces, create a compa
 
 1. Create a compatible directory using Amazon WorkDocs or Amazon WorkSpaces\.
 
-   1. For Amazon WorkDocs instructions, see [Creating a Simple AD Directory Using the Quick Start](https://docs.aws.amazon.com/workdocs/latest/adminguide//cloud_quick_start.html)\.
+   1. For Amazon WorkDocs instructions, see [Creating a Simple AD Directory Using the Quick Start](https://docs.aws.amazon.com/workdocs/latest/adminguide/cloud_quick_start.html)\.
 
    1. For Amazon WorkSpaces instructions, see [Get Started with Amazon WorkSpaces Quick Setup](https://docs.aws.amazon.com/workspaces/latest/adminguide/getting-started.html)\.
 

@@ -28,6 +28,8 @@ Amazon WorkMail administrators can tag organizations using the Amazon WorkMail c
 
 You can view your organization tags in the Amazon WorkMail console\.
 
+Developers can also tag organizations using the AWS SDK or AWS Command Line Interface \(AWS CLI\)\. For more information, see the `TagResource`, `ListTagsForResource`, and `UntagResource` commands in the [Amazon WorkMail API Reference](https://docs.aws.amazon.com/workmail/latest/APIReference/Welcome.html) or the [AWS CLI Command Reference](https://docs.aws.amazon.com/cli/latest/reference/workmail/index.html)\.
+
 You can remove tags from an organization at any time, using the Amazon WorkMail console\.
 
 **To remove tags from an Amazon WorkMail organization**

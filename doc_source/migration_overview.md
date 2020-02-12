@@ -13,11 +13,27 @@ Before you can migrate your users, you must add the users in Amazon WorkMail to 
 
 ## Step 2: Migrate to Amazon WorkMail<a name="prepare_mail_server"></a>
 
-You can work with any of our migration partners to migrate to Amazon WorkMail\. For information about about these providers, see [Amazon WorkMail Features](https://aws.amazon.com/workmail/features/)\.
+You can work with any AWS migration partners to migrate to Amazon WorkMail\. For information about about these providers, see [Amazon WorkMail Features](https://aws.amazon.com/workmail/features/)\.
 
-To migrate your mailboxes, you can assign an Amazon WorkMail user as the migration administrator\. You can specify the migration administrator in the following ways: 
-+ Add the new user **migration\_admin** in the Amazon WorkMail console\. You can also create the user **migration\_admin** in your Active Directory and enable this user for Amazon WorkMail\.
-+ In the Amazon WorkMail console, on the **Organizations settings** screen, under **Migration settings**, choose **Edit**, and then specify a user that you've designated as the migration administrator in the **migration\_admin** field\.
+To migrate your mailboxes, create a dedicated Amazon WorkMail user to act as migration administrator\. The following procedure grants permission to that user to access all the mailboxes in your organization\.
+
+**To create a migration administrator**
+
+1. Do one of the following:
+   + In the Amazon WorkMail console, create a new user to act as migration administrator\. For more information, see [Creating New Users](manage-users.md#add_new_user)\.
+   + In your Active Directory, create a new user to act as migration administrator, and enable the user for Amazon WorkMail\. For more information, see [Enabling Existing Users](manage-users.md#enable_existing_user)\.
+
+1. In the Amazon WorkMail console, for **Organizations**, choose the name of your organization\.
+
+1. Choose **Organization settings**, **Migration**, **Edit**\.
+
+1. For **Mailbox permissions**, select **On**\.
+
+1. Choose **Select user**\.
+
+1. Search for and select the user to act as migration administrator, and choose **Select user**\.
+
+1. Choose **Save**\.
 
 ## Step 3: Complete the Migration to Amazon WorkMail<a name="complete_migration"></a>
 

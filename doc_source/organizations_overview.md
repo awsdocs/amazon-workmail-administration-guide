@@ -6,6 +6,7 @@ In Amazon WorkMail, your organization represents the users in your company\. In 
 + [Adding an Organization](add_new_organization.md)
 + [Removing an Organization](remove_organization.md)
 + [Tagging an Organization](org-tag.md)
++ [Working with Access Control Rules](access-rules.md)
 + [Editing Your Organization's Mobile Device Policy](edit_organization_mobile_policy.md)
 + [Managing Email Flows](email-flows.md)
 + [Tracking Messages](tracking.md)

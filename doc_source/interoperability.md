@@ -19,7 +19,7 @@ Do not update DNS records to point to Amazon WorkMail\. This ensures that Micros
 Amazon WorkMail makes HTTPS requests to the EWS URL on Microsoft Exchange to obtain calendar free/busy information\. 
 + Ensure that the relevant firewall settings are set up to allow access from the Internet\. The default port for HTTPS requests is port 443\.
 + Amazon WorkMail can only make successful HTTPS requests to the EWS URL on Microsoft Exchange when a certificate signed by a valid certificate authority \(CA\) is available in your Microsoft Exchange environment\. For more information, see [V\-Exchange](https://technet.microsoft.com/en-us/library/bb125165.aspx) on Microsoft TechNet\. For more information about importing a certificate, see [Importing Certificates](https://technet.microsoft.com/en-us/library/bb124424.aspx) on Microsoft TechNet\.
-+ You need to enable **Basic Authentication** for EWS in Microsoft Exchange\. For more information, see [Virtual Directories: Exchange 2013](https://blogs.msdn.microsoft.com/mvpawardprogram/2013/03/18/virtual-directories-                         exchange-2013/) on the Microsoft MVP Award Program Blog\.
++ You need to enable **Basic Authentication** for EWS in Microsoft Exchange\. For more information, see [Virtual Directories: Exchange 2013](https://docs.microsoft.com/en-us/archive/blogs/mvpawardprogram/virtual-directories-exchange-2013) on the Microsoft MVP Award Program Blog\.
 
 ## Add Domains and Enable Mailboxes<a name="add_domains_interop"></a>
 

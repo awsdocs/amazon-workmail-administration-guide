@@ -4,6 +4,7 @@ The following table describes important changes in each release of the *Amazon W
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Working with Access Control Rules](#DocumentHistory) | Access control rules allow Amazon WorkMail administrators to control how their organization's mailboxes are accessed\. For more information, see [Working with Access Control Rules](https://docs.aws.amazon.com/workmail/latest/adminguide/access-rules.html) in the *Amazon WorkMail Administrator Guide*\. | February 12, 2020 | 
 | [Tagging an Organization](#DocumentHistory) | Tag an Amazon WorkMail organization to differentiate between organizations in the AWS Billing and Cost Management console, or to control access to organization resources\. For more information, see [Tagging an Organization](https://docs.aws.amazon.com/workmail/latest/adminguide/org-tag.html) in the *Amazon WorkMail Administrator Guide*\. | January 23, 2020 | 
 | [Enforce DMARC policies on incoming email](#DocumentHistory) | For more information, see [Enforcing DMARC Policies on Incoming Email](https://docs.aws.amazon.com/workmail/latest/adminguide/inbound-dmarc.html) in the *Amazon WorkMail Administrator Guide*\. | October 17, 2019 | 
 | [Retrieving Message Content with Lambda](#DocumentHistory) | Use the Amazon WorkMail Message Flow API with AWS Lambda to retrieve message content\. For more information, see [Retrieving Message Content with Lambda](https://docs.aws.amazon.com/workmail/latest/adminguide/lambda-content.html) in the *Amazon WorkMail Administrator Guide*\. | September 12, 2019 | 
