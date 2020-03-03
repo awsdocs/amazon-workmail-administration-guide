@@ -19,7 +19,7 @@ The `AWS/WorkMail` namespace includes the following metrics\.
 
 ## CloudWatch Event Logs for Amazon WorkMail<a name="cw-events"></a>
 
-When you enable email event logging for your Amazon WorkMail organization, Amazon WorkMail logs email events with CloudWatch\. For more information about enabling email event logging, see [Tracking Messages](tracking.md)\.
+When you turn on email event logging for your Amazon WorkMail organization, Amazon WorkMail logs email events with CloudWatch\. For more information about turning on email event logging, see [Tracking Messages](tracking.md)\.
 
 The following tables describe the events that Amazon WorkMail logs with CloudWatch, when the events are transmitted, and what the event fields contain\.
 
@@ -120,7 +120,7 @@ This event is logged when a DMARC policy is applied to an email sent to your org
 
 ## Using CloudWatch Insights with Amazon WorkMail<a name="cw-insights"></a>
 
-If you have enabled email event logging in the Amazon WorkMail console, you can use Amazon CloudWatch Logs Insights to query your event logs\. For more information about enabling email event logging, see [Tracking Messages](tracking.md)\. For more information about CloudWatch Logs Insights, see [Analyze Log Data with CloudWatch Logs Insights](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AnalyzingLogData.html) in the *Amazon CloudWatch Logs User Guide*\.
+If you have turned on email event logging in the Amazon WorkMail console, you can use Amazon CloudWatch Logs Insights to query your event logs\. For more information about turning on email event logging, see [Tracking Messages](tracking.md)\. For more information about CloudWatch Logs Insights, see [Analyze Log Data with CloudWatch Logs Insights](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AnalyzingLogData.html) in the *Amazon CloudWatch Logs User Guide*\.
 
 The following examples demonstrate how to query CloudWatch logs for common email events\. You run these queries in the CloudWatch console\. For instructions about how to run these queries, see [Tutorial: Run and Modify a Sample Query](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_AnalyzeLogData_RunSampleQuery.html) in the *Amazon CloudWatch Logs User Guide*\.
 

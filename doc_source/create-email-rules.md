@@ -12,9 +12,7 @@ To create an email flow rule, you specify a [rule action](email-flows.md#email-f
 
 1. Enter a name for your rule\.
 
-1. Do one of the following:
-   + For inbound email flow rules, enter one or more sender patterns\. 
-   + For outbound email flow rules, enter one or more sender patterns and one or more recipient patterns\.
+1. Enter one or more sender patterns and one or more recipient patterns\.
 
 1. Select the action to apply to the email\.
 

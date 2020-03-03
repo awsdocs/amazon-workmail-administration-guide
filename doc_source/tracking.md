@@ -1,17 +1,17 @@
 # Tracking Messages<a name="tracking"></a>
 
-Enable email event logging in the Amazon WorkMail console to track email messages for your organization\. Email event logging uses an AWS Identity and Access Management service\-linked role to grant permissions to publish the email event logs to Amazon CloudWatch\. In the event logs, you can use CloudWatch search tools and metrics to track messages and troubleshoot email issues\.
+Turn on email event logging in the Amazon WorkMail console to track email messages for your organization\. Email event logging uses an AWS Identity and Access Management service\-linked role to grant permissions to publish the email event logs to Amazon CloudWatch\. For more information about IAM service\-linked roles, see [Using Service\-Linked Roles for Amazon WorkMail](using-service-linked-roles.md)\.
 
-For more information about using IAM service\-linked roles for Amazon WorkMail event logging, see [Using Service\-Linked Roles for Amazon WorkMail](using-service-linked-roles.md)\. For more information about using CloudWatch to monitor Amazon WorkMail, see [Logging and Monitoring in Amazon WorkMail](monitoring-overview.md)\. 
+In the CloudWatch event logs, you can use CloudWatch search tools and metrics to track messages and troubleshoot email issues\. For more information about the event logs that Amazon WorkMail sends to CloudWatch, see [CloudWatch Event Logs for Amazon WorkMail](monitoring-workmail-cloudwatch.md#cw-events)\. For more information about CloudWatch Logs, see the [Amazon CloudWatch Logs User Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/)\.
 
-## Enabling Email Event Logging<a name="enable-tracking"></a>
+## Turning On Email Event Logging<a name="enable-tracking"></a>
 
-When you enable email event logging using the default settings, Amazon WorkMail:
+When you turn on email event logging using the default settings, Amazon WorkMail:
 + Creates an AWS Identity and Access Management service\-linked role – `AmazonWorkMailEvents`\.
 + Creates a CloudWatch log group – `/aws/workmail/emailevents/organization-alias`\.
 + Sets CloudWatch log retention to 30 days\.
 
-**To enable email event logging**
+**To turn on email event logging**
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
@@ -96,7 +96,7 @@ If you are a `WorkMailFullAccess` managed policy user, you must include the term
    aws iam put-role-policy --role-name workmail-monitoring-role --policy-name workmail-permissions --policy-document file://rolepolicy.json
    ```
 
-Follow the steps in the previous topic to enable email event logging using the newly created log group and role\. For more information, see [Enabling Email Event Logging](#enable-tracking)\.
+Follow the steps in the previous topic to turn on email event logging using the newly created log group and role\. For more information, see [Turning On Email Event Logging](#enable-tracking)\.
 
 ## Turning Off Email Event Logging<a name="turn-off-tracking"></a>
 

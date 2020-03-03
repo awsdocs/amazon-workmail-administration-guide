@@ -1,6 +1,6 @@
 # Managing Email Flows<a name="email-flows"></a>
 
-You can set up *email flow rules* to handle email flows based on email addresses or domains\. Inbound email flow rules are based on the sender's email address or domain\. Outbound email flow rules are based on both the sender's and recipient's email addresses or domains\.
+Set up *email flow rules* to handle email flows based on email addresses or domains\. Email flow rules are based on both the sender's and recipient's email addresses or domains\.
 
 To create an email flow rule, specify a [*rule action*](#email-flows-rule-actions) to apply to an email when a specified [*pattern*](#email-flows-patterns) is matched\.
 
@@ -20,9 +20,9 @@ To create an email flow rule, specify a [*rule action*](#email-flows-rule-action
 
 Inbound email flow rules help prevent undesirable email from reaching your users' mailboxes\. You can use these rules with an AWS Lambda function to process incoming email before it is delivered to your users' mailboxes\. For more information about using Lambda with Amazon WorkMail, see [Configuring Lambda for Amazon WorkMail](lambda.md)\. For more information about Lambda, see the [https://docs.aws.amazon.com/lambda/latest/dg/welcome.html](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)\.
 
-Unlike email rules for individual mailboxes, inbound email flow rules, also called rule actions, automatically apply to all email sent to anyone inside the Amazon WorkMail organization\.
+Inbound email flow rules, also called rule actions, automatically apply to all emails sent to anyone inside of the Amazon WorkMail organization\. This differs from email rules for individual mailboxes\.
 
-The following rule actions define how inbound email is handled\. For each rule, you specify [sender patterns](#email-flows-patterns) together with one of the following actions\. 
+The following rule actions define how inbound email is handled\. For each rule, you specify [sender and recipient patterns](#email-flows-patterns) together with one of the following actions\. 
 
 
 ****  
@@ -76,7 +76,7 @@ Both sender and recipient patterns take one of the following forms:
 + **A wildcard domain** matches all email addresses under that domain and all of its subdomains\. A wildcard appears only at the front of a domain; for example:
 
   ```
-  *example.com
+  *.example.com
   ```
 + **Star** matches any email addresses under any domain\.
 
@@ -86,7 +86,7 @@ Both sender and recipient patterns take one of the following forms:
 
 Multiple patterns can be specified for one rule\. For more information, see [Inbound Email Rule Actions](#email-flows-rule-actions) and [Outbound Email Rule Actions](#email-flows-rule-outbound)\.
 
-Inbound email flow rules are applied if either the `Sender` or `From` header in an inbound email matches any patterns\. If present, the `Sender` address is matched first\. The `From` address is matched if there is no `Sender` header or if the `Sender` header doesn't match any rule\.
+Inbound email flow rules are applied if either the `Sender` or `From` header in an inbound email matches any patterns\. If present, the `Sender` address is matched first\. The `From` address is matched if there is no `Sender` header or if the `Sender` header doesn't match any rule\. If there are multiple recipients for the email that match different rules, each rule applies for the matched recipients\.
 
 Outbound email flow rules are applied if the recipient and either the `Sender` or `From` header in an outbound email matches any patterns\. If there are multiple recipients for the email that match different rules, each rule applies for the matched recipients\.
 

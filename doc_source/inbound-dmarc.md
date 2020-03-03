@@ -29,7 +29,7 @@ New Amazon WorkMail organizations have DMARC enforcement turned on by default\.
 
 Turning on DMARC enforcement might result in inbound emails being dropped or marked as spam, depending on how the sender configured their domain\. If a sender misconfigures their email domain, your users might stop receiving legitimate emails\. To check for emails that aren't being delivered to your users, you can enable email event logging for your Amazon WorkMail organization\. Then, you can query your email event logs for inbound emails that are filtered out based on the sender's DMARC policies\. 
 
-Before you use email event logging to track DMARC enforcement, enable email event logging in the Amazon WorkMail console\. To get the most out of your log data, allow some time to pass while email events are logged\. For more information and instructions, see [Enabling Email Event Logging](tracking.md#enable-tracking)\.
+Before you use email event logging to track DMARC enforcement, enable email event logging in the Amazon WorkMail console\. To get the most out of your log data, allow some time to pass while email events are logged\. For more information and instructions, see [Turning On Email Event Logging](tracking.md#enable-tracking)\.
 
 **To use email event logging to track DMARC enforcement**
 

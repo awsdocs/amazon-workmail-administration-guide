@@ -16,7 +16,7 @@ If you've confirmed the Internet connection and firewall settings, but the error
   ```
   DOMAIN\username
   ```
-+ Your Microsoft Exchange server is not configured for Basic Authentication for EWS\. For more information, see [Virtual Directories: Exchange 2013](https://blogs.msdn.microsoft.com/mvpawardprogram/2013/03/18/virtual-directories-                         exchange-2013/) on the Microsoft MVP Award Program Blog\.
++ Your Microsoft Exchange server is not configured for Basic Authentication for EWS\. For more information, see [Virtual Directories: Exchange 2013](https://docs.microsoft.com/en-us/archive/blogs/mvpawardprogram/virtual-directories-exchange-2013) on the Microsoft MVP Award Program Blog\.
 
 **User receives emails with winmail\.dat attachment**—This might happen when encrypted S/MIME email is sent from Exchange to Amazon WorkMail and received in Outlook for Mac 2016 or IMAP client\. The solution is to run the following command in Exchange Management Shell:
 

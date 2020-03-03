@@ -8,8 +8,6 @@ To check your current rule configuration, you can test how the configuration beh
 
 1. In the navigation pane, choose **Organization settings**, **Inbound/Outbound rules**\.
 
-1. Do one of the following:
-   + For inbound email flow rules, next to **Test configuration**, enter the full email address of the sender to test\. 
-   + For outbound email flow rules, next to **Test configuration**, enter the full email addresses of both the sender and recipient to test\.
+1. Next to **Test configuration**, enter the full email addresses of both the sender and recipient that you want to test\.
 
 1. Choose **Test**\. The action to be taken for the provided email address is displayed\.
