@@ -1,10 +1,10 @@
-# Tagging an Organization<a name="org-tag"></a>
+# Tagging an organization<a name="org-tag"></a>
 
 Tagging an Amazon WorkMail organization resource lets you do the following:
 + Differentiate between organizations in the AWS Billing and Cost Management console\.
 + Control access to Amazon WorkMail organization resources by adding them to the `Resource` element of IAM permission policy statements\.
 
-For more information about Amazon WorkMail resource\-level permissions, see [Resources](security_iam_service-with-iam.md#security_iam_service-with-iam-id-based-policies-resources)\. For more information about controlling access based on tags, see [Authorization Based on Amazon WorkMail Tags](security_iam_service-with-iam.md#security_iam_service-with-iam-tags)\.
+For more information about Amazon WorkMail resource\-level permissions, see [Resources](security_iam_service-with-iam.md#security_iam_service-with-iam-id-based-policies-resources)\. For more information about controlling access based on tags, see [Authorization based on Amazon WorkMail tags](security_iam_service-with-iam.md#security_iam_service-with-iam-tags)\.
 
 Amazon WorkMail administrators can tag organizations using the Amazon WorkMail console\.
 

@@ -1,4 +1,4 @@
-# Removing an Email Flow Rule<a name="remove-email-flow-rule"></a>
+# Removing an email flow rule<a name="remove-email-flow-rule"></a>
 
 When you remove an email flow rule, the changes are applied immediately\.
 

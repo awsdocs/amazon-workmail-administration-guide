@@ -1,4 +1,4 @@
-# Configure Availability Settings on Amazon WorkMail<a name="enable_interop_wm"></a>
+# Configure availability settings on Amazon WorkMail<a name="enable_interop_wm"></a>
 
 Configure availability settings on Amazon WorkMail and Microsoft Exchange to enable bi\-directional sharing of calendar free/busy information\.
 
@@ -34,7 +34,7 @@ Configure availability settings on Amazon WorkMail and Microsoft Exchange to ena
       ```
 
     The external URL returned by the above command is the EWS URL\.
-+ **User email address and password**—These are the credentials of the Microsoft Exchange service account and are encrypted and securely stored by Amazon WorkMail\. The email address of the Microsoft Exchange service account should use the Fully Qualified Domain Name \(FQDN\)\. For more information, see [Create Service Accounts in Microsoft Exchange and Amazon WorkMail](interoperability.md#create-serviceacct)\.
++ **User email address and password**—These are the credentials of the Microsoft Exchange service account and are encrypted and securely stored by Amazon WorkMail\. The email address of the Microsoft Exchange service account should use the Fully Qualified Domain Name \(FQDN\)\. For more information, see [Create service accounts in Microsoft Exchange and Amazon WorkMail](interoperability.md#create-serviceacct)\.
 
   If your Active Directory domain is not the same as your Microsoft Exchange domain, use the User Principal Name \(UPN\) of the Microsoft Exchange Service account\. This can be obtained with the following PowerShell command:
 

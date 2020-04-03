@@ -1,16 +1,16 @@
-# Managing User Accounts<a name="manage-users"></a>
+# Managing user accounts<a name="manage-users"></a>
 
 Create new users or enable existing users and edit user email addresses, create user email aliases, edit user details, and reset user passwords from Amazon WorkMail\.
 
 **Topics**
-+ [Creating New Users](#add_new_user)
-+ [Enabling Existing Users](#enable_existing_user)
-+ [Editing User Email Addresses](#edit_user_email_addresses)
-+ [Editing User Details](#edit_user_details)
-+ [Resetting User Passwords](#reset_user_password)
-+ [Troubleshooting Amazon WorkMail Password Policies](#password-policies)
++ [Creating new users](#add_new_user)
++ [Enabling existing users](#enable_existing_user)
++ [Editing user email addresses](#edit_user_email_addresses)
++ [Editing user details](#edit_user_details)
++ [Resetting user passwords](#reset_user_password)
++ [Troubleshooting Amazon WorkMail password policies](#password-policies)
 
-## Creating New Users<a name="add_new_user"></a>
+## Creating new users<a name="add_new_user"></a>
 
 When you create new users, Amazon WorkMail creates mailboxes for them\. Users can log in and access their mail from the Amazon WorkMail web application, mobile device, or Microsoft Outlook on macOS or PC\.
 
@@ -18,7 +18,7 @@ When you create new users, Amazon WorkMail creates mailboxes for them\. Users ca
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. If necessary, change the region\. From the navigation bar, select the region that meets your needs\. For more information, see [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+1. If necessary, change the region\. From the navigation bar, select the region that meets your needs\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
 1. On the **Organizations** screen, in the list of organizations, select your organization's alias\.
 
@@ -30,7 +30,7 @@ When you create new users, Amazon WorkMail creates mailboxes for them\. Users ca
 
 1. On the **Set up email address and password** screen, enter the user's email address and password, and choose **Add user**\.
 
-## Enabling Existing Users<a name="enable_existing_user"></a>
+## Enabling existing users<a name="enable_existing_user"></a>
 
 When Amazon WorkMail is integrated with your corporate Active Directory or you already have users available in your Simple AD directory, you can enable these users in Amazon WorkMail\.
 
@@ -38,7 +38,7 @@ When Amazon WorkMail is integrated with your corporate Active Directory or you a
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. If necessary, change the region\. From the navigation bar, select the region that meets your needs\. For more information, see [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+1. If necessary, change the region\. From the navigation bar, select the region that meets your needs\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
 1. On the **Organizations** screen, in the list of organizations, select your organization's alias\.
 
@@ -48,17 +48,17 @@ When Amazon WorkMail is integrated with your corporate Active Directory or you a
 
 1. In the **Enable user\(s\)** dialog box, review the primary email address and choose **Enable**\.
 
-## Editing User Email Addresses<a name="edit_user_email_addresses"></a>
+## Editing user email addresses<a name="edit_user_email_addresses"></a>
 
 You can assign multiple email addresses to a single user and the default email address is used as the default sending address for outgoing email\. 
 
-You can also add one or more email aliases, which can be used to send or receive email from a different address or domain\. For more information, see [Send as an Alias](https://docs.aws.amazon.com/workmail/latest/userguide/send_alias.html)\.
+You can also add one or more email aliases, which can be used to send or receive email from a different address or domain\. For more information, see [Send as an alias](https://docs.aws.amazon.com/workmail/latest/userguide/send_alias.html)\.
 
 **To edit a user's email address**
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. If necessary, change the region\. From the navigation bar, select the region that meets your needs\. For more information, see [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+1. If necessary, change the region\. From the navigation bar, select the region that meets your needs\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
 1. On the **Organizations** screen, in the list of organizations, select your organization's alias\.
 
@@ -68,20 +68,20 @@ You can also add one or more email aliases, which can be used to send or receive
 
 1. To set the new email address as the default, choose **Set as default**\.
 
-## Editing User Details<a name="edit_user_details"></a>
+## Editing user details<a name="edit_user_details"></a>
 
 You can edit a user's first and last name, email address, display name, address, phone number, and company details\. You can also set a user's mailbox quota to as little as 1 MB or as much as 51,200 MB \(50 GB\)\. Users are notified when they reach 90 percent of their set mailbox quota\.
 
 Changing a user's mailbox quota does not affect pricing\. For more information about pricing, see [Amazon WorkMail Pricing](http://aws.amazon.com/workmail/pricing/)\.
 
 **Note**  
-If you are integrating Amazon WorkMail with an AD Connector directory, you can't edit these details from the AWS Management Console\. Instead, you must edit them using your Active Directory management tools\. Limitations apply when your organization is in interoperability mode\. For more information, see [Limitations in Interoperability Mode](interoperability.md#interop_limitations)\.
+If you are integrating Amazon WorkMail with an AD Connector directory, you can't edit these details from the AWS Management Console\. Instead, you must edit them using your Active Directory management tools\. Limitations apply when your organization is in interoperability mode\. For more information, see [Limitations in interoperability mode](interoperability.md#interop_limitations)\.
 
 **To edit a user's details**
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. If necessary, change the region\. From the navigation bar, select the region that meets your needs\. For more information, see [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+1. If necessary, change the region\. From the navigation bar, select the region that meets your needs\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
 1. On the **Organizations** screen, in the list of organizations, select your organization's alias\.
 
@@ -91,7 +91,7 @@ If you are integrating Amazon WorkMail with an AD Connector directory, you can't
 
 1. Choose **Save**\.
 
-## Resetting User Passwords<a name="reset_user_password"></a>
+## Resetting user passwords<a name="reset_user_password"></a>
 
 If a user forgets a password or is having trouble signing in to Amazon WorkMail, you can reset the password\. If you are integrating Amazon WorkMail with an AD Connector directory, you have to reset the user password in Active Directory\.
 
@@ -99,7 +99,7 @@ If a user forgets a password or is having trouble signing in to Amazon WorkMail,
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. If necessary, change the region\. From the navigation bar, select the region that meets your needs\. For more information, see [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+1. If necessary, change the region\. From the navigation bar, select the region that meets your needs\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
 1. On the **Organizations** screen, in the list of organizations, select your organization's alias\.
 
@@ -109,13 +109,13 @@ If a user forgets a password or is having trouble signing in to Amazon WorkMail,
 
 1. In the **Reset Password** dialog box, type the new password and choose **Reset**\.
 
-## Troubleshooting Amazon WorkMail Password Policies<a name="password-policies"></a>
+## Troubleshooting Amazon WorkMail password policies<a name="password-policies"></a>
 
 If resetting the password is unsuccessful, verify that the new password meets the password policy requirements\.
 
 The password policy requirements depend on which directory type is used by your Amazon WorkMail organization\.
 
-**Amazon WorkMail Directory and Simple AD Directory Password Policy**  
+**Amazon WorkMail directory and Simple AD directory password policy**  
 By default, passwords for an Amazon WorkMail directory or Simple AD directory must be:
 + Non\-empty\.
 + At least eight characters\.
@@ -131,10 +131,10 @@ Passwords must also contain characters from three out of five of the following g
 
 Amazon WorkMail directory password policies cannot be changed\.
 
-To change a Simple AD password policy, use the AD administration tools on an Amazon EC2 Windows instance of your Simple AD directory\. For more information, see [Installing the Active Directory Administration Tools](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/simple_ad_install_ad_tools.html) in the *AWS Directory Service Administration Guide*\.
+To change a Simple AD password policy, use the AD administration tools on an Amazon EC2 Windows instance of your Simple AD directory\. For more information, see [Installing the Active Directory administration tools](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/simple_ad_install_ad_tools.html) in the *AWS Directory Service Administration Guide*\.
 
-**AWS Managed Microsoft AD Directory Password Policy**  
+**AWS Managed Microsoft AD Directory password policy**  
 For information about the default password policy for an AWS Managed Microsoft AD directory, see [Manage Password Policies for AWS Managed Microsoft AD](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/ms_ad_password_policies.html) in the *AWS Directory Service Administration Guide*\.
 
-**AD Connector Password Policy**  
+**AD Connector password policy**  
 AD Connector uses the password policy of the Active Directory domain that it is connected to\.

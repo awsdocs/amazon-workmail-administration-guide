@@ -1,4 +1,4 @@
-# Remove Users from a Group<a name="remove-group-users"></a>
+# Remove users from a group<a name="remove-group-users"></a>
 
 Use the Amazon WorkMail console to remove users from a group\.
 
@@ -9,7 +9,7 @@ If Amazon WorkMail is integrated with a connected Active Directory or Microsoft 
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. If you require a different AWS Region, change it from the navigation bar\. For more information, see [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+1. If you require a different AWS Region, change it from the navigation bar\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
 1. On the **Organizations** page, in the **Alias** column, select the name of the organization that your group belongs to\.
 

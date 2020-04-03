@@ -1,4 +1,4 @@
-# Creating an Email Flow Rule<a name="create-email-rules"></a>
+# Creating an email flow rule<a name="create-email-rules"></a>
 
 To create an email flow rule, you specify a [rule action](email-flows.md#email-flows-rule-actions) to apply to an email when a specified [pattern](email-flows.md#email-flows-patterns) is matched\. When you create a new email flow rule, it's applied immediately\.
 
@@ -18,4 +18,4 @@ To create an email flow rule, you specify a [rule action](email-flows.md#email-f
 
 1. Choose **Create Rule**\.
 
-You can test the new email flow rule that you created\. For more information, see [Testing an Email Flow Rule](test-email-flow-rule.md)\.
+You can test the new email flow rule that you created\. For more information, see [Testing an email flow rule](test-email-flow-rule.md)\.

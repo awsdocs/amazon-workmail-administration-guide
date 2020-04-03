@@ -1,4 +1,4 @@
-# Choosing the Default Domain<a name="default_domain"></a>
+# Choosing the default domain<a name="default_domain"></a>
 
 To use a domain as default in the email address of your users and groups, you can choose a default domain\. Making a domain the default does not change existing email addresses\.
 
@@ -6,7 +6,7 @@ To use a domain as default in the email address of your users and groups, you ca
 
 1. Sign in to the AWS Management Console and open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. If necessary, change the region\. From the navigation bar, select the region that meets your needs\. For more information, see [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+1. If necessary, change the region\. From the navigation bar, select the region that meets your needs\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
 1. On the **Organizations** screen, in the **Alias** column, select the name of the organization to which to add a default domain\.
 

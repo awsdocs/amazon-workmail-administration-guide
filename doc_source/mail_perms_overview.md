@@ -1,4 +1,4 @@
-# Working with Mailbox Permissions<a name="mail_perms_overview"></a>
+# Working with mailbox permissions<a name="mail_perms_overview"></a>
 
 You can use mailbox permissions in Amazon WorkMail to grant users or groups the right to work in other users' mailboxes\. Mailbox permissions apply to an entire mailbox, enabling multiple users to access the same mailbox without sharing the credentials for that mailbox\. Users with mailbox permissions can read and modify mailbox data and send email from the shared mailbox\.
 
@@ -17,19 +17,19 @@ For the Microsoft Outlook client in Windows, users with full access permissions 
 For the Amazon WorkMail web application and other email clients, users with full access permissions can manually open the shared mailboxes\. Opened mailboxes stay open, even between sessions, unless the user closes them\.
 
 **Topics**
-+ [Mailbox and Folder Permissions](#mail_vs_folder)
-+ [Enabling Mailbox Permissions](#enable_mail_perms)
-+ [Editing Mailbox Permissions](#edit_mail_perms)
-+ [Removing Mailbox Permissions](#remove_mail_perms)
-+ [Managing Group Permissions](#manage_group_perms)
++ [Mailbox and folder permissions](#mail_vs_folder)
++ [Enabling mailbox permissions](#enable_mail_perms)
++ [Editing mailbox permissions](#edit_mail_perms)
++ [Removing mailbox permissions](#remove_mail_perms)
++ [Managing group permissions](#manage_group_perms)
 
-## Mailbox and Folder Permissions<a name="mail_vs_folder"></a>
+## Mailbox and folder permissions<a name="mail_vs_folder"></a>
 
 Mailbox permissions apply to all folders in a mailbox\. These permissions can only be enabled by the AWS account holder or the IAM user authorized to call the Amazon WorkMail management API\. To apply the permissions to mailboxes or groups as a whole, log in to the AWS Management Console or use the Amazon WorkMail API\. You can manage up to 100 mailbox and group permissions from the console\. To manage more permissions, use the Amazon WorkMail API\.
 
 Folder permissions apply only to a single folder\. These permissions can be set by end users, either by using an email client or by using the Amazon WorkMail web application\.
 
-## Enabling Mailbox Permissions<a name="enable_mail_perms"></a>
+## Enabling mailbox permissions<a name="enable_mail_perms"></a>
 
 You can enable other users to access a mailbox using the Amazon WorkMail web application\.
 
@@ -43,7 +43,7 @@ You can enable other users to access a mailbox using the Amazon WorkMail web app
 
 Updated permissions can take up to five minutes to propagate\.
 
-## Editing Mailbox Permissions<a name="edit_mail_perms"></a>
+## Editing mailbox permissions<a name="edit_mail_perms"></a>
 
 You can edit existing mailbox permissions for Amazon WorkMail\.
 
@@ -55,7 +55,7 @@ You can edit existing mailbox permissions for Amazon WorkMail\.
 
 Updated permissions can take up to five minutes to propagate\.
 
-## Removing Mailbox Permissions<a name="remove_mail_perms"></a>
+## Removing mailbox permissions<a name="remove_mail_perms"></a>
 
 You can remove existing mailbox permissions for Amazon WorkMail\.
 
@@ -69,7 +69,7 @@ You can remove existing mailbox permissions for Amazon WorkMail\.
 
 Updated permissions can take up to five minutes to propagate\.
 
-## Managing Group Permissions<a name="manage_group_perms"></a>
+## Managing group permissions<a name="manage_group_perms"></a>
 
 You can add or remove group permissions for Amazon WorkMail\.
 

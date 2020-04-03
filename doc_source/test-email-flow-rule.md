@@ -1,4 +1,4 @@
-# Testing an Email Flow Rule<a name="test-email-flow-rule"></a>
+# Testing an email flow rule<a name="test-email-flow-rule"></a>
 
 To check your current rule configuration, you can test how the configuration behaves against specific email addresses\. 
 

@@ -1,4 +1,4 @@
-# Adding a Domain<a name="add_domain"></a>
+# Adding a domain<a name="add_domain"></a>
 
 You can add up to 100 domains to your organization for sending email\. When you add a new domain, an Amazon SES sending authorization policy is automatically added to the domain identity policy\. This provides Amazon WorkMail with access to all Amazon SES sending actions for your domain and allows you to redirect email to your domain as well as external domains\.
 
@@ -9,7 +9,7 @@ As a best practice, you should add aliases for postmaster@ and abuse@\. You can 
 
 1. Sign in to the AWS Management Console and open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. If necessary, change the Region\. From the navigation bar, select the Region that meets your needs\. For more information, see [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+1. If necessary, change the Region\. From the navigation bar, select the Region that meets your needs\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
 1. On the **Organizations** screen, in the **Alias** column, select the name of the organization to which to add a domain\.
 
@@ -28,15 +28,15 @@ As a best practice, you should add aliases for postmaster@ and abuse@\. You can 
 1. In the console sections **Step 2: Finalize domain setup** and **Step 3: Increase security \(recommended\)**, the following records are listed:
    + The MX record to deliver incoming email to Amazon WorkMail\.
    + The CNAME autodiscover record that allows users to easily configure their Microsoft Outlook or mobile device knowing only their email address and password\.
-   + The CNAME records for DKIM signing\. For more information about DKIM signing, see [Authenticating Email with DKIM](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/dkim.html) in the *Amazon Simple Email Service Developer Guide*\.
-   + The TXT record for SPF verification\. For more information about SPF verification, see [Authenticating Email with SPF](authenticate_domain.md)\.
-   + The TXT record for DMARC\. For more information about DMARC records in Amazon WorkMail, see [Complying with DMARC Using Amazon SES](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/dmarc.html) in the *Amazon Simple Email Service Developer Guide*\.
+   + The CNAME records for DKIM signing\. For more information about DKIM signing, see [Authenticating email with DKIM](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/dkim.html) in the *Amazon Simple Email Service Developer Guide*\.
+   + The TXT record for SPF verification\. For more information about SPF verification, see [Authenticating email with SPF](authenticate_domain.md)\.
+   + The TXT record for DMARC\. For more information about DMARC records in Amazon WorkMail, see [Complying with DMARC using Amazon SES](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/dmarc.html) in the *Amazon Simple Email Service Developer Guide*\.
 **Important**  
 Some DNS providers automatically append the domain name to the end of DNS records\. Adding a record that already contains the domain name \(such as \_amazonses\.example\.com\) might result in the duplication of the domain name \(such as \_amazonses\.example\.com\.example\.com\)\. To avoid duplicating the domain name in the record name, add a period to the end of the domain name in the DNS record\. This indicates to your DNS provider that the record name is fully qualified, meaning that it is no longer relative to the domain name\. It also prevents the DNS provider from appending an additional domain name\.
 
    You can copy these records for use with your DNS service\. The record names that are copied include the domain name\. Depending on which DNS service you use, the domain name might already be added to the domain's DNS record\.
 
-   The records on the domain page also include the verification status\. After you create a record, choose the refresh icon to see the verification status and record value\. For more information about verifying domains, see [Verifying Domains](domain_verification.md)\.
+   The records on the domain page also include the verification status\. After you create a record, choose the refresh icon to see the verification status and record value\. For more information about verifying domains, see [Verifying domains](domain_verification.md)\.
 
    The following table shows the available verification statuses for each record type\.    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/workmail/latest/adminguide/add_domain.html)

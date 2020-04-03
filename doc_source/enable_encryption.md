@@ -1,4 +1,4 @@
-# Enabling Signed or Encrypted Email<a name="enable_encryption"></a>
+# Enabling signed or encrypted email<a name="enable_encryption"></a>
 
 You can use S/MIME to enable users to send signed or encrypted email both inside and outside the organization\.
 

@@ -1,13 +1,13 @@
-# Managing User Mailboxes<a name="manage-mailboxes"></a>
+# Managing user mailboxes<a name="manage-mailboxes"></a>
 
-You can disable and restore user mailboxes and enable push notifications\. For information about managing mailbox permissions, see [Working with Mailbox Permissions](mail_perms_overview.md)\.
+You can disable and restore user mailboxes and enable push notifications\. For information about managing mailbox permissions, see [Working with mailbox permissions](mail_perms_overview.md)\.
 
 **Topics**
-+ [Disabling User Mailboxes](#delete_user_mailbox)
-+ [Restoring Disabled Mailboxes](#restore_deleted_mailbox)
-+ [Working with Notifications](#notifications)
++ [Disabling user mailboxes](#delete_user_mailbox)
++ [Restoring disabled mailboxes](#restore_deleted_mailbox)
++ [Working with notifications](#notifications)
 
-## Disabling User Mailboxes<a name="delete_user_mailbox"></a>
+## Disabling user mailboxes<a name="delete_user_mailbox"></a>
 
 You can disable user mailboxes when they are no longer needed\. Amazon WorkMail keeps mailboxes for 30 days before they're permanently removed\.
 
@@ -15,7 +15,7 @@ You can disable user mailboxes when they are no longer needed\. Amazon WorkMail 
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. If necessary, change the region\. From the navigation bar, select the region that meets your needs\. For more information, see [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+1. If necessary, change the region\. From the navigation bar, select the region that meets your needs\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
 1. On the **Organizations** screen, in the list of organizations, select your organization's alias\.
 
@@ -26,7 +26,7 @@ You can disable user mailboxes when they are no longer needed\. Amazon WorkMail 
 **Note**  
 To permanently delete a user and their data, use the `DeleteUser` API action for Amazon WorkMail\. For more information, see [DeleteUser](https://docs.aws.amazon.com/workmail/latest/APIReference/API_DeleteUser.html) in the *Amazon WorkMail API Reference*\.
 
-## Restoring Disabled Mailboxes<a name="restore_deleted_mailbox"></a>
+## Restoring disabled mailboxes<a name="restore_deleted_mailbox"></a>
 
 Amazon WorkMail retains disabled mailboxes for 30 days before permanently removing them\. To restore a mailbox, use the same steps as enabling an existing user\.
 
@@ -37,7 +37,7 @@ Mailboxes cannot be restored if the organization containing them has been delete
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. If necessary, change the region\. From the navigation bar, select the region that meets your needs\. For more information, see [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+1. If necessary, change the region\. From the navigation bar, select the region that meets your needs\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
 1. On the **Organizations** screen, in the list of organizations, select your organization's alias\.
 
@@ -47,7 +47,7 @@ Mailboxes cannot be restored if the organization containing them has been delete
 
 1. In the **Enable user\(s\)** dialog box, review the primary email address of the user and choose **Enable**\.
 
-## Working with Notifications<a name="notifications"></a>
+## Working with notifications<a name="notifications"></a>
 
 With the Amazon WorkMail Push Notifications API, you can receive push notifications about changes in your mailbox, including new email and calendar updates\. You can register the URLs \(or push notification responders\) to receive notifications\. With this feature, developers can create responsive applications for Amazon WorkMail users, as applications are quickly notified about changes from a user's mailbox\.
 

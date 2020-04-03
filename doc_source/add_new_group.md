@@ -1,4 +1,4 @@
-# Create a Group<a name="add_new_group"></a>
+# Create a group<a name="add_new_group"></a>
 
 Create groups in the Amazon WorkMail console\. You can also create aliases for your groups\.
 
@@ -6,7 +6,7 @@ Create groups in the Amazon WorkMail console\. You can also create aliases for y
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. If you require a different AWS Region, change it from the navigation bar\. For more information, see [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+1. If you require a different AWS Region, change it from the navigation bar\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
 1. On the **Organizations** screen, in the **Alias** column, select the name of the organization that you want to add a group to\.
 
@@ -26,7 +26,7 @@ Create groups in the Amazon WorkMail console\. You can also create aliases for y
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. If you require a different AWS Region, change it from the navigation bar\. For more information, see [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+1. If you require a different AWS Region, change it from the navigation bar\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
 1. On the **Organizations** screen, in the **Alias** column, select the name of the organization that your group belongs to\.
 

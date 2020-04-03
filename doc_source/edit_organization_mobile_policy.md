@@ -1,4 +1,4 @@
-# Editing Your Organization's Mobile Device Policy<a name="edit_organization_mobile_policy"></a>
+# Editing your organization's mobile device policy<a name="edit_organization_mobile_policy"></a>
 
 You can edit your organization's mobile device policy to change the way that mobile devices interact with Amazon WorkMail\.
 
@@ -6,7 +6,7 @@ You can edit your organization's mobile device policy to change the way that mob
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. If necessary, change the Region\. From the navigation bar, select the appropriate Region\. For more information, see [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+1. If necessary, change the Region\. From the navigation bar, select the appropriate Region\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
 1. On the **Organizations** screen, in the **Alias** column, select the organization to edit\.
 

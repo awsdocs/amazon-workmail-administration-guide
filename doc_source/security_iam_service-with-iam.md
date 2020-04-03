@@ -1,14 +1,14 @@
-# How Amazon WorkMail Works with IAM<a name="security_iam_service-with-iam"></a>
+# How Amazon WorkMail works with IAM<a name="security_iam_service-with-iam"></a>
 
-Before you use IAM to manage access to Amazon WorkMail, you should understand what IAM features are available to use with Amazon WorkMail\. To get a high\-level view of how Amazon WorkMail and other AWS services work with IAM, see [AWS Services That Work with IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html) in the *IAM User Guide*\.
+Before you use IAM to manage access to Amazon WorkMail, you should understand what IAM features are available to use with Amazon WorkMail\. To get a high\-level view of how Amazon WorkMail and other AWS services work with IAM, see [AWS services that work with IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html) in the *IAM User Guide*\.
 
 **Topics**
-+ [Amazon WorkMail Identity\-Based Policies](#security_iam_service-with-iam-id-based-policies)
-+ [Amazon WorkMail Resource\-Based Policies](#security_iam_service-with-iam-resource-based-policies)
-+ [Authorization Based on Amazon WorkMail Tags](#security_iam_service-with-iam-tags)
-+ [Amazon WorkMail IAM Roles](#security_iam_service-with-iam-roles)
++ [Amazon WorkMail identity\-based policies](#security_iam_service-with-iam-id-based-policies)
++ [Amazon WorkMail resource\-based policies](#security_iam_service-with-iam-resource-based-policies)
++ [Authorization based on Amazon WorkMail tags](#security_iam_service-with-iam-tags)
++ [Amazon WorkMail IAM roles](#security_iam_service-with-iam-roles)
 
-## Amazon WorkMail Identity\-Based Policies<a name="security_iam_service-with-iam-id-based-policies"></a>
+## Amazon WorkMail identity\-based policies<a name="security_iam_service-with-iam-id-based-policies"></a>
 
 With IAM identity\-based policies, you can specify allowed or denied actions and resources as well as the conditions under which actions are allowed or denied\. Amazon WorkMail supports specific actions, resources, and condition keys\. To learn about all of the elements that you use in a JSON policy, see [IAM JSON Policy Elements Reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html) in the *IAM User Guide*\.
 
@@ -34,7 +34,7 @@ You can specify multiple actions using wildcards \(\*\)\. For example, to specif
 
 
 
-To see a list of Amazon WorkMail actions, see [Actions Defined by Amazon WorkMail](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonworkmail.html#amazonworkmail-actions-as-permissions) in the *IAM User Guide*\.
+To see a list of Amazon WorkMail actions, see [Actions defined by Amazon WorkMail](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonworkmail.html#amazonworkmail-actions-as-permissions) in the *IAM User Guide*\.
 
 ### Resources<a name="security_iam_service-with-iam-id-based-policies-resources"></a>
 
@@ -48,7 +48,7 @@ The Amazon WorkMail organization resource has the following ARN:
 arn:aws:workmail:${Region}:${Account}:organization/${OrganizationId}
 ```
 
-For more information about the format of ARNs, see [Amazon Resource Names \(ARNs\) and AWS Service Namespaces](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html)\.
+For more information about the format of ARNs, see [Amazon Resource Names \(ARNs\) and AWS service namespaces](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html)\.
 
 For example, to specify the `m-n1pq2345678r901st2u3vx45x6789yza` organization in your statement, use the following ARN\.
 
@@ -68,9 +68,9 @@ Some Amazon WorkMail actions, such as those for creating resources, cannot be pe
 "Resource": "*"
 ```
 
-To see a list of Amazon WorkMail resource types and their ARNs, see [Resources Defined by Amazon WorkMail](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonworkmail.html#amazonworkmail-resources-for-iam-policies) in the *IAM User Guide*\. To learn with which actions you can specify for the ARN of each resource, see [Actions, Resources, and Condition Keys for Amazon WorkMail](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonworkmail.html)\.
+To see a list of Amazon WorkMail resource types and their ARNs, see [Resources defined by Amazon WorkMail](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonworkmail.html#amazonworkmail-resources-for-iam-policies) in the *IAM User Guide*\. To learn with which actions you can specify for the ARN of each resource, see [Actions, resources, and condition keys for Amazon WorkMail](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonworkmail.html)\.
 
-### Condition Keys<a name="security_iam_service-with-iam-id-based-policies-conditionkeys"></a>
+### Condition keys<a name="security_iam_service-with-iam-id-based-policies-conditionkeys"></a>
 
 Amazon WorkMail does not provide any service\-specific condition keys, but it does support using the following global condition keys\.
 + `aws:CurrentTime`
@@ -119,39 +119,39 @@ The following example policy grants access to the Amazon WorkMail console only f
 }
 ```
 
-To see all AWS global condition keys, see [AWS Global Condition Context Keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html) in the *IAM User Guide*\.
+To see all AWS global condition keys, see [AWS global condition context keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html) in the *IAM User Guide*\.
 
 ### Examples<a name="security_iam_service-with-iam-id-based-policies-examples"></a>
 
 
 
-To view examples of Amazon WorkMail identity\-based policies, see [Amazon WorkMail Identity\-Based Policy Examples](security_iam_id-based-policy-examples.md)\.
+To view examples of Amazon WorkMail identity\-based policies, see [Amazon WorkMail identity\-based policy examples](security_iam_id-based-policy-examples.md)\.
 
-## Amazon WorkMail Resource\-Based Policies<a name="security_iam_service-with-iam-resource-based-policies"></a>
+## Amazon WorkMail resource\-based policies<a name="security_iam_service-with-iam-resource-based-policies"></a>
 
 Amazon WorkMail does not support resource\-based policies\.
 
-## Authorization Based on Amazon WorkMail Tags<a name="security_iam_service-with-iam-tags"></a>
+## Authorization based on Amazon WorkMail tags<a name="security_iam_service-with-iam-tags"></a>
 
-You can attach tags to Amazon WorkMail resources or pass tags in a request to Amazon WorkMail\. To control access based on tags, you provide tag information in the [condition element](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html) of a policy using the `workmail:ResourceTag/key-name`, `aws:RequestTag/key-name`, or `aws:TagKeys` condition keys\. For more information about tagging Amazon WorkMail resources, see [Tagging an Organization](org-tag.md)\.
+You can attach tags to Amazon WorkMail resources or pass tags in a request to Amazon WorkMail\. To control access based on tags, you provide tag information in the [condition element](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html) of a policy using the `workmail:ResourceTag/key-name`, `aws:RequestTag/key-name`, or `aws:TagKeys` condition keys\. For more information about tagging Amazon WorkMail resources, see [Tagging an organization](org-tag.md)\.
 
-## Amazon WorkMail IAM Roles<a name="security_iam_service-with-iam-roles"></a>
+## Amazon WorkMail IAM roles<a name="security_iam_service-with-iam-roles"></a>
 
 An [IAM role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) is an entity within your AWS account that has specific permissions\.
 
-### Using Temporary Credentials with Amazon WorkMail<a name="security_iam_service-with-iam-roles-tempcreds"></a>
+### Using temporary credentials with Amazon WorkMail<a name="security_iam_service-with-iam-roles-tempcreds"></a>
 
 You can use temporary credentials to sign in with federation, assume an IAM role, or to assume a cross\-account role\. You obtain temporary security credentials by calling AWS STS API operations such as [AssumeRole](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html) or [GetFederationToken](https://docs.aws.amazon.com/STS/latest/APIReference/API_GetFederationToken.html)\. 
 
 Amazon WorkMail supports using temporary credentials\. 
 
-### Service\-Linked Roles<a name="security_iam_service-with-iam-roles-service-linked"></a>
+### Service\-linked roles<a name="security_iam_service-with-iam-roles-service-linked"></a>
 
 [Service\-linked roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-linked-role) allow AWS services to access resources in other services to complete an action on your behalf\. Service\-linked roles appear in your IAM account and are owned by the service\. An IAM administrator can view but not edit the permissions for service\-linked roles\.
 
-Amazon WorkMail supports service\-linked roles\. For details about creating or managing Amazon WorkMail service\-linked roles, see [Using Service\-Linked Roles for Amazon WorkMail](using-service-linked-roles.md)\.
+Amazon WorkMail supports service\-linked roles\. For details about creating or managing Amazon WorkMail service\-linked roles, see [Using service\-linked roles for Amazon WorkMail](using-service-linked-roles.md)\.
 
-### Service Roles<a name="security_iam_service-with-iam-roles-service"></a>
+### Service roles<a name="security_iam_service-with-iam-roles-service"></a>
 
 This feature allows a service to assume a [service role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-role) on your behalf\. This role allows the service to access resources in other services to complete an action on your behalf\. Service roles appear in your IAM account and are owned by the account\. This means that an IAM administrator can change the permissions for this role\. However, doing so might break the functionality of the service\.
 

@@ -1,8 +1,8 @@
-# Using Email Journaling with Amazon WorkMail<a name="journaling_overview"></a>
+# Using email journaling with Amazon WorkMail<a name="journaling_overview"></a>
 
 You can set up journaling to record your email communication, using integrated third\-party archiving and eDiscovery tools\. This ensures that email storage compliance regulations for privacy protection, data storage, and information protection are met\.
 
-## Using Journaling<a name="using_journaling"></a>
+## Using journaling<a name="using_journaling"></a>
 
 Amazon WorkMail journals all emails that are sent to any user in the specified organization, as well as all emails sent by users in that organization\. A copy of all emails is sent to an address specified by the system administrator, in a format called `journal record`\. This format is compatible with Microsoft email programs\. There is no additional charge for email journaling\.
 

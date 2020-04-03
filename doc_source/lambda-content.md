@@ -1,4 +1,4 @@
-# Retrieving Message Content with AWS Lambda<a name="lambda-content"></a>
+# Retrieving message content with AWS Lambda<a name="lambda-content"></a>
 
 After you configure a AWS Lambda function to manage email flows for Amazon WorkMail, you can access the full content of the email messages that are processed using Lambda\. For more information about getting started with Lambda for Amazon WorkMail, see [Configuring AWS Lambda for Amazon WorkMail](lambda.md)\.
 
@@ -24,7 +24,7 @@ For more detailed examples of ways to analyze the content of messages that are i
 **Note**  
 The Amazon WorkMail Message Flow API can be used to access email messages that are in transit only\. The messages can only be accessed within 24 hours of being sent or received\. To programmatically access messages that are already delivered to a user’s mailbox, use one of the other protocols supported by Amazon WorkMail, such as IMAP or Exchange Web Services \(EWS\)\.
 
-## Managing Access to the Amazon WorkMail Message Flow API<a name="lambda-content-access"></a>
+## Managing access to the Amazon WorkMail Message Flow API<a name="lambda-content-access"></a>
 
 Use AWS Identity and Access Management \(IAM\) policies to manage access to the Amazon WorkMail Message Flow API\.
 
@@ -49,9 +49,9 @@ The following example includes example IDs for an ARN associated with an incomin
 arn:aws:workmailmessageflow:us-east-1:111122223333:message/m-n1pq2345678r901st2u3vx45x6789yza/incoming/d1234567-8e90-1f23-456g-hjk7lmnop8q9
 ```
 
-You can use these ARNs as resources in the `Resource` section of your IAM user policies in order to manage access to Amazon WorkMail messages in transit\. For more information about granting IAM users permissions for Amazon WorkMail, see [Create AWS Identity and Access Management Users and Groups](prereqs.md#iam_users_groups)\.
+You can use these ARNs as resources in the `Resource` section of your IAM user policies in order to manage access to Amazon WorkMail messages in transit\. For more information about granting IAM users permissions for Amazon WorkMail, see [Create AWS Identity and Access Management users and groups](prereqs.md#iam_users_groups)\.
 
-## Example IAM Policies for Amazon WorkMail Message Flow Access<a name="lambda-content-policies"></a>
+## Example IAM policies for Amazon WorkMail message flow access<a name="lambda-content-policies"></a>
 
 The following example policy grants an IAM entity full read access to all inbound and outbound messages for every Amazon WorkMail organization in your AWS account\.
 

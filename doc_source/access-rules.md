@@ -1,4 +1,4 @@
-# Working with Access Control Rules<a name="access-rules"></a>
+# Working with access control rules<a name="access-rules"></a>
 
 Access control rules for Amazon WorkMail allow administrators to control how their organization's mailboxes are accessed\. Each Amazon WorkMail organization has a default access control rule that grants mailbox access to all users added to the organization, no matter which access protocol or IP address they use\. Administrators can edit or replace the default rule with one of their own, add a new rule, or delete a rule\.
 
@@ -10,12 +10,12 @@ Administrators can apply access control rules that allow or deny access based on
 + **IP addresses** – The IPv4 CIDR ranges used to access the mailbox\.
 + **Amazon WorkMail users** – The user IDs in your organization that are used to access the mailbox\.
 
-Administrators apply access control rules in addition to the user's mailbox and folder permissions\. For more information, see [Working with Mailbox Permissions](mail_perms_overview.md) and [Sharing Folders and Folder Permissions](https://docs.aws.amazon.com/workmail/latest/userguide/share-folders.html) in the *Amazon WorkMail User Guide*\.
+Administrators apply access control rules in addition to the user's mailbox and folder permissions\. For more information, see [Working with mailbox permissions](mail_perms_overview.md) and [Sharing folders and folder permissions](https://docs.aws.amazon.com/workmail/latest/userguide/share-folders.html) in the *Amazon WorkMail User Guide*\.
 
 **Note**  
-Access control rules do not apply to Amazon WorkMail console or SDK access\. Use IAM roles or policies instead\. For more information, see [Identity and Access Management for Amazon WorkMail](security-iam.md)\.
+Access control rules do not apply to Amazon WorkMail console or SDK access\. Use IAM roles or policies instead\. For more information, see [Identity and access management for Amazon WorkMail](security-iam.md)\.
 
-## Creating Access Control Rules<a name="create-acr"></a>
+## Creating access control rules<a name="create-acr"></a>
 
 Create new access control rules from the Amazon WorkMail console\.
 
@@ -39,7 +39,7 @@ Create new access control rules from the Amazon WorkMail console\.
 
 1. Choose **Create rule**\.
 
-## Editing Access Control Rules<a name="edit-acr"></a>
+## Editing access control rules<a name="edit-acr"></a>
 
 Edit new and default access control rules from the Amazon WorkMail console\.
 
@@ -59,7 +59,7 @@ Edit new and default access control rules from the Amazon WorkMail console\.
 
 1. Choose **Save changes**\.
 
-## Testing Access Control Rules<a name="test-acr"></a>
+## Testing access control rules<a name="test-acr"></a>
 
 To see how your organization's access control rules are applied, test the rules from the Amazon WorkMail console\.
 
@@ -83,7 +83,7 @@ To see how your organization's access control rules are applied, test the rules 
 
 The test results appear under **Effect**\.
 
-## Deleting Access Control Rules<a name="delete-acr"></a>
+## Deleting access control rules<a name="delete-acr"></a>
 
 Delete access control rules that you no longer require from the Amazon WorkMail console\.
 

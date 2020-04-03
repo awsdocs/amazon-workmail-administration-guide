@@ -2,7 +2,7 @@
 
 You can monitor Amazon WorkMail using CloudWatch, which collects raw data and processes it into readable, near real\-time metrics\. These statistics are kept for 15 months, so that you can access historical information and gain a better perspective on how your web application or service is performing\. You can also set alarms that watch for certain thresholds, and send notifications or take actions when those thresholds are met\. For more information, see the [Amazon CloudWatch User Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/)\.
 
-## CloudWatch Metrics for Amazon WorkMail<a name="cw-metrics"></a>
+## CloudWatch metrics for Amazon WorkMail<a name="cw-metrics"></a>
 
 Amazon WorkMail sends the following metrics and dimension information to CloudWatch\.
 
@@ -17,9 +17,9 @@ The `AWS/WorkMail` namespace includes the following metrics\.
 |  `OutgoingEmailBounced`  |  The number of outgoing emails that could not be delivered, counted for each intended recipient\. For example, if 1 email is sent to 10 recipients, and 2 emails could not be delivered, the `OutgoingEmailBounced` count is 2\. Units: Count  | 
 |  `OutgoingEmailSent`  |  The number of emails successfully sent from your Amazon WorkMail organization\. This metric is counted for each recipient of a successfully sent email\. For example, if 1 email is sent to 10 recipients, and the email was successfully delivered to 8 of the recipients, the `OutgoingEmailSent` count is 8 \. Units: Count  | 
 
-## CloudWatch Event Logs for Amazon WorkMail<a name="cw-events"></a>
+## CloudWatch event logs for Amazon WorkMail<a name="cw-events"></a>
 
-When you turn on email event logging for your Amazon WorkMail organization, Amazon WorkMail logs email events with CloudWatch\. For more information about turning on email event logging, see [Tracking Messages](tracking.md)\.
+When you turn on email event logging for your Amazon WorkMail organization, Amazon WorkMail logs email events with CloudWatch\. For more information about turning on email event logging, see [Tracking messages](tracking.md)\.
 
 The following tables describe the events that Amazon WorkMail logs with CloudWatch, when the events are transmitted, and what the event fields contain\.
 
@@ -57,13 +57,13 @@ This event is logged when an incoming or outgoing message triggers an email flow
 | Field | Description | 
 | --- | --- | 
 |  ruleName  |  The name of the rule\.  | 
-|  ruleType  |  The type of rule applied \(INBOUND\_RULE, OUTBOUND\_RULE, MAILBOX\_RULE\)\. Inbound and outbound rules apply to your Amazon WorkMail organization\. Mailbox rules apply only to specified mailboxes\. For more information, see [Managing Email Flows](email-flows.md)\.  | 
+|  ruleType  |  The type of rule applied \(INBOUND\_RULE, OUTBOUND\_RULE, MAILBOX\_RULE\)\. Inbound and outbound rules apply to your Amazon WorkMail organization\. Mailbox rules apply only to specified mailboxes\. For more information, see [Managing email flows](email-flows.md)\.  | 
 |  ruleActions  |  Actions taken based on the rule\. Different recipients of the message might have different actions, such as a bounced email or a successfully delivered email\.  | 
 |  targetFolder  |  Intended destination folder for a `Move` or `Copy` MAILBOX\_RULE\.  | 
 |  targetRecipient  |  Intended recipient of a `Forward` or `Redirect` MAILBOX\_RULE\.  | 
 
 **`JOURNALING_INITIATED`**  
-This event is logged when Amazon WorkMail sends an email to the journaling address specified by your organization administrator\. This is only transmitted if journaling is configured for your organization\. For more information, see [Using Email Journaling with Amazon WorkMail](journaling_overview.md)\.
+This event is logged when Amazon WorkMail sends an email to the journaling address specified by your organization administrator\. This is only transmitted if journaling is configured for your organization\. For more information, see [Using email journaling with Amazon WorkMail](journaling_overview.md)\.
 
 
 | Field | Description | 
@@ -120,9 +120,9 @@ This event is logged when a DMARC policy is applied to an email sent to your org
 
 ## Using CloudWatch Insights with Amazon WorkMail<a name="cw-insights"></a>
 
-If you have turned on email event logging in the Amazon WorkMail console, you can use Amazon CloudWatch Logs Insights to query your event logs\. For more information about turning on email event logging, see [Tracking Messages](tracking.md)\. For more information about CloudWatch Logs Insights, see [Analyze Log Data with CloudWatch Logs Insights](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AnalyzingLogData.html) in the *Amazon CloudWatch Logs User Guide*\.
+If you have turned on email event logging in the Amazon WorkMail console, you can use Amazon CloudWatch Logs Insights to query your event logs\. For more information about turning on email event logging, see [Tracking messages](tracking.md)\. For more information about CloudWatch Logs Insights, see [Analyze log data with CloudWatch Logs Insights](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AnalyzingLogData.html) in the *Amazon CloudWatch Logs User Guide*\.
 
-The following examples demonstrate how to query CloudWatch logs for common email events\. You run these queries in the CloudWatch console\. For instructions about how to run these queries, see [Tutorial: Run and Modify a Sample Query](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_AnalyzeLogData_RunSampleQuery.html) in the *Amazon CloudWatch Logs User Guide*\.
+The following examples demonstrate how to query CloudWatch Logs for common email events\. You run these queries in the CloudWatch console\. For instructions about how to run these queries, see [Tutorial: Run and modify a sample query](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_AnalyzeLogData_RunSampleQuery.html) in the *Amazon CloudWatch Logs User Guide*\.
 
 **Example Example: See why User B did not receive an email sent by User A\.**  
 The following code example demonstrates how to query for an outgoing email sent by User A to User B, sorted by timestamp\.  

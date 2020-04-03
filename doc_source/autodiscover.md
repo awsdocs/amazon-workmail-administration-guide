@@ -1,4 +1,4 @@
-# Enabling AutoDiscover to Configure Endpoints<a name="autodiscover"></a>
+# Enabling AutoDiscover to configure endpoints<a name="autodiscover"></a>
 
 AutoDiscover enables you to easily configure Microsoft Outlook and mobile clients with only your email address and password\. The service also maintains a connection to Amazon WorkMail and updates local settings whenever endpoint or settings changes are made\. In addition, AutoDiscover enables your client to use additional Amazon WorkMail features, such as the Offline Address Book, Out\-of\-Office Assistant, and the ability to view free/busy time in Calendar\. 
 
@@ -9,7 +9,7 @@ The client performs the following AutoDiscover phases to detect the server endpo
   + https://autodiscover\.company\.tld/autodiscover/autodiscover\.xml
 + Phase 3: The client performs a DNS lookup to autodiscover\.company\.tld and sends an unauthenticated GET request to the derived endpoint from the user’s email address\. If the server returns a 302 redirect, the client resends the AutoDiscover request against the returned HTTPS endpoint\. 
 
-If all of these phases fail, the client can’t be configured automatically, and you must set up the client manually\. For information about manually configuring mobile devices, see [Manually Connect Your Device](https://docs.aws.amazon.com/workmail/latest/userguide/manually_connect_device.html)\.
+If all of these phases fail, the client can’t be configured automatically, and you must set up the client manually\. For information about manually configuring mobile devices, see [Manually connect your device](https://docs.aws.amazon.com/workmail/latest/userguide/manually_connect_device.html)\.
 
 When you set up your domain in Amazon WorkMail, you are prompted to add the AutoDiscover DNS record\. This enables the client to perform phase 3 of the AutoDiscover process\. However, these steps don't work for all mobile devices, such as the stock Android email app, and you may need to set up AutoDiscover phase 2 manually\.
 
@@ -20,9 +20,9 @@ There are two ways you can set up AutoDiscover phase 2 for your domain:
 **To enable AutoDiscover phase 2 with Route 53 and CloudFront**
 **Note**  
 The following steps show how to proxy https://autodiscover\.company\.tld/autodiscover/autodiscover\.xml\. To proxy https://company\.tld/autodiscover/autodiscover\.xml, remove the "autodiscover\." prefix from the domains in the following steps\.  
-For more information about applicable pricing, see [Amazon CloudFront Pricing](https://aws.amazon.com/cloudfront/pricing/) and [Amazon Route 53 Pricing](https://aws.amazon.com/route53/pricing/)\.
+For more information about applicable pricing, see [Amazon CloudFront pricing](https://aws.amazon.com/cloudfront/pricing/) and [Amazon Route 53 pricing](https://aws.amazon.com/route53/pricing/)\.
 
-1. Get an SSL certificate for autodiscover\.company\.tld and upload it to AWS Identity and Access Management or AWS Certificate Manager\. For more information, see [Working with Server Certificates](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_server-certs.html) in the *IAM User Guide*, or [Getting Started](https://docs.aws.amazon.com/acm/latest/userguide/gs.html) in the *AWS Certificate Manager User Guide*\.
+1. Get an SSL certificate for autodiscover\.company\.tld and upload it to AWS Identity and Access Management or AWS Certificate Manager\. For more information, see [Working with server certificates](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_server-certs.html) in the *IAM User Guide*, or [Getting started](https://docs.aws.amazon.com/acm/latest/userguide/gs.html) in the *AWS Certificate Manager User Guide*\.
 
 1. Create a new CloudFront distribution\.
 
@@ -32,31 +32,33 @@ For more information about applicable pricing, see [Amazon CloudFront Pricing](h
 
    1. For **Web**, choose **Get Started**\. 
 
-   1. Fill in the following values for **Origin Settings**:
-      + **Origin Domain Name**: autodiscover\-service\.mail\.us\-east\-1\.awsapps\.com, autodiscover\-service\.mail\.eu\-west\-1\.awsapps\.com, or autodiscover\-service\.mail\.us\-west\-2\.awsapps\.com 
-      + **Origin Protocol Policy**: Match Viewer
+   1. Enter the following values for **Origin Settings**:
+      + For **Origin Domain Name**, enter the appropriate domain name for your Region: **autodiscover\-service\.mail\.us\-east\-1\.awsapps\.com**, **autodiscover\-service\.mail\.eu\-west\-1\.awsapps\.com**, or **autodiscover\-service\.mail\.us\-west\-2\.awsapps\.com**\.
+      + **Origin Protocol Policy**: **Match Viewer**
 **Note**  
 Leave **Origin path** blank, and do not change the auto\-populated value for **Origin ID**\.
 
-   1. Fill in the following values for **Default Cache Behavior Settings**:
+   1. Select the following values for **Default Cache Behavior Settings**:
       + **Viewer Protocol Policy**: HTTPS Only
-      + **Allowed HTTP Methods**: GET, HEAD, OPTIONS, PUT, POST, PATCH, DELETE 
-      + **Cache Based on Selected Request Headers**: All 
-      + **Forward Cookies**: All 
+      + **Allowed HTTP Methods**: GET, HEAD, OPTIONS, PUT, POST, PATCH, DELETE
+      + **Cache Based on Selected Request Headers**: All
+      + **Forward Cookies**: All
       + **Query String Forwarding and Caching**: None \(Improves Caching\) 
       + **Smooth Streaming**: No 
       + **Restrict Viewer Access**: No 
 
-   1. Fill in the following values for **Distribution Settings**:
+   1. Select the following values for **Distribution Settings**:
       + **Price Class**: Use only US, Canada, and Europe
-      + **Alternate Domain Names \(CNAMEs\)**: autodiscover\.company\.tld \(or company\.tld\)
+      + For **Alternate Domain Names \(CNAMEs\)**, enter **autodiscover\.company\.tld** or **company\.tld**
       + **SSL Certificate**: Custom SSL Certificate \(stored in IAM\)
       + **Custom SSL Client Support**: Choose **All Clients** or **Only Clients that Support Server Name Indication \(SNI\)**\. Older versions of Android might not work with the latter option\.
 **Note**  
 If you choose **All Clients**, leave **Default Root Object** blank\.
       + **Logging**: Choose **On** or **Off**\.
-      + **Comment**: AutoDiscover type2 for autodiscover\.company\.tld 
+      + For **Comment**, enter **AutoDiscover type2 for autodiscover\.company\.tld**
       + For **Distribution State**, choose **Enabled**\.
+
+   1. Choose **Create Distribution**\.
 
 1. In Route 53, create a record that routes internet traffic for your domain name to your CloudFront distribution:
 **Note**  
@@ -92,7 +94,7 @@ If the CloudFront distribution created above is not present, wait a while and tr
 
 1. Confirm that the endpoint is SSL\-enabled and configured correctly\.
 
-## AutoDiscover Phase 2 Troubleshooting<a name="troubleshooting"></a>
+## AutoDiscover phase 2 troubleshooting<a name="troubleshooting"></a>
 
 Post the following requests to your AutoDiscover endpoint to test it for correct configuration\. If your AutoDiscover endpoint is configured correctly, it responds with an unauthorized request message\.
 

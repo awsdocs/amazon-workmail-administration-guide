@@ -1,13 +1,13 @@
-# Managing Mobile Devices<a name="manage-devices"></a>
+# Managing mobile devices<a name="manage-devices"></a>
 
-Remotely wipe user mobile devices, remove devices from your organization, and view details for devices in your organization from Amazon WorkMail\. For information about editing your organization's mobile device policy, see [Editing Your Organization's Mobile Device Policy](edit_organization_mobile_policy.md)\.
+Remotely wipe user mobile devices, remove devices from your organization, and view details for devices in your organization from Amazon WorkMail\. For information about editing your organization's mobile device policy, see [Editing your organization's mobile device policy](edit_organization_mobile_policy.md)\.
 
 **Topics**
-+ [Remotely Wiping Mobile Devices](#remote_wipe_device)
-+ [Removing User Devices from the Devices List](#remove_mobile_device)
-+ [Viewing Mobile Device Details](#view_device_details)
++ [Remotely wiping mobile devices](#remote_wipe_device)
++ [Removing user devices from the devices list](#remove_mobile_device)
++ [Viewing mobile device details](#view_device_details)
 
-## Remotely Wiping Mobile Devices<a name="remote_wipe_device"></a>
+## Remotely wiping mobile devices<a name="remote_wipe_device"></a>
 
 You can only remotely wipe user devices when they are connected to Amazon WorkMail\. If a device is disconnected from the network, this procedure doesn't work\.
 
@@ -18,7 +18,7 @@ For most mobile devices, a remote wipe resets the device to factory defaults\. A
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. If necessary, change the region\. From the navigation bar, select the region that meets your needs\. For more information, see [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+1. If necessary, change the region\. From the navigation bar, select the region that meets your needs\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
 1. On the **Organizations** screen, in the list of organizations, select your organization's alias\.
 
@@ -32,7 +32,7 @@ For most mobile devices, a remote wipe resets the device to factory defaults\. A
 **Important**  
 To re\-add a device, make sure the device is removed from the list; otherwise, the device will be wiped again\.
 
-## Removing User Devices from the Devices List<a name="remove_mobile_device"></a>
+## Removing user devices from the devices list<a name="remove_mobile_device"></a>
 
 If a user is no longer using a certain mobile device or the device is remote wiped, you can remove it from the list\. When the user configures the device again, it shows up in the list\.
 
@@ -40,7 +40,7 @@ If a user is no longer using a certain mobile device or the device is remote wip
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. If necessary, change the region\. From the navigation bar, select the region that meets your needs\. For more information, see [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+1. If necessary, change the region\. From the navigation bar, select the region that meets your needs\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
 1. On the **Organizations** screen, in the list of organizations, select your organization's alias\.
 
@@ -48,7 +48,7 @@ If a user is no longer using a certain mobile device or the device is remote wip
 
 1. In the list of devices, select the device to remove and choose **Remove device**\.
 
-## Viewing Mobile Device Details<a name="view_device_details"></a>
+## Viewing mobile device details<a name="view_device_details"></a>
 
 You can view the details of a user's mobile device\.
 
@@ -59,7 +59,7 @@ Some devices don't send all of their details to the server, so you may not see a
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. If necessary, change the region\. From the navigation bar, select the region that meets your needs\. For more information, see [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+1. If necessary, change the region\. From the navigation bar, select the region that meets your needs\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
 1. On the **Organizations** screen, in the list of organizations, select your organization's alias\.
 

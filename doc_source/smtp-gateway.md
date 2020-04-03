@@ -1,6 +1,6 @@
-# Configuring SMTP Gateways<a name="smtp-gateway"></a>
+# Configuring SMTP gateways<a name="smtp-gateway"></a>
 
-You can configure SMTP gateways to use with outbound email flow rules\. Outbound email flow rules let you route emails sent from your Amazon WorkMail organization through an SMTP gateway\. For more information, see [Outbound Email Rule Actions](email-flows.md#email-flows-rule-outbound)\.
+You can configure SMTP gateways to use with outbound email flow rules\. Outbound email flow rules let you route emails sent from your Amazon WorkMail organization through an SMTP gateway\. For more information, see [Outbound email rule actions](email-flows.md#email-flows-rule-outbound)\.
 
 **Note**  
 SMTP gateways configured for outbound email flow rules must support TLS v1\.2 using certificates from major certificate authorities\. Only basic authentication is supported\.
