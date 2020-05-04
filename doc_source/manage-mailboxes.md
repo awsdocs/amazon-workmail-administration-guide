@@ -5,6 +5,7 @@ You can disable and restore user mailboxes and enable push notifications\. For i
 **Topics**
 + [Disabling user mailboxes](#delete_user_mailbox)
 + [Restoring disabled mailboxes](#restore_deleted_mailbox)
++ [Viewing email headers](#email-headers)
 + [Working with notifications](#notifications)
 
 ## Disabling user mailboxes<a name="delete_user_mailbox"></a>
@@ -46,6 +47,18 @@ Mailboxes cannot be restored if the organization containing them has been delete
 1. From the list of disabled users, select the users to enable and choose **Enable user**\.
 
 1. In the **Enable user\(s\)** dialog box, review the primary email address of the user and choose **Enable**\.
+
+## Viewing email headers<a name="email-headers"></a>
+
+The information in email headers can help you troubleshoot user email issues\.
+
+**To view email headers in Amazon WorkMail**
+
+1. In the Amazon WorkMail web application, open the email message\.
+
+1. Choose **Message options** \(the gear and envelope icon\)\.
+
+The email headers appear under **Internet Headers**\.
 
 ## Working with notifications<a name="notifications"></a>
 

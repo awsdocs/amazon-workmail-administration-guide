@@ -80,3 +80,4 @@ Amazon's trademarks and trade dress may not be used in
    + [Removing a resource](remove_resource.md)
 + [Using email journaling with Amazon WorkMail](journaling_overview.md)
 + [Document history](DocumentHistory.md)
++ [AWS glossary](glossary.md)
