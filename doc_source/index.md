@@ -43,6 +43,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Removing an organization](remove_organization.md)
    + [Tagging an organization](org-tag.md)
    + [Working with access control rules](access-rules.md)
+   + [Setting mailbox retention policies](mailbox-retention-policy.md)
    + [Editing your organization's mobile device policy](edit_organization_mobile_policy.md)
    + [Managing email flows](email-flows.md)
       + [Creating an email flow rule](create-email-rules.md)
