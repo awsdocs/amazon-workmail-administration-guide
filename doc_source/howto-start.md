@@ -31,7 +31,7 @@ You must sign in to the Amazon WorkMail console before you can add users and man
 **Note**  
 You can start using your Amazon WorkMail organization with the provided test domain created during setup\. The test domain format is *example*\.awsapps\.com\. You can use the test mail domain as long as you maintain enabled users in your Amazon WorkMail organization\. However, the test domain cannot be used outside of Amazon WorkMail\. Also, the test domain might become available for registration and use by other customers if your Amazon WorkMail organization does not maintain at least one enabled user\. 
 
-1. Create new users or enable your existing directory users for Amazon WorkMail\. For more information, see [Creating new users](manage-users.md#add_new_user)\.
+1. Create new users or enable your existing directory users for Amazon WorkMail\. For more information, see [Creating users](manage-users.md#add_new_user)\.
 
 1. \(Optional\) If you have existing Microsoft Exchange mailboxes, migrate them to Amazon WorkMail\. For more information, see [Migrating to Amazon WorkMail](migration_overview.md)\.
 
@@ -40,6 +40,8 @@ After you've finished setting up your Amazon WorkMail site, you can access Amazo
 **To locate your Amazon WorkMail web application URL**
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
+
+1. For **Organizations**, choose the name of your organization\.
 
 1. In the navigation panel, choose **Organization settings**\.
 

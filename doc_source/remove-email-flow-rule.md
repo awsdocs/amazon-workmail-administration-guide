@@ -6,6 +6,8 @@ When you remove an email flow rule, the changes are applied immediately\.
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
+1. For **Organizations**, choose the name of your organization\.
+
 1. In the navigation pane, choose **Organization settings**, **Inbound/Outbound rules**\.
 
 1. Select the rule and choose **Remove**\. 

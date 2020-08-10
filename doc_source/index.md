@@ -40,7 +40,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Amazon WorkMail quotas](workmail_limits.md)
 + [Working with organizations](organizations_overview.md)
    + [Adding an organization](add_new_organization.md)
-   + [Removing an organization](remove_organization.md)
+   + [Deleting an organization](delete_organization.md)
    + [Tagging an organization](org-tag.md)
    + [Working with access control rules](access-rules.md)
    + [Setting mailbox retention policies](mailbox-retention-policy.md)

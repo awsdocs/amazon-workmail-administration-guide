@@ -6,9 +6,9 @@ You can edit a resource's general details \(name, description, type, and email a
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. If necessary, change the region\. From the navigation bar, choose the region that meets your needs\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+1. If necessary, change the AWS Region\. From the navigation bar, choose the Region that meets your needs\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
-1. On the **Organizations** page, select your organization\.
+1. For **Organizations**, choose the name of your organization\.
 
 1. In the navigation pane, choose **Resources**, and select the resource to edit\.
 
@@ -22,9 +22,9 @@ You can configure a resource to accept or decline booking requests automatically
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. If necessary, change the region\. From the navigation bar, choose the region that meets your needs\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+1. If necessary, change the Region\. From the navigation bar, choose the Region that meets your needs\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
-1. On the **Organizations** page, select your organization\.
+1. For **Organizations**, choose the name of your organization\.
 
 1. In the navigation pane, choose **Resources**, and then select the resource to edit\.
 
@@ -46,9 +46,9 @@ Before you proceed, follow the process above to clear the **Automatically accept
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. If necessary, change the region\. From the navigation bar, choose the region that meets your needs\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+1. If necessary, change the Region\. From the navigation bar, choose the Region that meets your needs\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
-1. On the **Organizations** page, select your organization\.
+1. For **Organizations**, choose the name of your organization\.
 
 1. In the navigation pane, choose **Resources**, and select the name of the resource to edit\.
 

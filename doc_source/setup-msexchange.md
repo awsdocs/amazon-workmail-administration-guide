@@ -5,7 +5,7 @@ When you enable email routing between Microsoft Exchange Server and Amazon WorkM
 Prerequisites for email routing: 
 + Interoperability mode is enabled for your organization\. For more information, see [Enable interoperability](interoperability.md#enable_interoperability)\.
 + Your domain is added and verified in the Amazon WorkMail console\.
-+ Your Microsoft Exchange Server can send email to the Internet\. You may need to configure a Send connector\. For more information, see [Create a Send connector for email sent to the Internet](https://technet.microsoft.com/en-us/library/jj657457.aspx) on Microsoft TechNet\.
++ Your Microsoft Exchange Server can send email to the internet\. You might need to configure a Send connector\.
 
 ## Enable email routing for a user<a name="enable_routing_user"></a>
 
@@ -50,9 +50,9 @@ Microsoft Exchange remains the primary server for incoming email as long as you 
 
 ## Post setup configuration<a name="post_setup"></a>
 
-The above steps moves a user mailbox from Microsoft Exchange Server to Amazon WorkMail, while keeping the user in Microsoft Exchange as a contact\. Because the migrated user is now an external mail user, Microsoft Exchange Server imposes additional constraints and there may be additional configuration requirements to complete the migration\.
-+ The user might not be able to send emails to groups by default\. To enable this functionality, the user needs to be added to a safe sender list for all groups\. For more information, see [Delivery management](https://technet.microsoft.com/en-us/library/bb123722.aspx#deliverymanagement) on Microsoft TechNet\.
-+ The user also might not be able to book resources\. To enable this functionality, you need to set the `ProcessExternalMeetingMessages` of all resources that the user needs to access\. For more information, see [Set\-CalendarProcessing](https://technet.microsoft.com/en-us/library/dd335046.aspx) on Microsoft TechNet\.
+The above steps move a user mailbox from Microsoft Exchange Server to Amazon WorkMail, while keeping the user in Microsoft Exchange as a contact\. Because the migrated user is now an external mail user, Microsoft Exchange Server imposes additional constraints and there may be additional configuration requirements to complete the migration\.
++ The user might not be able to send emails to groups by default\. To enable this functionality, the user must be added to a safe sender list for all groups\. For more information, see [Delivery management](https://technet.microsoft.com/en-us/library/bb123722.aspx#deliverymanagement) on Microsoft TechNet\.
++ The user also might not be able to book resources\. To enable this functionality, you must set the `ProcessExternalMeetingMessages` of all resources that the user needs to access\. For more information, see [Set\-CalendarProcessing](https://technet.microsoft.com/en-us/library/dd335046.aspx) on Microsoft TechNet\.
 
 ## Mail client configuration<a name="mail_client_config"></a>
 

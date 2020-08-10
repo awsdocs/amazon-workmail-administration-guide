@@ -11,6 +11,6 @@ User certificates in the Global Address List \(GAL\) are supported only in a con
 
 1. Configure Certificate Autoenrollment to issue and store user certificates automatically in the Active Directory\. Amazon WorkMail receives user certificates from the Active Directory and publishes them to the GAL\. For more information, see [Configure Certificate Autoenrollment](https://technet.microsoft.com/en-us/library/cc731522(v=ws.11).aspx)\.
 
-1. Distribute the generated certificates to users by exporting the certificates from the exchange server and mailing them\.
+1. Distribute the generated certificates to users by exporting the certificates from the server running Microsoft Exchange and mailing them\.
 
 1. Each user installs the certificate to their email program \(such as Windows Outlook\) and mobile devices\.

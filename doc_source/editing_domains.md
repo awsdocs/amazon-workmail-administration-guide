@@ -1,8 +1,8 @@
 # Editing domain identity policies<a name="editing_domains"></a>
 
-Domain identity policies specify permissions for email actions \(such as redirecting emails\)\. You can redirect email to any email address of your choosing; however, if your domain was added prior to October 13, 2016, you need to update the sending authorization policy manually to support that\.
+Domain identity policies specify permissions for email actions \(such as redirecting email messages\)\. You can redirect email to any email address of your choosing\. However, if your domain was added prior to October 13, 2016, you need to update the sending authorization policy manually to support that\.
 
-The update is the addition of a new action: `ses:*`\. Domains added after October 13, 2016 have this added by default\.
+The update is the addition of a new action: `ses:*`\. Domains added after October 13, 2016 have this action added by default\.
 
 **Note**  
 Exercise caution when editing other sections of the `ses` policy, as incorrect settings can have an adverse effect on Amazon WorkMail functionality\.
@@ -21,7 +21,7 @@ Exercise caution when editing other sections of the `ses` policy, as incorrect s
 
 1. Choose **Apply Policy**\.
 
-The updated actions of the policy should look like the following: 
+The updated actions of the policy should look like the following\. 
 
 ```
             "Action": [

@@ -4,7 +4,7 @@ In Amazon WorkMail, your organization represents the users in your company\. In 
 
 **Topics**
 + [Adding an organization](add_new_organization.md)
-+ [Removing an organization](remove_organization.md)
++ [Deleting an organization](delete_organization.md)
 + [Tagging an organization](org-tag.md)
 + [Working with access control rules](access-rules.md)
 + [Setting mailbox retention policies](mailbox-retention-policy.md)

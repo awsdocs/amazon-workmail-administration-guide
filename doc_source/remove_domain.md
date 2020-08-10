@@ -9,9 +9,9 @@ You can't delete a domain when there are users or groups using the domain as the
 
 1. Sign in to the AWS Management Console and open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. If necessary, change the region\. From the navigation bar, select the region that meets your needs\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+1. If necessary, change the AWS Region\. From the navigation bar, select the Region that meets your needs\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
-1. On the **Organizations** screen, in the **Alias** column, select the name of the organization from which to remove the domain\.
+1. For **Organizations**, choose the name of the organization from which to remove the domain\.
 
 1. In the list of domains, select the check box next to the domain name and choose **Remove**\.
 

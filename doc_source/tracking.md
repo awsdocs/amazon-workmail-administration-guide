@@ -15,7 +15,7 @@ When you turn on email event logging using the default settings, Amazon WorkMail
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. For **Organizations**, choose the alias of your Amazon WorkMail organization\.
+1. For **Organizations**, choose the name of your organization\.
 
 1. In the navigation pane, choose **Organization settings**, **Monitoring**\.
 
@@ -106,7 +106,7 @@ Turn off email event logging from the Amazon WorkMail console\. If you no longer
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. For **Organizations**, choose the alias of your Amazon WorkMail organization\.
+1. For **Organizations**, choose the name of your organization\.
 
 1. In the navigation pane, choose **Organization settings**, **Monitoring**\.
 

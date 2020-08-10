@@ -1,6 +1,6 @@
 # Configure availability settings on Amazon WorkMail<a name="enable_interop_wm"></a>
 
-Configure availability settings on Amazon WorkMail and Microsoft Exchange to enable bi\-directional sharing of calendar free/busy information\.
+Configure availability settings on Amazon WorkMail and Microsoft Exchange to enable bidirectional sharing of calendar free/busy information\.
 
 **To configure availability settings in the console**
 

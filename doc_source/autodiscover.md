@@ -22,7 +22,7 @@ There are two ways you can set up AutoDiscover phase 2 for your domain:
 The following steps show how to proxy https://autodiscover\.company\.tld/autodiscover/autodiscover\.xml\. To proxy https://company\.tld/autodiscover/autodiscover\.xml, remove the "autodiscover\." prefix from the domains in the following steps\.  
 For more information about applicable pricing, see [Amazon CloudFront pricing](https://aws.amazon.com/cloudfront/pricing/) and [Amazon Route 53 pricing](https://aws.amazon.com/route53/pricing/)\.
 
-1. Get an SSL certificate for autodiscover\.company\.tld and upload it to AWS Identity and Access Management or AWS Certificate Manager\. For more information, see [Working with server certificates](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_server-certs.html) in the *IAM User Guide*, or [Getting started](https://docs.aws.amazon.com/acm/latest/userguide/gs.html) in the *AWS Certificate Manager User Guide*\.
+1. Get an SSL certificate for autodiscover\.company\.tld and upload it to AWS Identity and Access Management \(IAM\) or AWS Certificate Manager\. For more information, see [Working with server certificates](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_server-certs.html) in the *IAM User Guide*, or [Getting started](https://docs.aws.amazon.com/acm/latest/userguide/gs.html) in the *AWS Certificate Manager User Guide*\.
 
 1. Create a new CloudFront distribution\.
 
@@ -79,7 +79,7 @@ If the CloudFront distribution created above is not present, wait a while and tr
 
 **To enable AutoDiscover phase 2 with an Apache web server**
 
-1. Configure the following two directives on an SSL\-enabled Apache server: 
+1. Configure the following two directives on an SSL\-enabled Apache server\. 
 
    ```
    SSLProxyEngine on ProxyPass /autodiscover/autodiscover.xml
@@ -101,7 +101,7 @@ Post the following requests to your AutoDiscover endpoint to test it for correct
 **To make a basic unauthorized request**
 + Create an unauthenticated POST request to the AutoDiscover endpoint\.
 
-If your endpoint is configured correctly, it should return a `401 unauthorized` message:
+If your endpoint is configured correctly, it should return a `401 unauthorized` message\.
 
 ```
 $ curl -X POST -v https://autodiscover.''company.tld''/autodiscover/autodiscover.xml
@@ -113,7 +113,7 @@ Next, run a real request that a mobile device would issue\.
 
 **To run a real request**
 
-1. Create a request\.xml file with the following XML content:
+1. Create a request\.xml file with the following XML content\.
 
    ```
    <?xml version="1.0" encoding="utf-8"?>

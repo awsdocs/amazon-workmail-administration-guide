@@ -13,7 +13,7 @@ You can add up to 100 users at a time by using the following procedure\.
 
 1. If you require a different AWS Region, change it from the navigation bar\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
-1. On the **Organizations** page, in the **Alias** column, select the name of the organization that your group belongs to\.
+1. For **Organizations**, choose the name of your organization\.
 
 1. Choose **Groups**\.
 

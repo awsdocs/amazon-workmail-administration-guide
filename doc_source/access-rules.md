@@ -13,7 +13,7 @@ Administrators can apply access control rules that allow or deny access based on
 Administrators apply access control rules in addition to the user's mailbox and folder permissions\. For more information, see [Working with mailbox permissions](mail_perms_overview.md) and [Sharing folders and folder permissions](https://docs.aws.amazon.com/workmail/latest/userguide/share-folders.html) in the *Amazon WorkMail User Guide*\.
 
 **Note**  
-Access control rules do not apply to Amazon WorkMail console or SDK access\. Use IAM roles or policies instead\. For more information, see [Identity and access management for Amazon WorkMail](security-iam.md)\.
+Access control rules do not apply to Amazon WorkMail console or SDK access\. Use AWS Identity and Access Management \(IAM\) roles or policies instead\. For more information, see [Identity and access management for Amazon WorkMail](security-iam.md)\.
 
 ## Creating access control rules<a name="create-acr"></a>
 
@@ -23,7 +23,7 @@ Create new access control rules from the Amazon WorkMail console\.
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. On the **Organizations** screen, choose the alias of the organization\.
+1. For **Organizations**, choose the name of your organization\.
 
 1. Choose **Access control rules**\.
 
@@ -47,7 +47,7 @@ Edit new and default access control rules from the Amazon WorkMail console\.
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. On the **Organizations** screen, choose the alias of the organization\.
+1. For **Organizations**, choose the name of your organization\.
 
 1. Choose **Access control rules**\.
 
@@ -67,7 +67,7 @@ To see how your organization's access control rules are applied, test the rules 
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. On the **Organizations** screen, choose the alias of the organization\.
+1. For **Organizations**, choose the name of your organization\.
 
 1. Choose **Access control rules**\.
 
@@ -94,7 +94,7 @@ If an administrator deletes all access control rules for an organization, Amazon
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. On the **Organizations** screen, choose the alias of the organization\.
+1. For **Organizations**, choose the name of your organization\.
 
 1. Choose **Access control rules**\.
 

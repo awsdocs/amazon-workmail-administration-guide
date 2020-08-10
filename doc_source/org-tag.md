@@ -2,7 +2,7 @@
 
 Tagging an Amazon WorkMail organization resource lets you do the following:
 + Differentiate between organizations in the AWS Billing and Cost Management console\.
-+ Control access to Amazon WorkMail organization resources by adding them to the `Resource` element of IAM permission policy statements\.
++ Control access to Amazon WorkMail organization resources by adding them to the `Resource` element of AWS Identity and Access Management \(IAM\) permission policy statements\.
 
 For more information about Amazon WorkMail resource\-level permissions, see [Resources](security_iam_service-with-iam.md#security_iam_service-with-iam-id-based-policies-resources)\. For more information about controlling access based on tags, see [Authorization based on Amazon WorkMail tags](security_iam_service-with-iam.md#security_iam_service-with-iam-tags)\.
 
@@ -12,7 +12,7 @@ Amazon WorkMail administrators can tag organizations using the Amazon WorkMail c
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. On the **Organizations** screen, choose the alias of the organization to add tags to\.
+1. For **Organizations**, choose the name of your organization\.
 
 1. Choose **Tags**\.
 
@@ -36,7 +36,7 @@ You can remove tags from an organization at any time, using the Amazon WorkMail 
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. On the **Organizations** screen, choose the alias of the organization to remove tags from\.
+1. For **Organizations**, choose the name of your organization\.
 
 1. Choose **Tags**\.
 

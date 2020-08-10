@@ -1,6 +1,6 @@
 # Adding a domain<a name="add_domain"></a>
 
-You can add up to 100 domains to your organization for sending email\. When you add a new domain, an Amazon SES sending authorization policy is automatically added to the domain identity policy\. This provides Amazon WorkMail with access to all Amazon SES sending actions for your domain and allows you to redirect email to your domain as well as external domains\.
+You can add up to 100 domains to your Amazon WorkMail organization for sending email\. When you add a new domain, an Amazon Simple Email Service \(Amazon SES\) sending authorization policy is automatically added to the domain identity policy\. This provides Amazon WorkMail with access to all Amazon SES sending actions for your domain and allows you to redirect email to your domain as well as external domains\.
 
 **Note**  
 As a best practice, you should add aliases for postmaster@ and abuse@\. You can create distribution groups for these aliases if you want certain users in your organization to receive mail sent to these aliases\.
@@ -9,9 +9,9 @@ As a best practice, you should add aliases for postmaster@ and abuse@\. You can 
 
 1. Sign in to the AWS Management Console and open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. If necessary, change the Region\. From the navigation bar, select the Region that meets your needs\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+1. If necessary, change the AWS Region\. From the navigation bar, select the Region that meets your needs\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
-1. On the **Organizations** screen, in the **Alias** column, select the name of the organization to which to add a domain\.
+1. For **Organizations**, choose the name of the organization to which to add a domain\.
 
 1. In the navigation pane, choose **Domains**, **Add domain**\.
 
@@ -41,6 +41,6 @@ Some DNS providers automatically append the domain name to the end of DNS record
    The following table shows the available verification statuses for each record type\.    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/workmail/latest/adminguide/add_domain.html)
 **Note**  
-The AutoDiscover domain verification also checks for correct AutoDiscover setup\. After Phase 2 and Phase 3 verification is complete, a checkmark appears next to the **Verified** status\.
+The AutoDiscover domain verification also checks for correct AutoDiscover setup\. After Phase 2 and Phase 3 verification is complete, a check mark appears next to the **Verified** status\.
 
    We recommend that you set the Time to Live \(TTL\) to 3600 of the MX and autodiscover CNAME record\. Reducing the TTL ensures that your mail servers don't use outdated or invalid MX records after updating your MX records or migrating your mailboxes\.

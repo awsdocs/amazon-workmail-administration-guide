@@ -1,6 +1,6 @@
 # Retrieving message content with AWS Lambda<a name="lambda-content"></a>
 
-After you configure a AWS Lambda function to manage email flows for Amazon WorkMail, you can access the full content of the email messages that are processed using Lambda\. For more information about getting started with Lambda for Amazon WorkMail, see [Configuring AWS Lambda for Amazon WorkMail](lambda.md)\.
+After you configure an AWS Lambda function to manage email flows for Amazon WorkMail, you can access the full content of the email messages that are processed using Lambda\. For more information about getting started with Lambda for Amazon WorkMail, see [Configuring AWS Lambda for Amazon WorkMail](lambda.md)\.
 
 To access the full content of email messages, use the `GetRawMessageContent` action in the Amazon WorkMail Message Flow API\. The email message ID that is passed to your Lambda function upon invocation sends a request to the API\. Then, the API responds with the full MIME content of the email message\. For more information, see [Amazon WorkMail Message Flow](https://docs.aws.amazon.com/workmail/latest/APIReference/API_Operations_Amazon_WorkMail_Message_Flow.html) in the *Amazon WorkMail API Reference*\.
 
@@ -70,7 +70,7 @@ The following example policy grants an IAM entity full read access to all inboun
 }
 ```
 
-If you have multiple organizations in your AWS account, you can also limit access to one or more organizations\. This is useful if certain Lambdas should only be used for certain organizations\.
+If you have multiple organizations in your AWS account, you can also limit access to one or more organizations\. This is useful if certain Lambda functions should only be used for certain organizations\.
 
 ```
 {

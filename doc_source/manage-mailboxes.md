@@ -16,9 +16,9 @@ You can disable user mailboxes when they are no longer needed\. Amazon WorkMail 
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. If necessary, change the region\. From the navigation bar, select the region that meets your needs\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+1. If necessary, change the AWS Region\. From the navigation bar, select the Region that meets your needs\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
-1. On the **Organizations** screen, in the list of organizations, select your organization's alias\.
+1. For **Organizations**, choose the name of your organization\.
 
 1. In the navigation pane, select **Users**, select the name of the user to disable, and choose **Disable User**\.
 
@@ -38,9 +38,9 @@ Mailboxes cannot be restored if the organization containing them has been delete
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. If necessary, change the region\. From the navigation bar, select the region that meets your needs\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+1. If necessary, change the Region\. From the navigation bar, select the Region that meets your needs\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
-1. On the **Organizations** screen, in the list of organizations, select your organization's alias\.
+1. For **Organizations**, choose the name of your organization\.
 
 1. In the navigation pane, choose **Users** to see a list of enabled, disabled, and system users\.
 
@@ -68,9 +68,9 @@ For more information, see [Notification subscriptions, mailbox events, and EWS i
 
 You can subscribe specific folders, such as Inbox or Calendar, or all folders for mailbox change events \(including NewMail, Created, and Modified\)\.
 
-Client libraries such as the [EWS Java API](https://github.com/OfficeDev/ews-java-api) or the [Managed EWS C\# API](https://msdn.microsoft.com/en-us/library/office/dn567668(v=exchg.150).aspx) can be used to access this feature\. A complete sample application of a push responder, developed using AWS Lambda and API Gateway \(using the AWS Serverless framework\), is available [here](https://github.com/aws-samples/amazon-workmail-demo-ews-push-notifications)\. It uses the EWS Java API\.
+You can use client libraries such as the [EWS Java API](https://github.com/OfficeDev/ews-java-api) or the [Managed EWS C\# API](https://msdn.microsoft.com/en-us/library/office/dn567668(v=exchg.150).aspx) to access this feature\. A complete sample application of a push responder, developed using AWS Lambda and API Gateway \(using the AWS Serverless framework\), is available [here](https://github.com/aws-samples/amazon-workmail-demo-ews-push-notifications)\. It uses the EWS Java API\.
 
-The following is a sample push subscription request:
+The following is a sample push subscription request\.
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -97,7 +97,7 @@ The following is a sample push subscription request:
 </soap:Envelope>
 ```
 
-The following is a successful subscription request result:
+The following is a successful subscription request result\.
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -119,7 +119,7 @@ The following is a successful subscription request result:
 </soap:Envelope>
 ```
 
-Afterwards, notifications are sent to the URL specified in the subscription request\. The following is a sample notification:
+Afterwards, notifications are sent to the URL specified in the subscription request\. The following is a sample notification\.
 
 ```
 <soap:Envelope
@@ -155,7 +155,7 @@ Afterwards, notifications are sent to the URL specified in the subscription requ
 </soap:Envelope>
 ```
 
-To acknowledge that the push notification responder has received the notification, it must reply with the following:
+To acknowledge that the push notification responder has received the notification, it must reply with the following\.
 
 ```
  <?xml version="1.0"?>
@@ -168,7 +168,7 @@ To acknowledge that the push notification responder has received the notificatio
   </s:Envelope>
 ```
 
-To unsubscribe from receiving push notifications, clients must send an unsubscribe response in the `SubscriptionStatus` field, similar to the following:
+To unsubscribe from receiving push notifications, clients must send an unsubscribe response in the `SubscriptionStatus` field, similar to the following\.
 
 ```
  <?xml version="1.0"?>
@@ -181,7 +181,7 @@ To unsubscribe from receiving push notifications, clients must send an unsubscri
   </s:Envelope>
 ```
 
-To verify the health of your push notification responder, Amazon WorkMail sends a “heartbeat” \(also called a `StatusEvent`\)\. The frequency with which they are sent is determined by the `StatusFrequency` parameter provided in the initial subscription request\. For example, if `StatusFrequency` equals 1, a `StatusEvent` is sent every 1 minute\. This value can range between 1 and 1440 minutes\. This `StatusEvent` looks like the following:
+To verify the health of your push notification responder, Amazon WorkMail sends a “heartbeat” \(also called a `StatusEvent`\)\. The frequency with which they are sent is determined by the `StatusFrequency` parameter provided in the initial subscription request\. For example, if `StatusFrequency` equals 1, a `StatusEvent` is sent every 1 minute\. This value can range between 1 and 1440 minutes\. This `StatusEvent` looks like the following\.
 
 ```
 <?xml version="1.0 (http://www.w3.org/TR/REC-xml/)" encoding="utf-8"?>

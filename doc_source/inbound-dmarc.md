@@ -8,7 +8,7 @@ New Amazon WorkMail organizations have DMARC enforcement turned on by default\.
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. For **Organizations**, choose the alias of your Amazon WorkMail organization\.
+1. For **Organizations**, choose the name of your organization\.
 
 1. In the navigation pane, choose **Organization settings**\.
 

@@ -8,7 +8,7 @@ When you no longer need a group, you can disable it\.
 
 1. If you require a different AWS Region, change it from the navigation bar\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
-1. On the **Organizations** screen, in the **Alias** column, select the name of the organization from which to remove a group\.
+1. For **Organizations**, choose the name of your organization\.
 
 1. In the navigation pane, choose **Groups**\.
 
