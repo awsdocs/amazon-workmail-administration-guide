@@ -22,7 +22,7 @@ In this procedure for the `nslookup` tool, you first find the DNS servers that s
 
    1. Open a command prompt\.
 
-   1. Run the following command to list all of the name servers that serve your domain:
+   1. Run the following command to list all of the name servers that serve your domain\.
 
       ```
       1. nslookup -type=NS example.com
@@ -50,7 +50,7 @@ In this procedure for the `nslookup` tool, you first find the DNS servers that s
 
 1. Open a terminal window\.
 
-1. Run the following command to list the TXT records for your domain:
+1. Run the following command to list the TXT records for your domain\.
 
    ```
    1. dig +short example.com txt
@@ -64,7 +64,7 @@ In this procedure for the `nslookup` tool, you first find the DNS servers that s
 
    1. Open a command prompt\.
 
-   1. Run the following command to list all of the name servers that serve your domain:
+   1. Run the following command to list all of the name servers that serve your domain\.
 
       ```
       1. nslookup -type=NS example.com
@@ -94,7 +94,7 @@ In this procedure for the `nslookup` tool, you first find the DNS servers that s
 
 1. Open a terminal window\.
 
-1. Run the following command to list the MX records for your domain:
+1. Run the following command to list the MX records for your domain\.
 
    ```
    1. dig +short example.com mx
@@ -112,9 +112,9 @@ In this procedure for the `nslookup` tool, you first find the DNS servers that s
 
 ## Troubleshooting domain verification<a name="domain-verification-issues"></a>
 
-For help troubleshooting domain verification, see the following list\.
-+ **Your DNS service does not allow underscores in TXT record names ** – You can omit `_amazonses` from the TXT record name\.
-+ **You want to verify the same domain multiple times and you can't have multiple TXT records with the same name ** – You might need to verify your domain name more than once because you're sending from multiple AWS accounts using the same domain in the same Region\. If your DNS service does not allow you to have multiple TXT records with the same name, there are two workarounds\. The first workaround, if your DNS service allows it, is to assign multiple values to the TXT record\. For example, if your DNS is managed by Amazon Route 53, you can set up multiple values for the same TXT record as follows:
+For help troubleshooting domain verification, see the following suggestions:
++ **Your DNS service does not allow underscores in TXT record names** – You can omit `_amazonses` from the TXT record name\.
++ **You want to verify the same domain multiple times and you can't have multiple TXT records with the same name** – You might need to verify your domain name more than once because you're sending from multiple AWS accounts using the same domain in the same Region\. If your DNS service does not allow you to have multiple TXT records with the same name, there are two workarounds\. The first workaround, if your DNS service allows it, is to assign multiple values to the TXT record\. For example, if your DNS is managed by Amazon Route 53, you can set up multiple values for the same TXT record as follows:
 
   1. In the Route 53 console, choose the `_amazonses` TXT record that you added when you verified your domain in the first Region\.
 
