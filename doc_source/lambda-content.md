@@ -12,8 +12,8 @@ import email
 
 def email_handler(event, context):
     workmail = boto3.client('workmailmessageflow', region_name=os.environ["AWS_REGION"])
-    msg_id = event['message_id']
-    raw_msg = workmail.get_raw_message_content(msg_id)
+    msg_id = event['messageId']
+    raw_msg = workmail.get_raw_message_content(messageId=msg_id)
 
     parsed_msg = email.message_from_bytes(raw_msg['messageContent'].read())
     print(parsed_msg)

@@ -44,3 +44,5 @@ Some DNS providers automatically append the domain name to the end of DNS record
 The AutoDiscover domain verification also checks for correct AutoDiscover setup\. After phase 2 and phase 3 verification are complete, a check mark appears next to the **Verified** status\.
 
    We recommend that you set the Time to Live \(TTL\) to 3600 of the MX and autodiscover CNAME record\. Reducing the TTL ensures that your mail servers don't use outdated or invalid MX records after updating your MX records or migrating your mailboxes\.
+
+1. We recommend configuring your domain as the `MAIL FROM` domain\. You can see the status of your `MAIL FROM` domain in the console section **Step 4: Enhance deliverability \(recommended\)**\. For more information, see [Configuring a custom MAIL FROM domain in Amazon WorkMail](custom-mail-from-domain.md)\.
