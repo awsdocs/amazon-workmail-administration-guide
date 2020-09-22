@@ -76,6 +76,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Remove users from a group](remove-group-users.md)
    + [Disable a group](remove_group.md)
 + [Working with mailbox permissions](mail_perms_overview.md)
++ [Exporting mailbox content](mail-export.md)
 + [Working with resources](resources_overview.md)
    + [Creating a resource](create_resource.md)
    + [Editing a resource](edit_resource.md)

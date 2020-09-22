@@ -124,7 +124,7 @@ If you have turned on email event logging in the Amazon WorkMail console, you ca
 
 The following examples demonstrate how to query CloudWatch Logs for common email events\. You run these queries in the CloudWatch console\. For instructions about how to run these queries, see [Tutorial: Run and modify a sample query](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_AnalyzeLogData_RunSampleQuery.html) in the *Amazon CloudWatch Logs User Guide*\.
 
-**Example Example: See why User B did not receive an email sent by User A\.**  
+**Example: See why User B did not receive an email sent by User A\.**  
 The following code example demonstrates how to query for an outgoing email sent by User A to User B, sorted by timestamp\.  
 
 ```
@@ -157,7 +157,7 @@ fields @timestamp, event.eventName
 ```
 This returns the delivery action and any applicable rule actions\.
 
-**Example Example: See all mail received from a user or domain**  
+**Example: See all mail received from a user or domain**  
 The following code example demonstrates how to query for all mail received from a specified user\.  
 
 ```
@@ -173,7 +173,7 @@ fields @timestamp, event.eventName
 | filter (event.from like "example.com" and event.eventName = "ORGANIZATION_EMAIL_RECEIVED")
 ```
 
-**Example Example: See who sent bounced emails**  
+**Example: See who sent bounced emails**  
 The following code example demonstrates how to query for outgoing emails that bounced, and also returns the reasons for bouncing\.  
 
 ```
@@ -189,7 +189,7 @@ fields @timestamp, event.bouncedRecipient.emailAddress, event.bouncedRecipient.r
 | filter event.eventName = "INCOMING_EMAIL_BOUNCED"
 ```
 
-**Example Example: See which domains are sending spam**  
+**Example: See which domains are sending spam**  
 The following code example demonstrates how to query for recipients in your organization that are receiving spam\.  
 
 ```
@@ -205,7 +205,7 @@ fields @timestamp, event.recipients.0, event.sender, event.from
 | filter (event.spamVerdict = "FAIL")
 ```
 
-**Example Example: See why an email was sent to a recipient's spam folder**  
+**Example: See why an email was sent to a recipient's spam folder**  
 The following code example demonstrates how to query for emails identified as spam, filtered by subject\.  
 
 ```
@@ -215,7 +215,7 @@ fields @timestamp, event.recipients.0, event.spamVerdict, event.spfVerdict, even
 ```
 You can also query by the email trace ID to see all events for the email\.
 
-**Example Example: See emails that match email flow rules**  
+**Example: See emails that match email flow rules**  
 The following code example demonstrates how to query for emails that matched outbound email flow rules\.  
 
 ```
@@ -231,7 +231,7 @@ fields @timestamp, event.ruleName, event.ruleActions.0.action, event.ruleActions
 | filter event.ruleType = "INBOUND_RULE"
 ```
 
-**Example Example: See how many emails are received or sent by your organization**  
+**Example: See how many emails are received or sent by your organization**  
 The following code example demonstrates how to query for the number of emails received by each recipient in your organization\.  
 
 ```

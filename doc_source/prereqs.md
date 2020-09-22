@@ -3,10 +3,10 @@
 To use Amazon WorkMail you'll need an AWS account\. If you haven't signed up for AWS yet, complete the following tasks to get set up\.
 
 **Topics**
-+ [Get an AWS Account and Your Root User Credentials](#getting-started-signup)
++ [Get an AWS account and your root user credentials](#getting-started-signup)
 + [Create AWS Identity and Access Management users and groups](#iam_users_groups)
 
-## Get an AWS Account and Your Root User Credentials<a name="getting-started-signup"></a>
+## Get an AWS account and your root user credentials<a name="getting-started-signup"></a>
 
 To access AWS, you must sign up for an AWS account\.
 
