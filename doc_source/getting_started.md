@@ -1,4 +1,4 @@
-# Getting started With Amazon WorkMail<a name="getting_started"></a>
+# Getting started with Amazon WorkMail<a name="getting_started"></a>
 
 After you have completed the [Prerequisites](prereqs.md), you're ready to get started with Amazon WorkMail\. For more information, see [Getting started with Amazon WorkMail](howto-start.md)\.
 

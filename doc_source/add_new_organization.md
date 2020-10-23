@@ -1,32 +1,27 @@
-# Adding an organization<a name="add_new_organization"></a>
+# Creating an organization<a name="add_new_organization"></a>
 
-To use Amazon WorkMail, you must first add an organization\. One AWS account can have multiple Amazon WorkMail organizations\. You can then add users, groups, and domains to the organizations\.
+To use Amazon WorkMail, you must first create an organization\. One AWS account can have multiple Amazon WorkMail organizations\. When you create an organization, you also select a domain for the organization and set up user directory and encryption settings\.
 
-The following setup options are available:
-+ **Quick setup**: Creates a directory for you\.
-+ **Standard setup**: Integrates Amazon WorkMail with an existing directory such as an on\-premises Microsoft Active Directory, AWS Managed Active Directory, or AWS Simple Active Directory\.
+You can either create a new user directory, or integrate Amazon WorkMail with an existing directory such as an on\-premises Microsoft Active Directory, AWS Managed Active Directory, or Simple AD\. By integrating with your on\-premises directory, you can use your existing users and groups in Amazon WorkMail, and users can sign in with their existing credentials\. If you’re using an existing directory that is on\-premises, you must first set up an AD Connector in AWS Directory Service\. The AD Connector synchronizes your users and groups to the Amazon WorkMail address book and performs user authentication requests\. For more information, see [Active Directory Connector](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_ad_connector.html) in the *AWS Directory Service Administration Guide*\.
 
-You can also create a compatible directory using Amazon WorkDocs or Amazon WorkSpaces, then complete the Amazon WorkMail setup using the **Standard setup** option\.
+You also have the option to select a customer managed master key that Amazon WorkMail uses to encrypt the mailbox content\. You can either select the default AWS managed master key for Amazon WorkMail, or select an existing customer managed master key in AWS Key Management Service \(AWS KMS\)\. For information about creating a new customer managed master key, see [Creating keys](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html) in the *AWS Key Management Service Developer Guide*\. If you are signed in as an AWS Identity and Access Management \(IAM\) user, make yourself a key administrator on the master key\. For more information, see [Enabling and disabling keys](https://docs.aws.amazon.com/kms/latest/developerguide/enabling-keys.html) in the *AWS Key Management Service Developer Guide*\.
+
+**Considerations**  
+The following are considerations for creating an Amazon WorkMail organization:
++ Amazon WorkMail does not currently support managed Microsoft Active Directory services that are shared with multiple accounts\.
++ If you have an on\-premises Active Directory with Microsoft Exchange and an AD Connector, we recommend configuring interoperability settings for your organization\. This allows you to minimize disruption to your users as you migrate mailboxes to Amazon WorkMail, or use Amazon WorkMail for a subset of your corporate mailboxes\. For more information, see [Interoperability between Amazon WorkMail and Microsoft Exchange](interoperability.md)\. 
++ If you select the **Free test domain** option, you can start using your Amazon WorkMail organization with the provided test domain\. The test domain format is *example*\.awsapps\.com\. You can use the test mail domain with Amazon WorkMail and other supported AWS services as long as you maintain enabled users in your Amazon WorkMail organization\. However, you cannot use the test domain for other purposes\. Also, the test domain might become available for registration and use by other customers if your Amazon WorkMail organization does not maintain at least one enabled user\.
 
 **Topics**
-+ [Quick setup: Creating a new directory](#quick_setup)
-+ [Standard setup: Integrating with an existing directory](#premises_directory)
++ [Creating a new organization](#create-organization)
 + [Integrating an Amazon WorkDocs or Amazon WorkSpaces directory](#compatible)
 + [Organization states and descriptions](#org-states)
 
-## Quick setup: Creating a new directory<a name="quick_setup"></a>
+## Creating a new organization<a name="create-organization"></a>
 
-You can use the **Quick setup** option to create an Amazon WorkMail organization\.
+Create a new organization in the Amazon WorkMail console\.
 
-**Note**  
-The **Quick setup** option does not support nested groups, and it is not compatible with Amazon WorkDocs or Amazon WorkSpaces\.
-
-The Amazon WorkMail **Quick setup** option does the following for you:
-+ Creates a new WorkMail Directory for storing your users and groups\. You cannot view this type of directory in AWS Directory Service\.
-+ Creates a free test domain\.
-+ Uses the KMS default AWS managed master key for encrypting your mailbox contents\.
-
-**To add an organization using the Quick setup option**
+**To create an organization**
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
@@ -34,57 +29,43 @@ The Amazon WorkMail **Quick setup** option does the following for you:
 
 1. For **Get started**, choose **Create organization**\.
 
-1. On the **Set up your organization** screen, choose **Quick setup**\.
+1. For **Email domain**, select the domain to use for the email addresses in your organization\. Choose from the following options:
+   + ****Existing Route 53 domain**** – Select an existing domain that you manage with an Amazon Route 53 \(Route 53\) hosted zone\.
+   + ****New Route 53 domain**** – Register a new Route 53 domain name to use with Amazon WorkMail\. 
+   + ****External domain**** – Enter an existing domain that you manage with an external DNS provider\.
+   + ****Free test domain**** – Use a free test domain provided by Amazon WorkMail, and add a domain later\.
 
-1. On the **Quick setup** screen, for **Organization name**, enter a unique alias to be used as your mail domain, and then choose **Create**\.
+1. \(Optional\) For **Route 53 hosted zone**, select your Route 53 domain if you are using one\.
 
-   After your organization is created, you can add domains, users, and groups\.
-**Note**  
-If you exceed the number of organizations that you can create using the Quick setup, you receive the error 'You have reached the maximum number of organizations you can create'\. For more information, see [Amazon WorkMail quotas](workmail_limits.md)\.
+1. For **Alias**, enter a unique alias for your organization\.
 
-## Standard setup: Integrating with an existing directory<a name="premises_directory"></a>
+1. Under **Advanced settings**, for **User directory**, select one of the following options:
+   + **Create new Amazon WorkMail directory** – Creates a new directory for you to add your users\.
+   + **Use existing directory** – Uses an existing directory to manage your users, such as an on\-premises Microsoft Active Directory, AWS Managed Active Directory, or Simple AD\.
 
-You can integrate Amazon WorkMail with an existing directory such as an on\-premises Microsoft Active Directory, AWS Managed Active Directory, or AWS Simple Active Directory\. By integrating with your on\-premises directory, you can reuse your existing users and groups in Amazon WorkMail and users can log in with their existing credentials\.
+1. For **Encryption**, select one of the following options:
+   + **Use an Amazon WorkMail managed key** – Creates a new encryption key in your account\.
+   + **Use existing customer managed key \(CMK\)** – Uses an existing CMK that you have already created in AWS KMS\.
 
-You also have the option to select a customer managed master key that Amazon WorkMail uses to encrypt the mailbox content\. You can either select the default AWS managed master key for Amazon WorkMail or select a customer managed master key in AWS KMS to use with Amazon WorkMail\. 
+1. Choose **Create organization**\.
 
-If the existing directory is on\-premises, you must first set up an AD Connector in AWS Directory Service\. The AD Connector is used to synchronize your users and groups to the Amazon WorkMail address book and perform user authentication requests\.
+If you are using an external domain, you'll want to verify it by adding the appropriate TXT and MX records to your DNS service\. Make sure to set your domain as the default for your organization\. For more information, see [Verifying domains](domain_verification.md) and [Choosing the default domain](default_domain.md)\.
 
-For information about setting up an AD Connector, see [Connecting to your existing directory with AD Connector](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/create_directory.html#connect_directory) in the *AWS Directory Service Administration Guide*\.
-
-**To perform a Standard setup**
-
-1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
-
-1. In the navigation bar, select the Region that meets your needs\. For more information, see [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
-
-1. For **Get started**, choose **Create organization**\.
-
-1. On the **Set up your organization** screen, choose **Standard setup**\.
-
-1. On the **Standard setup** screen, for **Available Directories**, select your existing directory\.
-**Note**  
-If you have an on\-premises Active Directory with Microsoft Exchange and an AWS AD Connector, choose **Enable interoperability** on the **Interoperability with Microsoft Exchange** screen\. Interoperability allows you to minimize disruption to your users as you migrate mailboxes to Amazon WorkMail, or use Amazon WorkMail for a subset of your corporate mailboxes\. For more information, see [Interoperability between Amazon WorkMail and Microsoft Exchange](https://docs.aws.amazon.com/workmail/latest/adminguide/interoperability.html)\.   
-Amazon WorkMail does not currently support managed Microsoft Active Directory directory services that are shared with multiple accounts\.
-
-1. For **Master keys**, select either the default AWS managed master key or a customer managed master key in AWS Key Management Service\.
-**Note**  
-For information about creating a new customer managed master key, see [Creating keys](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html) in the *AWS Key Management Service Developer Guide*\.  
-If you are logged on as an AWS Identity and Access Management \(IAM\) user, make yourself a key administrator on the master key\. For more information, see [Enabling and disabling keys](https://docs.aws.amazon.com/kms/latest/developerguide/enabling-keys.html) in the *AWS Key Management Service Developer Guide*\.
+When your organization is **Active**, you can add users to it and set up their email clients\. For more information, see [Managing user accounts](manage-users.md) and [Setting up email clients for Amazon WorkMail](https://docs.aws.amazon.com/workmail/latest/userguide/clients.html)\.
 
 ## Integrating an Amazon WorkDocs or Amazon WorkSpaces directory<a name="compatible"></a>
 
 To use Amazon WorkMail with Amazon WorkDocs or Amazon WorkSpaces, create a compatible directory by using the following steps\.
 
-**To add a compatible Amazon WorkDocs or Amazon WorkSpaces organization**
+**To add a compatible Amazon WorkDocs or Amazon WorkSpaces directory**
 
 1. Create a compatible directory using Amazon WorkDocs or Amazon WorkSpaces\.
 
-   1. For Amazon WorkDocs instructions, see [Creating a Simple AD directory using Quick setup](https://docs.aws.amazon.com/workdocs/latest/adminguide/cloud_quick_start.html)\.
+   1. For Amazon WorkDocs instructions, see [Getting started with Quick Start](https://docs.aws.amazon.com/workdocs/latest/adminguide/cloud_quick_start.html) in the *Amazon WorkDocs Administration Guide*\.
 
-   1. For Amazon WorkSpaces instructions, see [Get started with Amazon WorkSpaces quick setup](https://docs.aws.amazon.com/workspaces/latest/adminguide/getting-started.html)\.
+   1. For Amazon WorkSpaces instructions, see [Get started with Amazon WorkSpaces Quick Setup](https://docs.aws.amazon.com/workspaces/latest/adminguide/getting-started.html) in the *Amazon WorkSpaces Administration Guide*\.
 
-1. In the Amazon WorkMail console, set up Amazon WorkMail\. For more information, see [Standard setup: Integrating with an existing directory](#premises_directory)\.
+1. In the Amazon WorkMail console, create your Amazon WorkMail organization and choose to use your existing directory for it\. For more information, see [Creating a new organization](#create-organization)\.
 
 ## Organization states and descriptions<a name="org-states"></a>
 

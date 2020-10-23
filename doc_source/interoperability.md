@@ -16,7 +16,7 @@ Before you enable interoperability with Microsoft Exchange, do the following:
 Do not update DNS records to point to Amazon WorkMail\. This ensures that Microsoft Exchange remains the primary server for incoming email for as long as you want interoperability between the two environments\.
 + Make sure that the User Principal Names \(UPNs\) in Active Directory match the users' primary SMTP addresses\.
 
-Amazon WorkMail makes HTTPS requests to the EWS URL on Microsoft Exchange to obtain calendar free/busy information\. 
+Amazon WorkMail makes HTTPS requests to the Exchange Web Services \(EWS\) URL on Microsoft Exchange to obtain calendar free/busy information\. 
 + Ensure that the relevant firewall settings are set up to allow access from the internet\. The default port for HTTPS requests is port 443\.
 + Amazon WorkMail can only make successful HTTPS requests to the EWS URL on Microsoft Exchange when a certificate signed by a valid certificate authority \(CA\) is available in your Microsoft Exchange environment\. For more information, see [Create an Exchange Server certificate request for a certification authority](https://technet.microsoft.com/en-us/library/bb125165.aspx) on the Microsoft Exchange Documentation website\.
 + You must enable **Basic Authentication** for EWS in Microsoft Exchange\. For more information, see [Virtual directories: Exchange 2013](https://docs.microsoft.com/en-us/archive/blogs/mvpawardprogram/virtual-directories-exchange-2013) on the Microsoft MVP Award Program Blog\.

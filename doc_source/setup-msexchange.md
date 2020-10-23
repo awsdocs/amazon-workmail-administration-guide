@@ -23,7 +23,7 @@ We recommend that you carry out the following steps first for test users, before
 
 1. When all the data is migrated, disable the mailbox for the user on Microsoft Exchange and create a mail user \(or mail\-enabled user\) that has the external SMTP address pointed to Amazon WorkMail\. This can be achieved using the following commands in Exchange Management Shell\.
 **Important**  
-The steps below erase the contents of the mailbox\. Ensure that your data has been migrated to Amazon WorkMail before you attempt to enable email routing\. Some mail clients do not seamlessly switch to Amazon WorkMail when this command is executed\. For more information, see [Mail client configuration](#mail_client_config)\.
+The steps below erase the contents of the mailbox\. Ensure that your data has been migrated to Amazon WorkMail before you attempt to enable email routing\. Some mail clients do not seamlessly switch to Amazon WorkMail when this command is run\. For more information, see [Mail client configuration](#mail_client_config)\.
 
    ```
    $old_mailbox = Get-Mailbox exchangeuser
@@ -57,6 +57,6 @@ The above steps move a user mailbox from Microsoft Exchange Server to Amazon Wor
 ## Mail client configuration<a name="mail_client_config"></a>
 
 Some mail clients do not switch seamlessly to Amazon WorkMail and require the user to perform additional setup\. Different mail clients require different actions to be taken\.
-+ Microsoft Outlook on Windows—Requires MS Outlook to be restarted\. At startup, you are required to choose whether to keep using the old mailbox or use a temporary mailbox\. Choose the temporary mailbox option, and reconfigure the Microsoft Exchange mailbox from scratch\.
-+ Microsoft Outlook on MacOS—When Outlook is restarted, you see the following message **Outlook was redirected to server orgname\.awsapps\.com\. Do you want this server to configure your settings?**\. Accept the suggestion\.
-+ Mail on iOS—The mail app stops receiving emails and generates a **Cannot get mail** error\. Reconfigure the Microsoft Exchange mailbox from scratch\.
++ Microsoft Outlook on Windows – Requires MS Outlook to be restarted\. At startup, you are required to choose whether to keep using the old mailbox or use a temporary mailbox\. Choose the temporary mailbox option, and reconfigure the Microsoft Exchange mailbox from scratch\.
++ Microsoft Outlook on MacOS – When Outlook is restarted, you see the following message **Outlook was redirected to server orgname\.awsapps\.com\. Do you want this server to configure your settings?**\. Accept the suggestion\.
++ Mail on iOS – The mail app stops receiving emails and generates a **Cannot get mail** error\. Reconfigure the Microsoft Exchange mailbox from scratch\.
