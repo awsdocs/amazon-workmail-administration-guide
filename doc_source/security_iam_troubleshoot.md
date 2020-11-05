@@ -23,11 +23,11 @@ In this case, Mateo asks his administrator to update his policies to allow him t
 
 ## I am not authorized to perform iam:PassRole<a name="security_iam_troubleshoot-passrole"></a>
 
-If you receive an error that you're not authorized to perform the `iam:PassRole` action, then you must contact your administrator for assistance\. Your administrator is the person that provided you with your user name and password\. Ask that person to update your policies to allow you to pass a role to \.
+If you receive an error that you're not authorized to perform the `iam:PassRole` action, then you must contact your administrator for assistance\. Your administrator is the person that provided you with your user name and password\. Ask that person to update your policies to allow you to pass a role to Amazon WorkMail\.
 
 Some AWS services allow you to pass an existing role to that service, instead of creating a new service role or service\-linked role\. To do this, you must have permissions to pass the role to the service\.
 
-The following example error occurs when an IAM user named `marymajor` tries to use the console to perform an action in \. However, the action requires the service to have permissions granted by a service role\. Mary does not have permissions to pass the role to the service\.
+The following example error occurs when an IAM user named `marymajor` tries to use the console to perform an action in Amazon WorkMail\. However, the action requires the service to have permissions granted by a service role\. Mary does not have permissions to pass the role to the service\.
 
 ```
 User: arn:aws:iam::123456789012:user/marymajor is not authorized to perform: iam:PassRole
@@ -48,7 +48,7 @@ When you create an access key pair, you are prompted to save the access key ID a
 
 ## I'm an administrator and want to allow others to access Amazon WorkMail<a name="security_iam_troubleshoot-admin-delegate"></a>
 
-To allow others to access , you must create an IAM entity \(user or role\) for the person or application that needs access\. They will use the credentials for that entity to access AWS\. You must then attach a policy to the entity that grants them the correct permissions in \.
+To allow others to access Amazon WorkMail, you must create an IAM entity \(user or role\) for the person or application that needs access\. They will use the credentials for that entity to access AWS\. You must then attach a policy to the entity that grants them the correct permissions in Amazon WorkMail\.
 
 To get started right away, see [Creating Your First IAM Delegated User and Group](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-delegated-user.html) in the *IAM User Guide*\.
 
@@ -57,7 +57,7 @@ To get started right away, see [Creating Your First IAM Delegated User and Group
 You can create a role that users in other accounts or people outside of your organization can use to access your resources\. You can specify who is trusted to assume the role\. For services that support resource\-based policies or access control lists \(ACLs\), you can use those policies to grant people access to your resources\.
 
 To learn more, consult the following:
-+ To learn whether supports these features, see [How Amazon WorkMail works with IAM](security_iam_service-with-iam.md)\.
++ To learn whether Amazon WorkMail supports these features, see [How Amazon WorkMail works with IAM](security_iam_service-with-iam.md)\.
 + To learn how to provide access to your resources across AWS accounts that you own, see [Providing Access to an IAM User in Another AWS Account That You Own](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_aws-accounts.html) in the *IAM User Guide*\.
 + To learn how to provide access to your resources to third\-party AWS accounts, see [Providing Access to AWS Accounts Owned by Third Parties](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_third-party.html) in the *IAM User Guide*\.
 + To learn how to provide access through identity federation, see [Providing Access to Externally Authenticated Users \(Identity Federation\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_federated-users.html) in the *IAM User Guide*\.

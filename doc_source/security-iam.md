@@ -1,6 +1,6 @@
 # Identity and access management for Amazon WorkMail<a name="security-iam"></a>
 
-AWS Identity and Access Management \(IAM\) is an AWS service that helps an administrator securely control access to AWS resources\. IAM administrators control who can be *authenticated* \(signed in\) and *authorized* \(have permissions\) to use resources\. IAM is an AWS service that you can use with no additional charge\.
+AWS Identity and Access Management \(IAM\) is an AWS service that helps an administrator securely control access to AWS resources\. IAM administrators control who can be *authenticated* \(signed in\) and *authorized* \(have permissions\) to use Amazon WorkMail resources\. IAM is an AWS service that you can use with no additional charge\.
 
 **Topics**
 + [Audience](#security_iam_audience)
@@ -12,13 +12,13 @@ AWS Identity and Access Management \(IAM\) is an AWS service that helps an admin
 
 ## Audience<a name="security_iam_audience"></a>
 
-How you use AWS Identity and Access Management \(IAM\) differs, depending on the work you do in \.
+How you use AWS Identity and Access Management \(IAM\) differs, depending on the work you do in Amazon WorkMail\.
 
-**Service user** – If you use the service to do your job, then your administrator provides you with the credentials and permissions that you need\. As you use more features to do your work, you might need additional permissions\. Understanding how access is managed can help you request the right permissions from your administrator\. If you cannot access a feature in , see [Troubleshooting Amazon WorkMail identity and access](security_iam_troubleshoot.md)\.
+**Service user** – If you use the Amazon WorkMail service to do your job, then your administrator provides you with the credentials and permissions that you need\. As you use more Amazon WorkMail features to do your work, you might need additional permissions\. Understanding how access is managed can help you request the right permissions from your administrator\. If you cannot access a feature in Amazon WorkMail, see [Troubleshooting Amazon WorkMail identity and access](security_iam_troubleshoot.md)\.
 
-**Service administrator** – If you're in charge of resources at your company, you probably have full access to \. It's your job to determine which features and resources your employees should access\. You must then submit requests to your IAM administrator to change the permissions of your service users\. Review the information on this page to understand the basic concepts of IAM\. To learn more about how your company can use IAM with , see [How Amazon WorkMail works with IAM](security_iam_service-with-iam.md)\.
+**Service administrator** – If you're in charge of Amazon WorkMail resources at your company, you probably have full access to Amazon WorkMail\. It's your job to determine which Amazon WorkMail features and resources your employees should access\. You must then submit requests to your IAM administrator to change the permissions of your service users\. Review the information on this page to understand the basic concepts of IAM\. To learn more about how your company can use IAM with Amazon WorkMail, see [How Amazon WorkMail works with IAM](security_iam_service-with-iam.md)\.
 
-**IAM administrator** – If you're an IAM administrator, you might want to learn details about how you can write policies to manage access to \. To view example identity\-based policies that you can use in IAM, see [Amazon WorkMail identity\-based policy examples](security_iam_id-based-policy-examples.md)\.
+**IAM administrator** – If you're an IAM administrator, you might want to learn details about how you can write policies to manage access to Amazon WorkMail\. To view example Amazon WorkMail identity\-based policies that you can use in IAM, see [Amazon WorkMail identity\-based policy examples](security_iam_id-based-policy-examples.md)\.
 
 ## Authenticating With identities<a name="security_iam_authentication"></a>
 

@@ -9,6 +9,7 @@ Security is a shared responsibility between AWS and you\. The [shared responsibi
 This documentation helps you understand how to apply the shared responsibility model when using Amazon WorkMail\. The following topics show you how to configure Amazon WorkMail to meet your security and compliance objectives\. You also learn how to use other AWS services that help you to monitor and secure your Amazon WorkMail resources\. 
 
 **Topics**
++ [Data protection in Amazon WorkMail](data-protection.md)
 + [Identity and access management for Amazon WorkMail](security-iam.md)
 + [Using service\-linked roles for Amazon WorkMail](using-service-linked-roles.md)
 + [Logging and monitoring in Amazon WorkMail](monitoring-overview.md)
