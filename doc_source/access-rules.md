@@ -1,6 +1,6 @@
 # Working with access control rules<a name="access-rules"></a>
 
-Access control rules for Amazon WorkMail allow administrators to control how their organization's mailboxes are accessed\. Each Amazon WorkMail organization has a default access control rule that grants mailbox access to all users added to the organization, no matter which access protocol or IP address they use\. Administrators can edit or replace the default rule with one of their own, add a new rule, or delete a rule\.
+Access control rules for Amazon WorkMail allow administrators to control how their organization's users are granted access to Amazon WorkMail\. Each Amazon WorkMail organization has a default access control rule that grants mailbox access to all users added to the organization, no matter which access protocol or IP address they use\. Administrators can edit or replace the default rule with one of their own, add a new rule, or delete a rule\.
 
 **Warning**  
 If an administrator deletes all access control rules for an organization, Amazon WorkMail blocks all access to the organization's mailboxes\.

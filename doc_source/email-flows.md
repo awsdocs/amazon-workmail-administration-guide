@@ -11,14 +11,13 @@ To create an email flow rule, specify a [*rule action*](#email-flows-rule-action
 + [Creating an email flow rule](create-email-rules.md)
 + [Configuring SMTP gateways](smtp-gateway.md)
 + [Configuring AWS Lambda for Amazon WorkMail](lambda.md)
-+ [Retrieving message content with AWS Lambda](lambda-content.md)
 + [Testing an email flow rule](test-email-flow-rule.md)
 + [Modifying an email flow rule](modify-email-flow-rule.md)
 + [Removing an email flow rule](remove-email-flow-rule.md)
 
 ## Inbound email rule actions<a name="email-flows-rule-actions"></a>
 
-Inbound email flow rules help prevent undesirable email from reaching your users' mailboxes\. You can use these rules with an AWS Lambda function to process incoming email before it is delivered to your users' mailboxes\. For more information about using Lambda with Amazon WorkMail, see [Configuring Lambda for Amazon WorkMail](lambda.md)\. For more information about Lambda, see the [https://docs.aws.amazon.com/lambda/latest/dg/welcome.html](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)\.
+Inbound email flow rules help prevent undesirable email from reaching your users' mailboxes\. You can use these rules with an AWS Lambda function to process incoming email before it is delivered to your users' mailboxes\. For more information about using Lambda with Amazon WorkMail, see [Configuring AWS Lambda for Amazon WorkMail](lambda.md)\. For more information about Lambda, see the [https://docs.aws.amazon.com/lambda/latest/dg/welcome.html](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)\.
 
 Inbound email flow rules, also called rule actions, automatically apply to all email messages sent to anyone inside of the Amazon WorkMail organization\. This differs from email rules for individual mailboxes\.
 

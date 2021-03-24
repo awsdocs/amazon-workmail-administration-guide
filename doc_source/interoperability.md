@@ -26,6 +26,8 @@ Amazon WorkMail makes HTTPS requests to the Exchange Web Services \(EWS\) URL on
 Add your corporate domains to Amazon WorkMail so that they can be used in email addresses\. Ensure that the domains added to Amazon WorkMail are verified, then enable users and groups to provision mailboxes on Amazon WorkMail\. Resources cannot be enabled in Amazon WorkMail while in interoperability mode, and should be re\-created in Amazon WorkMail after you disable interoperability mode\. However, you can still use them to schedule meetings while in interoperability mode\. Resources from Microsoft Exchange are always shown in the **Users** tab in Amazon WorkMail\. 
 + For more information, see [Add domains](https://docs.aws.amazon.com/workmail/latest/adminguide/add_domain.html), [Enable existing users](https://docs.aws.amazon.com/workmail/latest/adminguide/enable_existing_user.html), and [Enable an existing group](https://docs.aws.amazon.com/workmail/latest/adminguide/enable_existing_group.html)\.
 
+ 
+
 **Note**  
 To ensure interoperability with Microsoft Exchange, do not update the DNS records to point to Amazon WorkMail records\. Microsoft Exchange remains the primary server for incoming email as long as you want interoperability between the two environments\.
 

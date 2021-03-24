@@ -5,7 +5,7 @@ Use the **Run Lambda** action in inbound and outbound email flow rules to pass e
 Choose from the following configurations for a **Run Lambda** action in Amazon WorkMail\.
 
 **Synchronous **Run Lambda** configuration**  
-Email messages that match the flow rule are passed to a Lambda function for processing before they are sent or delivered\. Use this configuration to control inbound or outbound email flow for use cases such as blocking delivery of sensitive email messages\.
+Email messages that match the flow rule are passed to a Lambda function for processing before they are sent or delivered\. Use this configuration to modify email content, and to control inbound or outbound email flow for use cases such as blocking delivery of sensitive email messages, removing attachment, adding disclaimers, and so on\.
 
 **Asynchronous **Run Lambda** configuration**  
 Email messages that match the flow rule are passed to a Lambda function for processing while they are sent or delivered\. This configuration does not affect email delivery and is used for tasks such as collecting metrics for inbound or outbound email messages\.
@@ -17,11 +17,11 @@ For more information about inbound and outbound email flow rules, see [Managing 
 **Note**  
 Currently, Lambda email flow rules reference only Lambda functions in the same AWS Region and AWS account as the Amazon WorkMail organization being configured\.
 
-## Getting started with Lambda for Amazon WorkMail<a name="start-lambda"></a>
+## Getting started with AWS Lambda for Amazon WorkMail<a name="start-lambda"></a>
 
-To start using Lambda with Amazon WorkMail, deploy [the example Lambda function](https://console.aws.amazon.com/lambda/home#/create/app?applicationId=arn:aws:serverlessrepo:us-east-1:489970191081:applications/workmail-hello-world-python) from the AWS Serverless Application Repository to your account\. Permissions for the example Lambda function are already configured for you\.
+To start using AWS Lambda with Amazon WorkMail, we recommend deploying the [ WorkMail Hello World Lambda function ](https://console.aws.amazon.com/lambda/home#/create/app?applicationId=arn:aws:serverlessrepo:us-east-1:489970191081:applications/workmail-hello-world-python) from the AWS Serverless Application Repository to your account\. The function has all the necessary resources, and the permissions configured for you\. For more examples, see the [amazon\-workmail\-lambda\-templates](https://github.com/aws-samples/amazon-workmail-lambda-templates) repository on GitHub\.
 
-If you choose to create your own Lambda function to use with Amazon WorkMail, you must configure permissions using the AWS Command Line Interface \(AWS CLI\)\. In the following example command, replace `MY_FUNCTION_NAME` with the name of your Lambda function, and replace `REGION` with your Amazon WorkMail AWS Region\. Available Amazon WorkMail Regions include `us-east-1`, `us-west-2`, and `eu-west-1`\.
+If you choose to create your own Lambda function, you must configure permissions using the AWS Command Line Interface \(AWS CLI\)\. In the following example command, replace `MY_FUNCTION_NAME` with the name of your Lambda function, and replace `REGION` with your Amazon WorkMail AWS Region\. Available Amazon WorkMail Regions include `us-east-1`, `us-west-2`, and `eu-west-1`\.
 
 ```
 aws --region REGION lambda add-permission --function-name MY_FUNCTION_NAME --statement-id AllowWorkMail --action "lambda:InvokeFunction" --principal workmail.REGION.amazonaws.com

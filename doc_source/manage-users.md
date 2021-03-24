@@ -117,6 +117,8 @@ The password policy requirements depend on which directory type is used by your 
 
 **Amazon WorkMail directory and Simple AD directory password policy**  
 By default, passwords for an Amazon WorkMail directory or Simple AD directory must be:
+
+
 + Non\-empty\.
 + At least eight characters\.
 + Less than 64 characters\.

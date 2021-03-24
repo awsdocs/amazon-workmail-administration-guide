@@ -4,6 +4,8 @@ You can edit a resource's general details \(name, description, type, and email a
 
 **To edit general resource details**
 
+
+
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
 1. If necessary, change the AWS Region\. From the navigation bar, choose the Region that meets your needs\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
@@ -41,6 +43,10 @@ You can configure a resource to accept or decline booking requests automatically
 You can add a delegate to control booking requests for a resource\. Resource delegates automatically receive copies of all booking requests and have full access to the resource calendar\. In addition, they must accept all booking requests for a resource\.
 
 **To add a resource delegate**
+
+
+
+ 
 **Note**  
 Before you proceed, follow the process above to clear the **Automatically accept all resource requests** option\.
 

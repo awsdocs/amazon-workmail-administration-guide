@@ -1,7 +1,7 @@
 # Amazon WorkMail Administrator Guide
 
 -----
-*****Copyright &copy; 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy;  Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -50,7 +50,9 @@ Amazon's trademarks and trade dress may not be used in
       + [Creating an email flow rule](create-email-rules.md)
       + [Configuring SMTP gateways](smtp-gateway.md)
       + [Configuring AWS Lambda for Amazon WorkMail](lambda.md)
-      + [Retrieving message content with AWS Lambda](lambda-content.md)
+         + [Retrieving message content with AWS Lambda](lambda-content.md)
+         + [Updating message content with AWS Lambda](update-with-lambda.md)
+         + [Managing access to the Amazon WorkMail Message Flow API](lambda-content-access.md)
       + [Testing an email flow rule](test-email-flow-rule.md)
       + [Modifying an email flow rule](modify-email-flow-rule.md)
       + [Removing an email flow rule](remove-email-flow-rule.md)
