@@ -6,4 +6,5 @@ You can create and remove users from Amazon WorkMail\. In addition, you can rese
 + [Managing user accounts](manage-users.md)
 + [Managing user mailboxes](manage-mailboxes.md)
 + [Managing mobile devices](manage-devices.md)
++ [Managing mobile device access rules](manage-mobile-access.md)
 + [Enabling signed or encrypted email](enable_encryption.md)

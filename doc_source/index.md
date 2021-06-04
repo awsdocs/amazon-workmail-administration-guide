@@ -1,7 +1,7 @@
 # Amazon WorkMail Administrator Guide
 
 -----
-*****Copyright &copy;  Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -71,6 +71,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Managing user accounts](manage-users.md)
    + [Managing user mailboxes](manage-mailboxes.md)
    + [Managing mobile devices](manage-devices.md)
+   + [Managing mobile device access rules](manage-mobile-access.md)
    + [Enabling signed or encrypted email](enable_encryption.md)
 + [Working with groups](groups_overview.md)
    + [Create a group](add_new_group.md)

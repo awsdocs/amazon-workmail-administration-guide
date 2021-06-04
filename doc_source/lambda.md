@@ -147,6 +147,8 @@ When true, applies the action to all the recipients that are not subject to anot
 
 The following limits apply when Amazon WorkMail invokes Lambda functions for synchronous **Run Lambda** actions: 
 + Lambda functions must respond within 15 seconds, or be treated as failed invocations\.
+**Note**  
+The system retries the invocation for the **Rule timeout** interval that you specify\.
 + Lambda function responses up to 256 KB are allowed\.
 + Up to 10 unique actions are allowed in the response\. Actions greater than 10 are subject to the configured **Fallback action**\. 
 + Up to 500 recipients are allowed for outbound Lambda functions\.

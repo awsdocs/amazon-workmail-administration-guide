@@ -1,6 +1,6 @@
 # Getting started with Amazon WorkMail<a name="howto-start"></a>
 
-Whether you are a new Amazon WorkMail user or an existing user of Amazon WorkDocs or Amazon WorkSpaces, get started with Amazon WorkMail by completing the following steps\.
+Whether you are a new Amazon WorkMail user or an existing user of Amazon WorkDocs or Amazon Workspaces, get started with Amazon WorkMail by completing the following steps\.
 
 **Note**  
 Complete the [Prerequisites](prereqs.md) before getting started\.
@@ -25,9 +25,9 @@ You must sign in to the Amazon WorkMail console before you can add users and man
 
 1. After you sign in to the Amazon WorkMail console, set up your organization and add a domain\. We recommend using a dedicated domain for your Amazon WorkMail organization\. For more information, see [Creating an organization](add_new_organization.md) and [Adding a domain](add_domain.md)\.
 
-1. \(Optional\) You can choose to use a free testing domain provided by Amazon WorkMail\. If you choose to do this, skip to step 4\. 
+1. \(Optional\) You can choose to use a free testing domain provided by Amazon WorkMail\. If you choose to do this, skip to step 4\.
 **Note**  
-The test domain format is *example*\.awsapps\.com\. You can use the test mail domain with Amazon WorkMail and other supported AWS services as long as you maintain enabled users in your Amazon WorkMail organization\. However, you cannot use the test domain for other purposes\. Also, the test domain might become available for registration and use by other customers if your Amazon WorkMail organization does not maintain at least one enabled user\. 
+Test domains use this format: *example***\.awsapps\.com**\. As you go, remember that you only use test domains for testing, never for production\. Also, you must have at least one enabled user in your WorkMail organization\. If you don't have an enabled user, the domain can become available for registration and use by other customers\.
 
 1. If you are using an external domain, verify your domain by adding the appropriate TXT and MX records to your DNS service\. Make sure to set your domain as the default for your organization\. For more information, see [Verifying domains](domain_verification.md) and [Choosing the default domain](default_domain.md)\.
 

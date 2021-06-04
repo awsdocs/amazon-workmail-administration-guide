@@ -19,7 +19,7 @@ There are two ways you can set up AutoDiscover phase 2 for your domain:
 
 **To enable AutoDiscover phase 2 with Route 53 and CloudFront**
 **Note**  
-The following steps show how to proxy https://autodiscover\.company\.tld/autodiscover/autodiscover\.xml\. To proxy https://company\.tld/autodiscover/autodiscover\.xml, remove the "autodiscover\." prefix from the domains in the following steps\.  
+The following steps explain how to create a proxy for https://autodiscover\.company\.tld/autodiscover/autodiscover\.xml\. To create a proxy for https://company\.tld/autodiscover/autodiscover\.xml, remove the "autodiscover\." prefix from the domains in the following steps\.  
 For more information about applicable pricing, see [Amazon CloudFront pricing](https://aws.amazon.com/cloudfront/pricing/) and [Amazon Route 53 pricing](https://aws.amazon.com/route53/pricing/)\.
 
 1. Get an SSL certificate for autodiscover\.company\.tld and upload it to AWS Identity and Access Management \(IAM\) or AWS Certificate Manager\. For more information, see [Working with server certificates](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_server-certs.html) in the *IAM User Guide*, or [Getting started](https://docs.aws.amazon.com/acm/latest/userguide/gs.html) in the *AWS Certificate Manager User Guide*\.
@@ -60,22 +60,32 @@ If you choose **All Clients**, leave **Default Root Object** blank\.
 
    1. Choose **Create Distribution**\.
 
-1. In Route 53, create a record that routes internet traffic for your domain name to your CloudFront distribution:
+1. In the Route 53 console, create a record that routes internet traffic for your domain name to your CloudFront distribution\.
 **Note**  
 These steps assume that the DNS record for example\.com is hosted in Route 53\.
 
-   1. In the Route 53 console, choose **Hosted Zones** and **example\.com**\. 
+   1. In the console's navigation pane choose **Hosted Zones**\. then choose a domain\. 
 
-   1. Choose **Create Record Set**, and then fill in the following fields:
-      + **Name**: autodiscover\.example\.com
-      + **Type**: A \- IPv4 address
-      + **Alias**: Yes
-      + **Alias Target**: The CloudFront distribution created above
-**Note**  
-If the CloudFront distribution created above is not present, wait a while and try again later\. Change propagation for a new CloudFront distribution can take up to 1 hour\. 
-      + **Evaluate Target Health**: No
+      A list of domains appears\.
 
-   1. Choose **Create**\.
+   1. Choose the hyperlinked domain name that you want to use\.
+
+      The **Hosted zone details** page appears\.
+
+   1. Choose **Create record**\.
+
+      The **Quick create records** page appears\.
+
+   1. Complete the following items:
+      + Ensure the **Routing policy** list displays **Simple routing**\.
+      + Move the **Alias** slider to "on\."
+      + Ensure the **Record type** list displays the first option, **A \- Routes traffic to an IPv4 address and some AWS resources**\.
+      + Open the **Route traffic to** list and choose **Alias to CloudFront distribution**\.
+
+        Your region appears, along with a search box\.
+      + In the search box, find and select the name of your CloudFront distribution\.
+
+   1. Choose **Create record**\.
 
 **To enable AutoDiscover phase 2 with an Apache web server**
 

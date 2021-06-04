@@ -1,6 +1,6 @@
 # Enforcing DMARC policies on incoming email<a name="inbound-dmarc"></a>
 
-Email domains use DNS records for security\. They protect your users from common attacks such as spoofing or phishing\. DNS records for domains often include DMARC TXT records, which are set by the domain owner that is sending the email\. DMARC TXT records include policies that specify actions to take when an email fails a DMARC check\. You can choose whether to enforce the DMARC policy on emails being sent to your organization\.
+Email domains use DNS records for security\. They protect your users from common attacks such as spoofing or phishing\. DNS records often include Domain\-based Message Authentication, Reporting, and Conformance \(DMARC\) records, which are set by the domain owner that sends the email\. DMARC records include policies that specify actions to take when an email fails a DMARC check\. You can choose whether to enforce the DMARC policy on emails being sent to your organization\.
 
 New Amazon WorkMail organizations have DMARC enforcement turned on by default\.
 
@@ -18,12 +18,10 @@ New Amazon WorkMail organizations have DMARC enforcement turned on by default\.
 
 1. For **DMARC enforcement**, select **On**\.
 
-1. Select the acknowledgment check box\.
-
-1. Choose **Save**\.
+1. Select the acknowledgment check box, then choose **Save**\.
 
 **To turn off DMARC enforcement**
-+ Follow steps 1\-8 in the previous section, but for step 6, choose **Off** instead of **On**\.
++ Follow the steps in the previous section, but for step 6, choose **Off** instead of **On**\.
 
 ## Using email event logging to track DMARC enforcement<a name="logging-dmarc"></a>
 

@@ -7,14 +7,15 @@ You can either create a new user directory, or integrate Amazon WorkMail with an
 You also have the option to select a customer managed master key that Amazon WorkMail uses to encrypt the mailbox content\. You can either select the default AWS managed master key for Amazon WorkMail, or select an existing customer managed master key in AWS Key Management Service \(AWS KMS\)\. For information about creating a new customer managed master key, see [Creating keys](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html) in the *AWS Key Management Service Developer Guide*\. If you are signed in as an AWS Identity and Access Management \(IAM\) user, make yourself a key administrator on the master key\. For more information, see [Enabling and disabling keys](https://docs.aws.amazon.com/kms/latest/developerguide/enabling-keys.html) in the *AWS Key Management Service Developer Guide*\.
 
 **Considerations**  
-The following are considerations for creating an Amazon WorkMail organization:
+Remember the following when creating an Amazon WorkMail organization:
 + Amazon WorkMail does not currently support managed Microsoft Active Directory services that are shared with multiple accounts\.
 + If you have an on\-premises Active Directory with Microsoft Exchange and an AD Connector, we recommend configuring interoperability settings for your organization\. This allows you to minimize disruption to your users as you migrate mailboxes to Amazon WorkMail, or use Amazon WorkMail for a subset of your corporate mailboxes\. For more information, see [Interoperability between Amazon WorkMail and Microsoft Exchange](interoperability.md)\. 
 + If you select the **Free test domain** option, you can start using your Amazon WorkMail organization with the provided test domain\. The test domain format is *example*\.awsapps\.com\. You can use the test mail domain with Amazon WorkMail and other supported AWS services as long as you maintain enabled users in your Amazon WorkMail organization\. However, you cannot use the test domain for other purposes\. Also, the test domain might become available for registration and use by other customers if your Amazon WorkMail organization does not maintain at least one enabled user\.
++ Amazon WorkMail does not support multi\-region directories\.
 
 **Topics**
 + [Creating a new organization](#create-organization)
-+ [Integrating an Amazon WorkDocs or Amazon WorkSpaces directory](#compatible)
++ [Integrating an Amazon WorkDocs or Workspaces directory](#compatible)
 + [Organization states and descriptions](#org-states)
 
 ## Creating a new organization<a name="create-organization"></a>
@@ -53,17 +54,17 @@ If you are using an external domain, you'll want to verify it by adding the appr
 
 When your organization is **Active**, you can add users to it and set up their email clients\. For more information, see [Managing user accounts](manage-users.md) and [Setting up email clients for Amazon WorkMail](https://docs.aws.amazon.com/workmail/latest/userguide/clients.html)\.
 
-## Integrating an Amazon WorkDocs or Amazon WorkSpaces directory<a name="compatible"></a>
+## Integrating an Amazon WorkDocs or Workspaces directory<a name="compatible"></a>
 
-To use Amazon WorkMail with Amazon WorkDocs or Amazon WorkSpaces, create a compatible directory by using the following steps\.
+To use Amazon WorkMail with Amazon WorkDocs or Workspaces, create a compatible directory by using the following steps\.
 
-**To add a compatible Amazon WorkDocs or Amazon WorkSpaces directory**
+**To add a compatible Amazon WorkDocs or Workspaces directory**
 
-1. Create a compatible directory using Amazon WorkDocs or Amazon WorkSpaces\.
+1. Create a compatible directory using Amazon WorkDocs or Workspaces\.
 
    1. For Amazon WorkDocs instructions, see [Getting started with Quick Start](https://docs.aws.amazon.com/workdocs/latest/adminguide/cloud_quick_start.html) in the *Amazon WorkDocs Administration Guide*\.
 
-   1. For Amazon WorkSpaces instructions, see [Get started with Amazon WorkSpaces Quick Setup](https://docs.aws.amazon.com/workspaces/latest/adminguide/getting-started.html) in the *Amazon WorkSpaces Administration Guide*\.
+   1. For Workspaces instructions, see [Get started with Amazon Workspaces Quick Setup](https://docs.aws.amazon.com/workspaces/latest/adminguide/getting-started.html) in the *Amazon Workspaces Administration Guide*\.
 
 1. In the Amazon WorkMail console, create your Amazon WorkMail organization and choose to use your existing directory for it\. For more information, see [Creating a new organization](#create-organization)\.
 

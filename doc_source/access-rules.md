@@ -59,6 +59,9 @@ Edit new and default access control rules from the Amazon WorkMail console\.
 
 1. Choose **Save changes**\.
 
+**Important**  
+When you change an access rule, the affected mailboxes can take five minutes to follow the updated rule, and clients that access the affected mailboxes may show inconsistent behavior during that time\. However, you immediately see correct behavior when you test rules\. For more information about testing rules, see the steps in the next section\.
+
 ## Testing access control rules<a name="test-acr"></a>
 
 To see how your organization's access control rules are applied, test the rules from the Amazon WorkMail console\.
