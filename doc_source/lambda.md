@@ -110,14 +110,14 @@ The following schema is an example of a synchronous **Run Lambda** response\. Re
 
 ```
 {
-      'actions': [                          
+      "actions": [
       {
-        'action' : {                       
-          'type': 'string',                 
-          'parameters': { various }       
+        "action" : {
+          "type": "string",
+          "parameters": { various }
         },
-        'recipients': list of strings,      
-        'allRecipients': boolean            
+        "recipients": list of strings,
+        "allRecipients": boolean      
       }
     ]
 }
@@ -167,14 +167,22 @@ The following example demonstrates the structure of a synchronous **Run Lambda**
 
 ```
 {
-    'actions': [{
-      'action' : {'type': 'DEFAULT'},
-      'allRecipients': True
+  "actions": [
+    {
+      "action": {
+        "type": "DEFAULT"
+      },
+      "allRecipients": true
     },
     {
-      'action' : {'type': 'DROP'},
-      'recipients' : ['drop-recipient@example.com']
-    }]
+      "action": {
+        "type": "DROP"
+      },
+      "recipients": [
+        "drop-recipient@example.com"
+      ]
+    }
+  ]
 }
 ```
 
@@ -183,15 +191,17 @@ The following example demonstrates the structure of a synchronous **Run Lambda**
 
 ```
 {
-      'actions' : [{
-        'action' : {
-          'type' : 'BOUNCE',
-          'parameters' : {
-            'bounceMessage' : 'Email in breach of company policy.'
-          }
-        },
-        'allRecipients': True
-      }]
+  "actions": [
+    {
+      "action": {
+        "type": "BOUNCE",
+        "parameters": {
+          "bounceMessage": "Email in breach of company policy."
+        }
+      },
+      "allRecipients": true
+    }
+  ]
 }
 ```
 
@@ -200,16 +210,22 @@ The following example demonstrates the structure of a synchronous **Run Lambda**
 
 ```
 {
-      'actions': [{
-        'action' : { 'type' : 'DEFAULT' },
-        'recipients' : [
-          'new-recipient@example.com'
-         ]
+  "actions": [
+    {
+      "action": {
+        "type": "DEFAULT"
       },
-      {
-        'action' : { 'type' : 'DEFAULT' },
-        'allRecipients' : True
-      }]
+      "recipients": [
+        "new-recipient@example.com"
+      ]
+    },
+    {
+      "action": {
+        "type": "DEFAULT"
+      },
+      "allRecipients": true
+    }
+  ]
 }
 ```
 
