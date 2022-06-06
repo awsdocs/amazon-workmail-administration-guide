@@ -93,7 +93,7 @@ The email subject line\. Truncated when it exceeds the 256 character limit\.
 **messageId**  
 A unique ID used to access the full content of the email message when using the Amazon WorkMail Message Flow SDK\.
 
-**invocationID**  
+**invocationId**  
 The ID for a unique Lambda invocation\. This ID remains the same when a Lambda function is called more than once for the same **LambdaEventData**\. Use to detect retries and avoid duplication\.
 
 **flowDirection**  
