@@ -10,11 +10,11 @@ For data protection purposes, we recommend that you protect AWS account credenti
 + Use advanced managed security services such as Amazon Macie, which assists in discovering and securing personal data that is stored in Amazon S3\.
 + If you require FIPS 140\-2 validated cryptographic modules when accessing AWS through a command line interface or an API, use a FIPS endpoint\. For more information about the available FIPS endpoints, see [Federal Information Processing Standard \(FIPS\) 140\-2](http://aws.amazon.com/compliance/fips/)\.
 
-We strongly recommend that you never put sensitive identifying information, such as your customers' account numbers, into free\-form fields such as a **Name** field\. This includes when you work with Amazon WorkMail or other AWS services using the console, API, AWS CLI, or AWS SDKs\. Any data that you enter into Amazon WorkMail or other services might get picked up for inclusion in diagnostic logs\. When you provide a URL to an external server, don't include credentials information in the URL to validate your request to that server\.
+We strongly recommend that you never put confidential or sensitive information, such as your customers' email addresses, into tags or free\-form fields such as a **Name** field\. This includes when you work with Amazon WorkMail or other AWS services using the console, API, AWS CLI, or AWS SDKs\. Any data that you enter into tags or free\-form fields used for names may be used for billing or diagnostic logs\. If you provide a URL to an external server, we strongly recommend that you do not include credentials information in the URL to validate your request to that server\.
 
 ## How Amazon WorkMail uses AWS KMS<a name="workmail-kms"></a>
 
-Amazon WorkMail transparently encrypts all messages in the mailboxes of all Amazon WorkMail organizations before the messages are written to disk and transparently decrypts the messages when users access them\. There is no option to disable encryption\. To protect the encryption keys that protect the messages, Amazon WorkMail is integrated with AWS Key Management Service \(AWS KMS\)\.
+Amazon WorkMail transparently encrypts all messages in the mailboxes of all Amazon WorkMail organizations before the messages are written to disk, and it transparently decrypts the messages when users access them\. You can't disable encryption\. To protect the encryption keys that protect the messages, Amazon WorkMail is integrated with AWS Key Management Service \(AWS KMS\)\.
 
 Amazon WorkMail also provides an option for enabling users to send signed or encrypted email\. This encryption feature does not use AWS KMS\. For more information, see [Enabling signed or encrypted email](enable_encryption.md)\.
 
@@ -34,33 +34,33 @@ Each message is encrypted under a unique data encryption key\. The message key i
 
 ![\[Encrypting your Amazon WorkMail mailboxes\]](http://docs.aws.amazon.com/workmail/latest/adminguide/images/service-workmail.png)
 
-#### A CMK for the organization<a name="workmail-cmk"></a>
+#### Setting a CMK for the organization<a name="workmail-cmk"></a>
 
 When you create an Amazon WorkMail organization, you have the option to select an AWS KMS customer master key \(CMK\) for the organization\. This CMK protects all mailbox keys in that organization\.
 
-You can either select the default AWS managed CMK for Amazon WorkMail, or select an existing customer managed CMK that you own and manage\. For more information, see [customer master keys \(CMKs\)](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys) in the *AWS Key Management Service Developer Guide*\. You can select the same CMK or a different CMK for each of your organizations, but you cannot change the CMK once you have selected it\.
+You can select the default AWS managed CMK for Amazon WorkMail, or you can select an existing customer managed CMK that you own and manage\. For more information, see [customer master keys \(CMKs\)](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys) in the *AWS Key Management Service Developer Guide*\. You can select the same CMK or a different CMK for each of your organizations, but you cannot change the CMK once you select it\.
 
 **Important**  
-Amazon WorkMail supports only symmetric CMKs\. You cannot use an asymmetric CMK to encrypt data in Amazon WorkMail\. For help determining whether a CMK is symmetric or asymmetric, see [Identifying symmetric and asymmetric CMKs](https://docs.aws.amazon.com/kms/latest/developerguide/find-symm-asymm.html) in the *AWS Key Management Service Developer Guide*\.
+Amazon WorkMail supports only symmetric CMKs\. You cannot use an asymmetric CMK\. For help determining whether a CMK is symmetric or asymmetric, see [Identifying symmetric and asymmetric CMKs](https://docs.aws.amazon.com/kms/latest/developerguide/find-symm-asymm.html) in the *AWS Key Management Service Developer Guide*\.
 
 To find the CMK for your organization, use the AWS CloudTrail log entry that records calls to AWS KMS\.
 
 #### A unique encryption key for each mailbox<a name="workmail-mailbox-kms-key"></a>
 
-When you create a new mailbox, Amazon WorkMail generates a unique 256\-bit [Advanced Encryption Standard](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) \(AES\) symmetric encryption key for the mailbox, known as its *mailbox key*, outside of AWS KMS\. Amazon WorkMail uses the mailbox key to protect the encryption keys for each message in the mailbox\.
+When you create a mailbox, Amazon WorkMail generates a unique 256\-bit [Advanced Encryption Standard](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) \(AES\) symmetric encryption key for the mailbox, known as its *mailbox key*, outside of AWS KMS\. Amazon WorkMail uses the mailbox key to protect the encryption keys for each message in the mailbox\.
 
 To protect the mailbox key, Amazon WorkMail calls AWS KMS to encrypt the mailbox key under the CMK for the organization\. Then it stores the encrypted mailbox key in the mailbox metadata\. 
 
 **Note**  
-Amazon WorkMail uses a symmetric mailbox encryption key to protect message keys\. Previously, Amazon WorkMail protected each mailbox with an asymmetric key pair\. It used the public key to encrypt each message key and the private key to decrypt it\. The private mailbox key was protected by the CMK for the organization\. Existing mailboxes might still use an asymmetric mailbox key pair\. This change does not affect the security of the mailbox or its messages\.
+Amazon WorkMail uses a symmetric mailbox encryption key to protect message keys\. Previously, Amazon WorkMail protected each mailbox with an asymmetric key pair\. It used the public key to encrypt each message key and the private key to decrypt it\. The private mailbox key was protected by the CMK for the organization\. Older mailboxes may use an asymmetric mailbox key pair\. This change does not affect the security of the mailbox or its messages\.
 
-#### A unique encryption key for each message<a name="workmail-message-kms-key"></a>
+#### Encrypting each message<a name="workmail-message-kms-key"></a>
 
-When a message is added to the mailbox, Amazon WorkMail generates a unique 256\-bit AES symmetric encryption key for the message outside of AWS KMS\. It uses this *message key* to encrypt the message\. Amazon WorkMail encrypts the message key under the mailbox key and stores the encrypted message key with the message\. Then, it encrypts the mailbox key under the CMK for the organization\.
+When a user adds a message to a mailbox, Amazon WorkMail generates a unique 256\-bit AES symmetric encryption key for the message outside of AWS KMS\. It uses this *message key* to encrypt the message\. Amazon WorkMail encrypts the message key under the mailbox key and stores the encrypted message key with the message\. Then, it encrypts the mailbox key under the CMK for the organization\.
 
 #### Creating a new mailbox<a name="workmail-kms-create-mailbox"></a>
 
-When Amazon WorkMail creates a new mailbox, it uses the following process to prepare the mailbox to hold encrypted messages\.
+When Amazon WorkMail creates a mailbox, it uses the following process to prepare the mailbox to hold encrypted messages\.
 + Amazon WorkMail generates a unique 256\-bit AES symmetric encryption key for the mailbox outside of AWS KMS\.
 + Amazon WorkMail calls the AWS KMS [Encrypt](https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html) operation\. It passes in the mailbox key and the identifier of the customer master key \(CMK\) for the organization\. AWS KMS returns a ciphertext of the mailbox key encrypted under the CMK\.
 + Amazon WorkMail stores the encrypted mailbox key with the mailbox metadata\.
@@ -110,7 +110,7 @@ You can also use the keys or values in the [encryption context](#workmail-encryp
 
 The key policy for the AWS managed CMK for Amazon WorkMail gives users permission to use the CMK for specified operations only when Amazon WorkMail makes the request on the user's behalf\. The key policy does not allow any user to use the CMK directly\.
 
- This key policy, like the policies of all [AWS managed keys](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys), is established by the service\. You cannot change the key policy, but you can view it at any time\. For details, see [Viewing a key policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-viewing.html) in the *AWS Key Management Service Developer Guide*\.
+ This key policy, like the policies of all [AWS managed keys](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys), is established by the service\. You can't change the key policy, but you can view it at any time\. For details, see [Viewing a key policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-viewing.html) in the *AWS Key Management Service Developer Guide*\.
 
 The policy statements in the key policy have the following effect:
 + Allow users in the account and Region to use the CMK for cryptographic operations and to create grants, but only when the request comes from Amazon WorkMail on their behalf\. The `kms:ViaService` condition key enforces this restriction\.
@@ -158,7 +158,7 @@ Amazon WorkMail uses grants to add the following permissions to the CMK for the 
 
 To create the grants, Amazon WorkMail calls [CreateGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateGrant.html) on behalf of the user who created the organization\. Permission to create the grant comes from the key policy\. This policy allows account users to call `CreateGrant` on the CMK for the organization when Amazon WorkMail makes the request on an authorized user's behalf\.
 
-The key policy also allows the account root to revoke the grant on the AWS managed key\. However, if you revoke the grant, Amazon WorkMail cannot decrypt the encrypted data in your mailboxes\.
+The key policy also allows the account root to revoke the grant on the AWS managed key\. However, if you revoke the grant, Amazon WorkMail can't decrypt the encrypted data in your mailboxes\.
 
 ### Amazon WorkMail encryption context<a name="workmail-encryption-context"></a>
 
@@ -184,7 +184,7 @@ You can use AWS CloudTrail and Amazon CloudWatch Logs to track the requests that
 
 #### Encrypt<a name="workmail-kms-cloudtrail-encrypt"></a>
 
-When you create a new mailbox, Amazon WorkMail generates a mailbox key and calls AWS KMS to encrypt the mailbox key\. Amazon WorkMail sends an [Encrypt](https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html) request to AWS KMS with the plaintext mailbox key and an identifier for the CMK of the Amazon WorkMail organization\.
+When you create a mailbox, Amazon WorkMail generates a mailbox key and calls AWS KMS to encrypt the mailbox key\. Amazon WorkMail sends an [Encrypt](https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html) request to AWS KMS with the plaintext mailbox key and an identifier for the CMK of the Amazon WorkMail organization\.
 
 The event that records the `Encrypt` operation is similar to the following example event\. The user is the Amazon WorkMail service\. The parameters include the CMK ID \(`keyId`\) and the encryption context for the Amazon WorkMail organization\. Amazon WorkMail also passes in the mailbox key, but that is not recorded in the CloudTrail log\.
 

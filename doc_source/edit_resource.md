@@ -1,6 +1,6 @@
-# Editing a resource<a name="edit_resource"></a>
+# Editing resource details<a name="edit_resource"></a>
 
-You can edit a resource's general details \(name, description, type, and email address\), booking options, and delegates\. 
+You can edit a resource's general details, including name, description, type, and email address, as well as booking options and delegates\. 
 
 **To edit general resource details**
 
@@ -8,13 +8,13 @@ You can edit a resource's general details \(name, description, type, and email a
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. If necessary, change the AWS Region\. From the navigation bar, choose the Region that meets your needs\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+   If necessary, change the AWS Region\. In the bar at the top of the console window, open the **Select a Region** list and choose a Region\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
-1. For **Organizations**, choose the name of your organization\.
+1. In the navigation pane, choose **Organizations**, then choose the name of your organization\.
 
-1. In the navigation pane, choose **Resources**, and select the resource to edit\.
+1. In the navigation pane, choose **Resources**, and then select the resource to edit\.
 
-1. On the **General** tab, update the details to change: **Resource name**, **Description**, **Resource Type**, or **Email address**\.
+1. On the **General** tab, update the **Resource name**, **Description**, **Resource Type**, or **Email address** details as needed\.
 
 1. Choose **Save**\.
 
@@ -24,42 +24,60 @@ You can configure a resource to accept or decline booking requests automatically
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. If necessary, change the Region\. From the navigation bar, choose the Region that meets your needs\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+   
 
-1. For **Organizations**, choose the name of your organization\.
+   If necessary, change the AWS Region\. In the bar at the top of the console window, open the **Select a Region** list and choose a Region\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
-1. In the navigation pane, choose **Resources**, and then select the resource to edit\.
+1. In the navigation pane, choose **Organizations**, and then choose the name of your organization\.
 
-1. On the **Booking Options** tab, choose **Edit**\.
+1. In the navigation pane, choose **Resources**, and then select the resource to edit\. A page appears and displays **Resource details** and two tabs, **Booking options** and **Delegates**\.
 
-1. To accept all resource requests automatically, select **Automatically accept all resource requests**\.
+   Do any of the following:
 
-1. To decline recurring resource requests automatically, select **Automatically decline recurring resource requests**\.
+**To change a resource's details**
 
-1. To decline conflicting resource requests automatically, select **Automatically decline conflicting resource requests**\.
+   1. In the **Resource details** section, choose **Edit**\.
 
-1. Choose **Save**\.
+   1. As needed, change the resource's name, description, or type\.
 
-You can add a delegate to control booking requests for a resource\. Resource delegates automatically receive copies of all booking requests and have full access to the resource calendar\. In addition, they must accept all booking requests for a resource\.
+**To add an email alias to a resource**
+
+   1. In the **Resource details** section, choose **Edit**\.
+
+   1. Under **Email address**, choose **Add alias**\.
+
+   1. In the **Email aliases** box, enter an alias\.
+
+   1. Repeat steps 2 and 3 as desired to enter more aliases\.
+
+   1. Choose **Save changes**\.
+
+**To change a resource's booking options**
+
+   1. In the **Booking options** section, choose **Edit**\.
+
+   1. As desired, select or clear the checkbox next to an option to enable or disable the option\.
+**Note**  
+When you disable any of the automatic booking options, you must create a delegate to handle the booking requests\. The next steps explain how to create delegate\. 
+
+   1. Choose **Save**\.
+
+You can add a delegate to control booking requests for a resource that doesn't have automatic booking options configured\. Resource delegates automatically receive copies of all booking requests and have full access to the resource calendar\. In addition, they must accept all booking requests for a resource\.
 
 **To add a resource delegate**
 
-
-
- 
-**Note**  
-Before you proceed, follow the process above to clear the **Automatically accept all resource requests** option\.
-
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. If necessary, change the Region\. From the navigation bar, choose the Region that meets your needs\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+   If necessary, change the AWS Region\. In the bar at the top of the console window, open the **Select a Region** list and choose a Region\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
-1. For **Organizations**, choose the name of your organization\.
+1. In the navigation pane, choose **Organizations**, then choose the name of the organization that you want to create delegates for\.
 
-1. In the navigation pane, choose **Resources**, and select the name of the resource to edit\.
+1. In the navigation pane, choose **Resources**, and then select the name of the resource to which you want to add a delegate\.
 
-1. On the **Delegates** tab, choose **Edit**\.
+1. In the **Booking options** tab, choose **Edit**, clear the **Automatically accept all resource requests** checkbox, and then choose **Save**\.
 
-1. Select the users or groups to add as delegates, and then use the right arrow to add them to the delegate list\. 
+1. Choose the **Delegates** tab, and then choose **Add delegate**\. 
 
-1. Choose **Save**\.
+   The **Add delegate** dialog box appears\.
+
+1. Open the **Search delegates** list and choose a delegate, then choose **Save**\.

@@ -11,6 +11,7 @@ This documentation helps you understand how to apply the shared responsibility m
 **Topics**
 + [Data protection in Amazon WorkMail](data-protection.md)
 + [Identity and access management for Amazon WorkMail](security-iam.md)
++ [AWS managed policies for Amazon WorkMail](security-iam-awsmanpol.md)
 + [Using service\-linked roles for Amazon WorkMail](using-service-linked-roles.md)
 + [Logging and monitoring in Amazon WorkMail](monitoring-overview.md)
 + [Compliance validation for Amazon WorkMail](compliance.md)

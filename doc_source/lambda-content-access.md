@@ -20,7 +20,7 @@ Changeable fields in the preceding example include the following:
 The following example includes example IDs for an ARN associated with an incoming email message in transit\.
 
 ```
-arn:aws:workmailmessageflow:us-east-1:111122223333:message/m-n1pq2345678r901st2u3vx45x6789yza/incoming/d1234567-8e90-1f23-456g-hjk7lmnop8q9
+arn:aws:workmailmessageflow:us-east-1:111122223333:message/m-n1pq2345678r901st2u3vx45x6789yza/incoming/d1234567-8e90-1f23-456g-hjk7lmnop8q9                
 ```
 
 You can use these ARNs as resources in the `Resource` section of your IAM user policies in order to manage access to Amazon WorkMail messages in transit\. For more information about granting IAM users permissions for Amazon WorkMail, see [Create AWS Identity and Access Management users and groups](prereqs.md#iam_users_groups)\.
@@ -80,7 +80,7 @@ The following example policy grants access only to messages that are incoming to
 }
 ```
 
-The following example policy grants an IAM entity full read and update access to all inbound and outbound messages for every Amazon WorkMail organization in your AWS account\.
+The following example policy grants an IAM entity full read and update access to all inbound and outbound messages for every Amazon WorkMail organization in your AWS accounts\.
 
 ```
 {

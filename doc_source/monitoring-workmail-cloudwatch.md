@@ -13,13 +13,13 @@ The `AWS/WorkMail` namespace includes the following metrics\.
 | --- | --- | 
 |  `OrganizationEmailReceived`  |  The number of emails received by your Amazon WorkMail organization\. If 1 email is addressed to 10 recipients in your organization, the `OrganizationEmailReceived` count is 1\. Units: Count  | 
 |  `MailboxEmailDelivered`  |  The number of emails delivered to individual mailboxes in your Amazon WorkMail organization\. If 1 email is successfully delivered to 10 recipients in your organization, the `MailboxEmailDelivered` count is 10\. Units: Count  | 
-|  `IncomingEmailBounced`  |  The number of incoming emails that bounced due to full mailboxes or non\-existent mailboxes\. This metric is counted for each intended recipient\. For example, if 1 email is sent to 10 recipients in your organization, and 2 of the recipients have full mailboxes resulting in a bounce response, the `IncomingEmailBounced` count is 2\. Units: Count  | 
+|  `IncomingEmailBounced`  |  The number of incoming emails that bounced due to full mailboxes\. This metric is counted for each intended recipient\. For example, if 1 email is sent to 10 recipients in your organization, and 2 of the recipients have full mailboxes resulting in a bounce response, the `IncomingEmailBounced` count is 2\. Units: Count  | 
 |  `OutgoingEmailBounced`  |  The number of outgoing emails that could not be delivered, counted for each intended recipient\. For example, if 1 email is sent to 10 recipients, and 2 emails could not be delivered, the `OutgoingEmailBounced` count is 2\. Units: Count  | 
 |  `OutgoingEmailSent`  |  The number of emails successfully sent from your Amazon WorkMail organization\. This metric is counted for each recipient of a successfully sent email\. For example, if 1 email is sent to 10 recipients, and the email was successfully delivered to 8 of the recipients, the `OutgoingEmailSent` count is 8 \. Units: Count  | 
 
 ## CloudWatch event logs for Amazon WorkMail<a name="cw-events"></a>
 
-When you turn on email event logging for your Amazon WorkMail organization, Amazon WorkMail logs email events with CloudWatch\. For more information about turning on email event logging, see [Tracking messages](tracking.md)\.
+When you turn on email event logging for your Amazon WorkMail organization, Amazon WorkMail logs email events with CloudWatch\. For more information about turning on email event logging, see [Enabling event logging](tracking.md)\.
 
 The following tables describe the events that Amazon WorkMail logs with CloudWatch, when the events are transmitted, and what the event fields contain\.
 
@@ -71,7 +71,7 @@ This event is logged when Amazon WorkMail sends an email to the journaling addre
 |  journalingAddress  |  The email address to which the journaling message is sent\.  | 
 
 **`INCOMING_EMAIL_BOUNCED`**  
-This event is logged when an incoming message cannot be delivered to a target recipient\. Bounced emails can be caused by reasons such as the target mailbox not existing, or the mailbox being full\. This is logged once for each recipient that resulted in a bounced email\. For example, if an incoming message is addressed to three recipients and two of them have full mailboxes, two INCOMING\_EMAIL\_BOUNCED events are logged\.
+This event is logged when an incoming message can't be delivered to a target recipient\. Emails can bounce for a number of reasons, such as a full target mailbox\. The system logs this event once for each recipient that results in a bounced email\. For example, if an incoming message is addressed to three recipients and two of them have full mailboxes, two INCOMING\_EMAIL\_BOUNCED events are logged\.
 
 
 | Field | Description | 
@@ -101,7 +101,7 @@ This event is logged when an outgoing email is successfully delivered to a targe
 |  messageId  |  The SMTP message ID\.  | 
 
 **`OUTGOING_EMAIL_BOUNCED`**  
-This event is logged when an outgoing message cannot be delivered to a target recipient\. Bounced emails can be caused by reasons such as the target mailbox not existing, or the mailbox being full\. This is logged once for each recipient that resulted in a bounced email\. For example, if an outgoing message is addressed to three recipients and two of them have full mailboxes, two `OUTGOING_EMAIL_BOUNCED` events are logged\.
+This event is logged when an outgoing message can't be delivered to a target recipient\. Emails can bounce for a number of reasons, such as a full target mailbox\. The system logs a bounce for each recipient that results in a bounced email\. For example, if an outgoing message is addressed to three recipients and two of them have full mailboxes, two `OUTGOING_EMAIL_BOUNCED` events are logged\.
 
 
 | Field | Description | 
@@ -120,7 +120,7 @@ This event is logged when a DMARC policy is applied to an email sent to your org
 
 ## Using CloudWatch Insights with Amazon WorkMail<a name="cw-insights"></a>
 
-If you have turned on email event logging in the Amazon WorkMail console, you can use Amazon CloudWatch Logs Insights to query your event logs\. For more information about turning on email event logging, see [Tracking messages](tracking.md)\. For more information about CloudWatch Logs Insights, see [Analyze log data with CloudWatch Logs Insights](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AnalyzingLogData.html) in the *Amazon CloudWatch Logs User Guide*\.
+If you have turned on email event logging in the Amazon WorkMail console, you can use Amazon CloudWatch Logs Insights to query your event logs\. For more information about turning on email event logging, see [Enabling event logging](tracking.md)\. For more information about CloudWatch Logs Insights, see [Analyze log data with CloudWatch Logs Insights](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AnalyzingLogData.html) in the *Amazon CloudWatch Logs User Guide*\.
 
 The following examples demonstrate how to query CloudWatch Logs for common email events\. You run these queries in the CloudWatch console\. For instructions about how to run these queries, see [Tutorial: Run and modify a sample query](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_AnalyzeLogData_RunSampleQuery.html) in the *Amazon CloudWatch Logs User Guide*\.
 

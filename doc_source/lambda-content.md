@@ -7,7 +7,7 @@ To access the full content of email messages, use the `GetRawMessageContent` act
 The following example shows how a Lambda function using the Python runtime environment can retrieve the full message content\.
 
 **Tip**  
-If you start by deploying the Amazon WorkMail [ Hello World Lambda function ](https://console.aws.amazon.com/lambda/home#/create/app?applicationId=arn:aws:serverlessrepo:us-east-1:489970191081:applications/workmail-hello-world-python) from the AWS Serverless Application Repository to your account, the system creates a lambda function in your account with all the necessary resources and permission\. You can then add your business logic to the lambda function based on your use\-case\.
+If you start by deploying the Amazon WorkMail [ Hello World Lambda function ](https://console.aws.amazon.com/lambda/home#/create/app?applicationId=arn:aws:serverlessrepo:us-east-1:489970191081:applications/workmail-hello-world-python) from the AWS Serverless Application Repository to your account, the system creates a Lambda function in your account with all the necessary resources and permission\. You can then add your business logic to the lambda function based on your use\-case\.
 
 ```
 import boto3

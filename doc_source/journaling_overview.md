@@ -14,10 +14,10 @@ All journal records are sent from an email address that is automatically added t
 amazonjournaling@yourorganization.awsapps.com
 ```
 
- There is no mailbox associated with this address, and you will not be able to create one using this name or address\. 
+ There is no mailbox associated with this address, and you won't be able to create one using this name or address\. 
 
 **Note**  
-Do not delete the following domain record from the Amazon Simple Email Service \(Amazon SES\) console, or email journaling stops functioning\.  
+don't delete the following domain record from the Amazon Simple Email Service \(Amazon SES\) console, or email journaling stops functioning\.  
 
 ```
 yourorganization.awsapps.com
@@ -29,14 +29,18 @@ Every incoming or outgoing email message generates one journal record, regardles
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. For **Organizations**, choose the name of your organization\.
+   If necessary, change the AWS Region\. In the bar at the top of the console window, open the **Select a Region** list and choose a Region\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
-1. On the **Organization settings** screen, choose **Journaling Settings**, **Edit**, **On**\.
+1. In the navigation pane, choose **Organizations**, then choose the name of your organization\.
 
-1. For **Journaling email address**, enter the email address provided by your email journaling provider\.
+1. In the navigation pane, **Organization settings**, choose the **Journaling** tab, and then choose **Edit**\.
+
+1. Move the **Journaling status** slider to the on position\.
+
+1. in the **Journaling email address** box, enter the email address given by your email journaling provider\.
 **Note**  
 We recommend using a dedicated journaling provider\.
 
-1. For **Report email address**, enter the email administrator's address\.
+1. In the **Report email address**, enter the email administrator's address\.
 
-1. Choose **Save**\. The changes are applied immediately\.
+1. Choose **Save**\. The changes apply immediately\.

@@ -5,10 +5,5 @@ In Amazon WorkMail, your organization represents the users in your company\. In 
 **Topics**
 + [Creating an organization](add_new_organization.md)
 + [Deleting an organization](delete_organization.md)
-+ [Tagging an organization](org-tag.md)
-+ [Working with access control rules](access-rules.md)
-+ [Setting mailbox retention policies](mailbox-retention-policy.md)
-+ [Editing your organization's mobile device policy](edit_organization_mobile_policy.md)
-+ [Managing email flows](email-flows.md)
-+ [Tracking messages](tracking.md)
++ [Working with organization settings](org-settings.md)
 + [Enforcing DMARC policies on incoming email](inbound-dmarc.md)

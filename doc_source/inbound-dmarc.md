@@ -1,6 +1,6 @@
 # Enforcing DMARC policies on incoming email<a name="inbound-dmarc"></a>
 
-Email domains use DNS records for security\. They protect your users from common attacks such as spoofing or phishing\. DNS records often include Domain\-based Message Authentication, Reporting, and Conformance \(DMARC\) records, which are set by the domain owner that sends the email\. DMARC records include policies that specify actions to take when an email fails a DMARC check\. You can choose whether to enforce the DMARC policy on emails being sent to your organization\.
+Email domains use Domain Name System \(DNS\) records for security\. They protect your users from common attacks such as spoofing or phishing\. DNS records often include Domain\-based Message Authentication, Reporting, and Conformance \(DMARC\) records, which are set by the domain owner that sends the email\. DMARC records include policies that specify actions to take when an email fails a DMARC check\. You can choose whether to enforce the DMARC policy on emails being sent to your organization\.
 
 New Amazon WorkMail organizations have DMARC enforcement turned on by default\.
 
@@ -8,20 +8,22 @@ New Amazon WorkMail organizations have DMARC enforcement turned on by default\.
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. For **Organizations**, choose the name of your organization\.
+   If necessary, change the AWS Region\. In the bar at the top of the console window, open the **Select a Region** list and choose a Region\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
-1. In the navigation pane, choose **Organization settings**\.
+1. In the navigation pane, choose **Organizations**, then choose the name of your organization\.
 
-1. Choose **Advanced**\.
+1. In the navigation pane, choose **Organization settings**\. The **Organization settings** page appears and displays a set of tabs\.
 
-1. For **Inbound DMARC Settings**, choose **Edit**\. 
+1. Choose the **DMARC** tab, then choose **Edit**\.
 
-1. For **DMARC enforcement**, select **On**\.
+1. Move the **DMARC enforcement** slider to the on position\.
 
-1. Select the acknowledgment check box, then choose **Save**\.
+1. Select the checkbox next to **I acknowledge that turning on DMARC enforcement may result in inbound emails being dropped or quarantined based on the sender's domain configuration\.**
+
+1. Choose **Save**\.
 
 **To turn off DMARC enforcement**
-+ Follow the steps in the previous section, but for step 6, choose **Off** instead of **On**\.
++ Follow the steps in the previous section, but move the **DMARC enforcement** slider to the off position\.\.
 
 ## Using email event logging to track DMARC enforcement<a name="logging-dmarc"></a>
 

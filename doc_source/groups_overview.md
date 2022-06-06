@@ -1,14 +1,18 @@
 # Working with groups<a name="groups_overview"></a>
 
-Groups can be used as distribution lists in Amazon WorkMail for receiving emails for generic email addresses like sales@example\.com or support@example\.com\. You can create multiple email aliases for a group\.
+You can use groups as distribution lists in Amazon WorkMail for receiving emails for generic email addresses, such as sales@example\.com or support@example\.com\. You can create multiple email aliases for a group\.
 
-You can also use groups as security groups to share a mailbox or calendar with a certain team\. It can take up to 2 hours before newly added groups appear in your Microsoft Outlook offline address book\.
+You can also use groups as security groups to share a mailbox or calendar with a certain team\. 
 
-Groups do not have their own mailboxes\. For information about setting up group permissions, see [Managing group permissions](mail_perms_overview.md#manage_group_perms)\.
+Groups don't have their own mailboxes, and that affects the mailbox permissions that you can grant to a group\. For information about setting up mailbox permissions for a group, see [Managing mailbox permissions for groups](manage_group_perms.md)\.
+
+**Note**  
+It can take up to 2 hours before newly added groups appear in your Microsoft Outlook offline address book\.
 
 **Topics**
 + [Create a group](add_new_group.md)
-+ [Enable an existing group](enable_existing_group.md)
-+ [Add users to a group](add-group-users.md)
-+ [Remove users from a group](remove-group-users.md)
-+ [Disable a group](remove_group.md)
++ [Enabling a group](enable_existing_group.md)
++ [Adding users as members to a group](add-group-users.md)
++ [Removing users from a group](remove-group-users.md)
++ [Disable a group](disable-group.md)
++ [Deleting a group](delete-group.md)

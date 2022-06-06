@@ -1,21 +1,21 @@
-# Add users to a group<a name="add-group-users"></a>
+# Adding users as members to a group<a name="add-group-users"></a>
 
-After you create and enable an Amazon WorkMail group, use the Amazon WorkMail console to add users to that group\.
+After you create and enable an Amazon WorkMail group, use the Amazon WorkMail console to add members to that group\.
 
 **Note**  
-If Amazon WorkMail is integrated with a connected Active Directory service or Microsoft Active Directory, you can manage your group members using Active Directory\. This can take a longer time to propagate to Amazon WorkMail\.
+If Amazon WorkMail is integrated with a connected Active Directory service or Microsoft Active Directory, you can use Active Directory to manage your group members\. However, changes can take longer to propagate to Amazon WorkMail\.
 
-You can add up to 100 users at a time by using the following procedure\.
+The following steps explain how to add up to 100 users at a time\.
 
 **To add users to a group**
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. If you require a different AWS Region, change it from the navigation bar\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+   If necessary, change the AWS Region\. In the bar at the top of the console window, open the **Select a Region** list and choose a Region\. For more information, see [Regions and endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the *Amazon Web Services General Reference*\.
 
-1. For **Organizations**, choose the name of your organization\.
+1. In the navigation pane, choose **Organizations**, then choose the name of your organization\.
 
-1. Choose **Groups**\.
+1. In the navigation pane, choose **Groups**\.
 
 1. Select the name of the group\.
 
@@ -29,4 +29,4 @@ You can add up to 100 users at a time by using the following procedure\.
 
 1. Choose **Save**\.
 
-Your changes might take a few minutes to propagate\.
+Your changes can take a few minutes to propagate\.

@@ -2,7 +2,7 @@
 
 Amazon WorkMail uses AWS Identity and Access Management \(IAM\)[ service\-linked roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-linked-role)\. A service\-linked role is a unique type of IAM role that is linked directly to Amazon WorkMail\. Service\-linked roles are predefined by Amazon WorkMail and include all the permissions that the service requires to call other AWS services on your behalf\. 
 
-A service\-linked role makes setting up Amazon WorkMail easier because you don’t have to manually add the necessary permissions\. Amazon WorkMail defines the permissions of its service\-linked roles, and unless defined otherwise, only Amazon WorkMail can assume its roles\. The defined permissions include the trust policy and the permissions policy, and that permissions policy cannot be attached to any other IAM entity\.
+A service\-linked role makes setting up Amazon WorkMail easier because you don’t have to manually add the necessary permissions\. Amazon WorkMail defines the permissions of its service\-linked roles, and unless defined otherwise, only Amazon WorkMail can assume its roles\. The defined permissions include the trust policy and the permissions policy, and that permissions policy can't be attached to any other IAM entity\.
 
 You can delete a service\-linked role only after first deleting the related resources\. This protects your Amazon WorkMail resources because you can't inadvertently remove permission to access the resources\.
 
@@ -10,7 +10,7 @@ For information about other services that support service\-linked roles, see [AW
 
 ## Service\-linked role permissions for Amazon WorkMail<a name="slr-permissions"></a>
 
-Amazon WorkMail uses the service\-linked role named **AmazonWorkMailEvents** – Amazon WorkMail uses this service\-linked role to enable access to AWS services and resources used or managed by Amazon WorkMail events, such as monitoring email events logged by CloudWatch\. For more information about enabling email event logging for Amazon WorkMail, see [Tracking messages](tracking.md)\.
+Amazon WorkMail uses the service\-linked role named **AmazonWorkMailEvents** – Amazon WorkMail uses this service\-linked role to enable access to AWS services and resources used or managed by Amazon WorkMail events, such as monitoring email events logged by CloudWatch\. For more information about enabling email event logging for Amazon WorkMail, see [Enabling event logging](tracking.md)\.
 
 The AmazonWorkMailEvents service\-linked role trusts the following services to assume the role:
 + `events.workmail.amazonaws.com`
@@ -30,7 +30,7 @@ If you delete this service\-linked role, and then need to create it again, you c
 
 ## Editing a service\-linked role for Amazon WorkMail<a name="edit-slr"></a>
 
-Amazon WorkMail does not allow you to edit the AmazonWorkMailEvents service\-linked role\. After you create a service\-linked role, you cannot change the name of the role because various entities might reference the role\. However, you can edit the description of the role using IAM\. For more information, see [Editing a Service\-Linked Role](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#edit-service-linked-role) in the *IAM User Guide*\.
+Amazon WorkMail does not allow you to edit the AmazonWorkMailEvents service\-linked role\. After you create a service\-linked role, you can't change the name of the role because various entities might reference the role\. However, you can edit the description of the role using IAM\. For more information, see [Editing a Service\-Linked Role](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#edit-service-linked-role) in the *IAM User Guide*\.
 
 ## Deleting a service\-linked role for Amazon WorkMail<a name="delete-slr"></a>
 
@@ -45,13 +45,15 @@ If the Amazon WorkMail service is using the role when you try to delete the reso
 
    1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-   1. Choose the organization alias for which to delete the AmazonWorkMailEvents role\.
+      If necessary, change the AWS Region\. In the bar at the top of the console window, open the **Select a Region** list and choose a Region\. For more information, see [Regions and endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the *Amazon Web Services General Reference*\.
 
-   1. Choose **Organization settings**, **Monitoring**\.
+   1. In the navigation pane, choose **Organizations**, then choose the name of your organization\.
+
+   1. In the navigation pane, choose **Organization settings**, then choose **Monitoring**\.
 
    1. For **Log settings**, choose **Edit**\.
 
-   1. Clear the check box for **Enable mail events**\.
+   1. Move the **Enable mail events** slider to the off position\.
 
    1. Choose **Save**\.
 

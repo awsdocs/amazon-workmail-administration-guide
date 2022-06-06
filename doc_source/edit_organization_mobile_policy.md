@@ -6,11 +6,11 @@ You can edit your organization's mobile device policy to change the way that mob
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. If necessary, change the AWS Region\. From the navigation bar, select the appropriate Region\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+   If necessary, change the AWS Region\. In the bar at the top of the console window, open the **Select a Region** list and choose a Region\. For more information about regions, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
-1. For **Organizations**, choose the name of your organization\.
+1. In the navigation pane, choose **Organization**, then choose an organization\.
 
-1. In the navigation pane, choose **Mobile Policies**, and then on the **Mobile policy** screen, choose **Edit**\.
+   In the navigation pane, choose **Mobile Policies**, and then on the **Mobile policy** screen, choose **Edit**\.
 
 1. Update any of the following as necessary:
 

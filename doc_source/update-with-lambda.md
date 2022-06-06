@@ -4,19 +4,19 @@ After you configure a synchronous AWS Lambda function to manage email flows, you
 
 **Note**  
 The PutRawMessageContent API requires boto3 1\.17\.8, or you can add a layer to your Lambda function\. To download the correct boto3 version, see the [boto page on GitHub](https://github.com/boto/boto)\. For more information about adding layers, see [Configure a function to use layers](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html#configuration-layers-using)\.   
-Here's an example layer: `Layer Name: “arn:aws:lambda:${AWS::Region}:489970191081:layer:WorkMailLambdaLayer:2”`\. In this example, substitute `${AWS::Region}` with an appropriate aws region such as us\-east\-1\.
+Here's an example layer: `"LayerArn":"arn:aws:lambda:${AWS::Region}:489970191081:layer:WorkMailLambdaLayer:2"`\. In this example, substitute `${AWS::Region}` with an appropriate aws region, such as us\-east\-1\.
 
 **Tip**  
 If you start by deploying the Amazon WorkMail [Hello World Lambda function](https://console.aws.amazon.com/lambda/home#/create/app?applicationId=arn:aws:serverlessrepo:us-east-1:489970191081:applications/workmail-hello-world-python) from the AWS Serverless Application Repository to your account, the system creates a Lambda function in your account with the necessary resources and permissions\. You can then add business logic to the lambda function, based on your use cases\.
 
 As you go, remember the following:
 + Use the [ GetRawMessageContent](https://docs.aws.amazon.com/workmail/latest/APIReference/API_messageflow_GetRawMessageContent.html) API to retrieve the original message content\. For more information see [Retrieving message content with AWS Lambda](lambda-content.md)\.
-+ Once you have the original message, change the MIME content\. When you finish, upload the message to an S3 bucket in your account\. Ensure that the S3 bucket uses the same AWS account as your Amazon WorkMail operations, and that it uses the same AWS Region as your API calls\.
++ Once you have the original message, change the MIME content\. When you finish, upload the message to an Amazon Simple Storage Service \(Amazon S3\) bucket in your account\. Ensure that the S3 bucket uses the same AWS account as your Amazon WorkMail operations, and that it uses the same AWS Region as your API calls\.
 + For Amazon WorkMail to process requests, your S3 bucket must have the correct policy in order to access the S3 object\. For more information, see [Example S3 policy](#s3example)\.
 + Use the [ PutRawMessageContent](https://docs.aws.amazon.com/workmail/latest/APIReference/API_messageflow_PutRawMessageContent.html) API to send the updated the message content back to Amazon WorkMail\.
 
 **Note**  
-The `PutRawMessageContent` API ensures that the MIME content of the updated message meets RFC standards, as wells as the criteria mentioned in the [RawMessageContent](https://docs.aws.amazon.com/workmail/latest/APIReference/API_messageflow_RawMessageContent.html) data type\. Emails inbound to your Amazon WorkMail organization do not always meet those standards, so the `PutRawMessageContent` API may reject them\. In such cases, you can consult the error message returned for more information on how to fix any issues\.
+The `PutRawMessageContent` API ensures that the MIME content of the updated message meets RFC standards, as wells as the criteria mentioned in the [RawMessageContent](https://docs.aws.amazon.com/workmail/latest/APIReference/API_messageflow_RawMessageContent.html) data type\. Emails inbound to your Amazon WorkMail organization don't always meet those standards, so the `PutRawMessageContent` API may reject them\. In such cases, you can consult the error message returned for more information on how to fix any issues\.
 
 **Example S3 policy**  
 
@@ -26,8 +26,7 @@ The `PutRawMessageContent` API ensures that the MIME content of the updated mess
     "Statement": [
         {
             "Effect": "Allow",
-            "Principal": {
-                "Service": "workmail.region.amazonaws.com"
+            "Principal": {"Service": "workmail.REGION.amazonaws.com"
             },
             "Action": [
                 "s3:GetObject",
@@ -35,8 +34,14 @@ The `PutRawMessageContent` API ensures that the MIME content of the updated mess
             ],
             "Resource": "arn:aws:s3:::My-Test-S3-Bucket/*",
             "Condition": {
+                "StringEquals": { 
+                    "aws:SourceAccount": "AWS_ACCOUNT_ID" 
+                },
                 "Bool": {
                     "aws:SecureTransport": "true"
+                },
+                "ArnLike": {
+                    "aws:SourceArn": "arn:aws:workmailmessageflow:REGION:AWS_ACCOUNT_ID:message/WORKMAIL_ORGANIZATION_ID/*"
                 }
             }
         }

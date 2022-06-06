@@ -1,6 +1,6 @@
 # Tagging an organization<a name="org-tag"></a>
 
-Tagging an Amazon WorkMail organization resource lets you do the following:
+Tagging an Amazon WorkMail organization resource allows you to:
 + Differentiate between organizations in the AWS Billing and Cost Management console\.
 + Control access to Amazon WorkMail organization resources by adding them to the `Resource` element of AWS Identity and Access Management \(IAM\) permission policy statements\.
 
@@ -12,19 +12,21 @@ Amazon WorkMail administrators can tag organizations using the Amazon WorkMail c
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. For **Organizations**, choose the name of your organization\.
+   If necessary, change the AWS Region\. In the bar at the top of the console window, open the **Select a Region** list and choose a Region\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+
+1. In the navigation pane, choose **Organizations**, and then choose the name of your organization\.
 
 1. Choose **Tags**\.
 
 1. For **Organization tags**, choose **Add new tag**\.
 
-1. For **Key**, enter a string to identify the tag\.
+1. For **Key**, enter a name that identifies the tag\.
 
 1. \(Optional\) For **Value**, enter a value for the tag\.
 
 1. \(Optional\) Repeat steps 4\-6 to add more tags to your organization\. You can add up to 50 tags\.
 
-1. Choose **Submit** to save your changes\.
+1. Choose **Save** to save your changes\.
 
 You can view your organization tags in the Amazon WorkMail console\.
 
@@ -36,7 +38,9 @@ You can remove tags from an organization at any time, using the Amazon WorkMail 
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. For **Organizations**, choose the name of your organization\.
+   If necessary, change the AWS Region\. In the bar at the top of the console window, open the **Select a Region** list and choose a Region\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+
+1. In the navigation pane, choose **Organizations**, and then choose the name of your organization\.
 
 1. Choose **Tags**\.
 

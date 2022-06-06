@@ -1,6 +1,6 @@
 # Working with domains<a name="domains_overview"></a>
 
-You can add or remove email domains or make them the default\.
+You can configure Amazon WorkMail to use a custom domain\. You can also make a domain the default for your organization, and enable AutoDiscover for Microsoft Outlook\.
 
 **Topics**
 + [Adding a domain](add_domain.md)
@@ -10,4 +10,4 @@ You can add or remove email domains or make them the default\.
 + [Enabling AutoDiscover to configure endpoints](autodiscover.md)
 + [Editing domain identity policies](editing_domains.md)
 + [Authenticating email with SPF](authenticate_domain.md)
-+ [Configuring a custom MAIL FROM domain in Amazon WorkMail](custom-mail-from-domain.md)
++ [Configuring a custom MAIL FROM domain](custom-mail-from-domain.md)

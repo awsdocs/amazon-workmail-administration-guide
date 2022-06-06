@@ -11,7 +11,7 @@ When a mailbox export job is completed, the `.zip` file in the Amazon S3 bucket 
 The following are prerequisites for exporting mailbox content:
 + The ability to program\.
 + An Amazon WorkMail administrator account\.
-+ An Amazon S3 bucket that does not allow public access\. For more information, see [Using Amazon S3 block public access](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html) in the *Amazon Simple Storage Service Developer Guide* and the *[Amazon Simple Storage Service Getting Started Guide](https://docs.aws.amazon.com/AmazonS3/latest/gsg/)*\.
++ An Amazon S3 bucket that does not allow public access\. For more information, see [Using Amazon S3 block public access](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html) in the *Amazon Simple Storage Service User Guide* and the *[Amazon Simple Storage Service User Guide](https://docs.aws.amazon.com/AmazonS3/latest/gsg/)*\.
 + A symmetric AWS KMS CMK\. For more information, see [Getting started](https://docs.aws.amazon.com/kms/latest/developerguide/getting-started.html) in the *AWS Key Management Service Developer Guide*\.
 + An AWS Identity and Access Management \(IAM\) role with a policy that grants permission to write to the Amazon S3 bucket and encrypt the sent files with the AWS KMS CMK\. For more information, see [How Amazon WorkMail works with IAM](security_iam_service-with-iam.md)\.
 
@@ -59,6 +59,8 @@ The following example shows an IAM policy that grants permission to write to the
 
 The following example shows an IAM trust policy that is attached to the IAM role you create\. To use this example policy in the following [Example: Exporting mailbox content](#example-export-mailbox) procedure, save the policy as a JSON file with file name `mailbox-export-trust-policy.json`\.
 
+You don’t have to use the `aws:SourceArn` and `aws:SourceAccount` conditions at the same time\. For example, you can remove `aws:SourceArn` from the policy if you need to use the same role to export messages from different Amazon WorkMail organizations under the same AWS account\. For more information about condition keys, refer to the [AWS global condition context keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html) in the *AWS Identity and Access Management user guide*\.
+
 ```
 {
   "Version": "2012-10-17",
@@ -71,8 +73,11 @@ The following example shows an IAM trust policy that is attached to the IAM role
       },
       "Action": "sts:AssumeRole",
       "Condition": {
-        "StringEquals": {
-          "sts:ExternalId": "111122223333"
+        "StringEquals": { 
+          "aws:SourceAccount": "111122223333"
+        },
+        "ArnLike": {
+          "aws:SourceArn": "arn:aws:workmail:us-east-1:111122223333:organization/m-a123b4c5de678fg9h0ij1k2lm234no56"
         }
       }
     }

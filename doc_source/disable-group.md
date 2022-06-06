@@ -1,4 +1,4 @@
-# Disable a group<a name="remove_group"></a>
+# Disable a group<a name="disable-group"></a>
 
 When you no longer need a group, you can disable it\.
 
@@ -6,9 +6,9 @@ When you no longer need a group, you can disable it\.
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. If you require a different AWS Region, change it from the navigation bar\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+   If necessary, change the AWS Region\. In the bar at the top of the console window, open the **Select a Region** list and choose a Region\. For more information, see [Regions and endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the *Amazon Web Services General Reference*\.
 
-1. For **Organizations**, choose the name of your organization\.
+1. In the navigation pane, choose **Organizations**, then choose the name of your organization\.
 
 1. In the navigation pane, choose **Groups**\.
 

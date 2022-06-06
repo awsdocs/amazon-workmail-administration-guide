@@ -1,8 +1,13 @@
-# Tracking messages<a name="tracking"></a>
+# Enabling event logging<a name="tracking"></a>
 
-Turn on email event logging in the Amazon WorkMail console to track email messages for your organization\. Email event logging uses an AWS Identity and Access Management service\-linked role to grant permissions to publish the email event logs to Amazon CloudWatch\. For more information about IAM service\-linked roles, see [Using service\-linked roles for Amazon WorkMail](using-service-linked-roles.md)\.
+You enable email event logging in the Amazon WorkMail console in order to track email messages for your organization\. Email event logging uses an AWS Identity and Access Management service\-linked role to grant permissions to publish the email event logs to Amazon CloudWatch\. For more information about IAM service\-linked roles, see [Using service\-linked roles for Amazon WorkMail](using-service-linked-roles.md)\.
 
 In the CloudWatch event logs, you can use CloudWatch search tools and metrics to track messages and troubleshoot email issues\. For more information about the event logs that Amazon WorkMail sends to CloudWatch, see [CloudWatch event logs for Amazon WorkMail](monitoring-workmail-cloudwatch.md#cw-events)\. For more information about CloudWatch Logs, see the [Amazon CloudWatch Logs User Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/)\.
+
+**Topics**
++ [Turning on email event logging](#enable-tracking)
++ [Creating a custom log group and IAM role for email event logging](#custom-tracking-role)
++ [Turning off email event logging](#turn-off-tracking)
 
 ## Turning on email event logging<a name="enable-tracking"></a>
 
@@ -15,19 +20,22 @@ When you turn on email event logging using the default settings, Amazon WorkMail
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. For **Organizations**, choose the name of your organization\.
+   If necessary, change the AWS Region\. In the bar at the top of the console window, open the **Select a Region** list and choose a Region\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
-1. In the navigation pane, choose **Organization settings**, **Monitoring**\.
+1. In the navigation pane, choose **Organizations**, then choose the name of your organization\.
 
-1. For **Log settings**, choose **Edit**\.
+1. In the navigation pane, choose **Monitoring**\.
 
-1. For **Log Events**, select **Enable mail events**\.
+1. In the **Log settings** section, choose **Edit**\.
+
+1. Move the **Enable mail events** slider to the on position\.
 
 1. Do one of the following:
+   + \(Recommended\) Choose **Use default settings**\.
 
-   1. \(Recommended\) Select **Use default settings**\.
+     —OR—
 
-   1. \(Optional\) Clear the check box for **Use default settings**, and select a **Destination Log Group** and **IAM Role**\.
+     \(Optional\) Clear the **Use default settings**, and select a **Destination Log Group** and **IAM Role** from the lists that appear\.
 **Note**  
 Choose this option only if you have already created a log group and custom IAM role using the AWS CLI\. For more information, see [Creating a custom log group and IAM role for email event logging](#custom-tracking-role)\.
 
@@ -106,12 +114,14 @@ Turn off email event logging from the Amazon WorkMail console\. If you no longer
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. For **Organizations**, choose the name of your organization\.
+   If necessary, change the AWS Region\. In the bar at the top of the console window, open the **Select a Region** list and choose a Region\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
-1. In the navigation pane, choose **Organization settings**, **Monitoring**\.
+1. In the navigation pane, choose **Organizations**, then choose the name of your organization\.
 
-1. For **Log settings**, choose **Edit**\.
+1. In the navigation pane, choose **Monitoring**\.
 
-1. Clear the check box for **Enable mail events**\.
+1. In the **Log settings** section, choose **Edit**\.
+
+1. Move the **Enable mail events** slider to the off position\.
 
 1. Choose **Save**\.

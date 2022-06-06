@@ -6,7 +6,7 @@ Access control rules for Amazon WorkMail allow administrators to control how the
 If an administrator deletes all access control rules for an organization, Amazon WorkMail blocks all access to the organization's mailboxes\.
 
 Administrators can apply access control rules that allow or deny access based on the following criteria:
-+ **Protocols** – The protocol used to access the mailbox, such as **Autodiscover**, **EWS**, **IMAP**, **SMTP**, **ActiveSync**, **Outlook for Windows**, and **Webmail**\. 
++ **Protocols** – The protocol used to access the mailbox\. Examples include **Autodiscover**, **EWS**, **IMAP**, **SMTP**, **ActiveSync**, **Outlook for Windows**, and **Webmail**\. 
 + **IP addresses** – The IPv4 CIDR ranges used to access the mailbox\.
 + **Amazon WorkMail users** – The user IDs in your organization that are used to access the mailbox\.
 
@@ -23,7 +23,9 @@ Create new access control rules from the Amazon WorkMail console\.
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. For **Organizations**, choose the name of your organization\.
+   If necessary, change the AWS Region\. In the bar at the top of the console window, open the **Select a Region** list and choose a Region\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+
+1. In the navigation pane, choose **Organizations**, and then choose the name of your organization\.
 
 1. Choose **Access control rules**\.
 
@@ -47,7 +49,9 @@ Edit new and default access control rules from the Amazon WorkMail console\.
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. For **Organizations**, choose the name of your organization\.
+   If necessary, change the AWS Region\. In the bar at the top of the console window, open the **Select a Region** list and choose a Region\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+
+1. In the navigation pane, choose **Organizations**, and then choose the name of your organization\.
 
 1. Choose **Access control rules**\.
 
@@ -60,7 +64,7 @@ Edit new and default access control rules from the Amazon WorkMail console\.
 1. Choose **Save changes**\.
 
 **Important**  
-When you change an access rule, the affected mailboxes can take five minutes to follow the updated rule, and clients that access the affected mailboxes may show inconsistent behavior during that time\. However, you immediately see correct behavior when you test rules\. For more information about testing rules, see the steps in the next section\.
+When you change an access rule, the affected mailboxes can take five minutes to follow the updated rule\. Clients that access the affected mailboxes may show inconsistent behavior during that time\. However, you will immediately see correct behavior when you test your rules\. For more information about testing rules, see the steps in the next section\.
 
 ## Testing access control rules<a name="test-acr"></a>
 
@@ -70,7 +74,9 @@ To see how your organization's access control rules are applied, test the rules 
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. For **Organizations**, choose the name of your organization\.
+   If necessary, change the AWS Region\. In the bar at the top of the console window, open the **Select a Region** list and choose a Region\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+
+1. In the navigation pane, choose **Organizations**, and then choose the name of your organization\.
 
 1. Choose **Access control rules**\.
 
@@ -97,7 +103,9 @@ If an administrator deletes all access control rules for an organization, Amazon
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. For **Organizations**, choose the name of your organization\.
+   If necessary, change the AWS Region\. In the bar at the top of the console window, open the **Select a Region** list and choose a Region\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
+
+1. In the navigation pane, choose **Organizations**, and then choose the name of your organization\.
 
 1. Choose **Access control rules**\.
 

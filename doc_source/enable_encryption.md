@@ -1,6 +1,6 @@
 # Enabling signed or encrypted email<a name="enable_encryption"></a>
 
-You can use S/MIME to enable users to send signed or encrypted email both inside and outside the organization\.
+You can use S/MIME to enable users to send signed or encrypted email both inside and outside of the organization\.
 
 **Note**  
 User certificates in the Global Address List \(GAL\) are supported only in a connected Active Directory setup\.

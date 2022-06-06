@@ -74,7 +74,7 @@ To specify all organizations that belong to a specific account, use the wildcard
 "Resource": "arn:aws:workmail:us-east-1:111122223333:organization/*"
 ```
 
-Some Amazon WorkMail actions, such as those for creating resources, cannot be performed on a specific resource\. In those cases, you must use the wildcard \(\*\)\.
+Some Amazon WorkMail actions, such as those for creating resources, can't be performed on a specific resource\. In those cases, you must use the wildcard \(\*\)\.
 
 ```
 "Resource": "*"

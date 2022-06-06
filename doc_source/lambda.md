@@ -5,12 +5,12 @@ Use the **Run Lambda** action in inbound and outbound email flow rules to pass e
 Choose from the following configurations for a **Run Lambda** action in Amazon WorkMail\.
 
 **Synchronous **Run Lambda** configuration**  
-Email messages that match the flow rule are passed to a Lambda function for processing before they are sent or delivered\. Use this configuration to modify email content, and to control inbound or outbound email flow for use cases such as blocking delivery of sensitive email messages, removing attachment, adding disclaimers, and so on\.
+Email messages that match the flow rule are passed to a Lambda function for processing before they are sent or delivered\. Use this configuration to modify email content\. You can also control inbound or outbound email flow for different use cases\. For example, a rule passed to a Lambda function can block delivery of sensitive email messages, remove attachments, or add disclaimers\.
 
 **Asynchronous **Run Lambda** configuration**  
 Email messages that match the flow rule are passed to a Lambda function for processing while they are sent or delivered\. This configuration does not affect email delivery and is used for tasks such as collecting metrics for inbound or outbound email messages\.
 
-Whether you choose synchronous or asynchronous configuration, the event object passed to your Lambda function contains metadata for the inbound or outbound email event\. You can also use the message ID in the metadata to access the full content of the email message\. For more information, see [Retrieving message content with AWS Lambda](lambda-content.md)\. For more information about email events, see [Lambda event data](#lambda-data)\.
+Whether you choose a synchronous or asynchronous configuration, the event object passed to your Lambda function contains metadata for the inbound or outbound email event\. You can also use the message ID in the metadata to access the full content of the email message\. For more information, see [Retrieving message content with AWS Lambda](lambda-content.md)\. For more information about email events, see [Lambda event data](#lambda-data)\.
 
 For more information about inbound and outbound email flow rules, see [Managing email flows](email-flows.md)\. For more information about Lambda, see the [https://docs.aws.amazon.com/lambda/latest/dg/welcome.html](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)\.
 
@@ -21,22 +21,32 @@ Currently, Lambda email flow rules reference only Lambda functions in the same A
 
 To start using AWS Lambda with Amazon WorkMail, we recommend deploying the [ WorkMail Hello World Lambda function ](https://console.aws.amazon.com/lambda/home#/create/app?applicationId=arn:aws:serverlessrepo:us-east-1:489970191081:applications/workmail-hello-world-python) from the AWS Serverless Application Repository to your account\. The function has all the necessary resources, and the permissions configured for you\. For more examples, see the [amazon\-workmail\-lambda\-templates](https://github.com/aws-samples/amazon-workmail-lambda-templates) repository on GitHub\.
 
-If you choose to create your own Lambda function, you must configure permissions using the AWS Command Line Interface \(AWS CLI\)\. In the following example command, replace `MY_FUNCTION_NAME` with the name of your Lambda function, and replace `REGION` with your Amazon WorkMail AWS Region\. Available Amazon WorkMail Regions include `us-east-1`, `us-west-2`, and `eu-west-1`\.
+If you choose to create your own Lambda function, you must configure permissions using the AWS Command Line Interface \(AWS CLI\)\. In the following example command, do the following:
++ Replace `MY_FUNCTION_NAME` with the name of your Lambda function\.
++ Replace `REGION` with your Amazon WorkMail AWS Region\. Available Amazon WorkMail Regions include `us-east-1` \(US East \(N\. Virginia\)\), `us-west-2` \(US West \(Oregon\)\), and `eu-west-1` \(Europe \(Ireland\)\)\.
++ Replace `AWS_ACCOUNT_ID` with your 12\-digit AWS account ID\.
++ Replace `WORKMAIL_ORGANIZATION_ID` with your Amazon WorkMail organization ID\. You can find it on the card for your organization on the **Organizations** page\.
+
+
 
 ```
-aws --region REGION lambda add-permission --function-name MY_FUNCTION_NAME --statement-id AllowWorkMail --action "lambda:InvokeFunction" --principal workmail.REGION.amazonaws.com
+aws --region REGION lambda add-permission --function-name MY_FUNCTION_NAME 
+--statement-id AllowWorkMail 
+--action "lambda:InvokeFunction" 
+--principal workmail.REGION.amazonaws.com
+--source-arn arn:aws:workmail:REGION:AWS_ACCOUNT_ID:organization/WORKMAIL_ORGANIZATION_ID
 ```
 
 For more information about using the AWS CLI, see the [https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html)\.
 
 ## Configuring synchronous **Run Lambda** rules<a name="synchronous-rules"></a>
 
-To configure a synchronous **Run Lambda** rule, create an email flow rule with the **Run Lambda** action and select the **Run synchronously** check box\. For more information about creating mail flow rules, see [Creating an email flow rule](create-email-rules.md)\.
+To configure a synchronous **Run Lambda** rule, create an email flow rule with the **Run Lambda** action and select the **Run synchronously** check box\. For more information about creating mail flow rules, see [Creating email flow rules](create-email-rules.md)\.
 
 To finish creating the synchronous rule, add the Lambda Amazon Resource Name \(ARN\) and configure the following options\.
 
 ****Fallback action****  
-The action Amazon WorkMail applies if the Lambda function fails to run\. This action also applies to any recipients that are omitted from the Lambda response if the **allRecipients** flag is not set\. The **Fallback action** cannot be another Lambda action\.
+The action Amazon WorkMail applies if the Lambda function fails to run\. This action also applies to any recipients that are omitted from the Lambda response if the **allRecipients** flag is not set\. The **Fallback action** can't be another Lambda action\.
 
 ****Rule timeout** \(in minutes\)**  
 The time period during which the Lambda function is retried if Amazon WorkMail fails to invoke it\. The **Fallback action** is applied at the end of this time period\.
@@ -74,15 +84,15 @@ The Lambda function is triggered using the following event data\. The presentati
 The event JSON includes the following data\.
 
 **summaryVersion**  
-The version number for **LambdaEventData**\. Only updates when a backwards incompatible change is made in **LambdaEventData**\.
+The version number for `LambdaEventData`\. This only updates when you make a backwards incompatible change in `LambdaEventData`\.
 
 **envelope**  
-The envelope of the email message, which includes the following fields\.    
+The envelope of the email message, which includes the following: fields\.    
 **mailFrom**  
 The **From** address, which is usually the email address of the user who sent the email message\. If the user sent the email message as another user or on behalf of another user, the **mailFrom** field returns the email address of the user on whose behalf the email message was sent, not the email address of the actual sender\.  
 **recipients**  
-A list of recipient email addresses\. There is no distinction between **To**, **CC**, or **BCC**\.  
-For inbound email flow rules, this list includes recipients for each domain that is part of the Amazon WorkMail organization in which the rule is created\. The Lambda function is invoked separately for each SMTP conversation from the sender, and the recipients field lists the recipients from that SMTP conversation\. Recipients with external domains are not included\.
+A list of recipient email addresses\. Amazon WorkMail doesn't distinguish between **To**, **CC**, or **BCC**\.  
+For inbound email flow rules, this list includes recipients in all the domains in the Amazon WorkMail organization in which you create the rule\. The Lambda function is invoked separately for each SMTP conversation from the sender, and the recipients field lists the recipients from that SMTP conversation\. Recipients with external domains are not included\.
 
 **sender**  
 The email address of the user who sent the email message on behalf of another user\. This field is set only when an email message is sent on behalf of another user\.
@@ -106,18 +116,18 @@ Applies to the payload size, not the subject line length\. When `true`, the payl
 
 When an email flow rule with a synchronous **Run Lambda** action matches an inbound or outbound email message, Amazon WorkMail calls the configured Lambda function and waits for the response before taking action on the email message\. The Lambda function returns a response according to a pre\-defined schema that lists the actions, action types, applicable parameters, and recipients that the action applies to\.
 
-The following schema is an example of a synchronous **Run Lambda** response\. Responses vary based on the programming language used for the Lambda function\.
+The following example shows a synchronous **Run Lambda** response\. Responses vary based on the programming language used for the Lambda function\.
 
 ```
 {
-      "actions": [
+    "actions": [                          
       {
-        "action" : {
-          "type": "string",
-          "parameters": { various }
+        "action" : {                       
+          "type": "string",                 
+          "parameters": { various }       
         },
-        "recipients": list of strings,
-        "allRecipients": boolean      
+        "recipients": [list of strings],      
+        "allRecipients": boolean            
       }
     ]
 }
@@ -156,7 +166,7 @@ The system retries the invocation for the **Rule timeout** interval that you spe
 
 ### Synchronous **Run Lambda** action failures<a name="synchronous-failures"></a>
 
-If Amazon WorkMail is unable to invoke your Lambda function due to an error, invalid response, or Lambda timeout, Amazon WorkMail retries the invocation with exponential backoff until the **Rule timeout** period completes\. Then, the **Fallback action** is applied to all recipients of the email message\. For more information, see [Configuring synchronous **Run Lambda** rules](#synchronous-rules)\.
+If Amazon WorkMail can't invoke your Lambda function due to an error, invalid response, or Lambda timeout, Amazon WorkMail retries the invocation with exponential backoff that decreases the processing rate until the **Rule timeout** period completes\. Then, the **Fallback action** is applied to all recipients of the email message\. For more information, see [Configuring synchronous **Run Lambda** rules](#synchronous-rules)\.
 
 ## Example synchronous **Run Lambda** responses<a name="synchronous-responses"></a>
 
@@ -167,22 +177,22 @@ The following example demonstrates the structure of a synchronous **Run Lambda**
 
 ```
 {
-  "actions": [
-    {
-      "action": {
-        "type": "DEFAULT"
+    "actions": [
+      {
+        "action": {
+          "type": "DEFAULT"
+        },
+        "allRecipients": true
       },
-      "allRecipients": true
-    },
-    {
-      "action": {
-        "type": "DROP"
-      },
-      "recipients": [
-        "drop-recipient@example.com"
-      ]
-    }
-  ]
+      {
+        "action": {
+          "type": "DROP"
+        },
+        "recipients": [
+          "drop-recipient@example.com"
+        ]
+      }
+    ]
 }
 ```
 
@@ -191,17 +201,17 @@ The following example demonstrates the structure of a synchronous **Run Lambda**
 
 ```
 {
-  "actions": [
-    {
-      "action": {
-        "type": "BOUNCE",
-        "parameters": {
-          "bounceMessage": "Email in breach of company policy."
-        }
-      },
-      "allRecipients": true
-    }
-  ]
+    "actions" : [
+      {
+        "action" : {
+          "type": 'BOUNCE',
+          "parameters": {
+            "bounceMessage" : "Email in breach of company policy."
+          }
+        },
+        "allRecipients": true
+      }
+    ]
 }
 ```
 
@@ -210,22 +220,22 @@ The following example demonstrates the structure of a synchronous **Run Lambda**
 
 ```
 {
-  "actions": [
-    {
-      "action": {
-        "type": "DEFAULT"
+    "actions": [
+      {
+        "action": { 
+          "type": "DEFAULT" 
+        },
+        "recipients": [
+          "new-recipient@example.com"
+         ]
       },
-      "recipients": [
-        "new-recipient@example.com"
-      ]
-    },
-    {
-      "action": {
-        "type": "DEFAULT"
-      },
-      "allRecipients": true
-    }
-  ]
+      {
+        "action": { 
+          "type": "DEFAULT" 
+        },
+        "allRecipients": true
+      }
+    ]
 }
 ```
 

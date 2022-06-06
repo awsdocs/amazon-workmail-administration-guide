@@ -6,40 +6,28 @@ Configure availability settings on Amazon WorkMail and Microsoft Exchange to ena
 
 1. Open the Amazon WorkMail console at [https://console\.aws\.amazon\.com/workmail/](https://console.aws.amazon.com/workmail/)\.
 
-1. In the navigation panel, choose **Organization settings**, **Interoperability Settings**\.
+   If necessary, change the AWS Region\. To do so, open the **Select a region** list, located to the right of the search box, then choose the desired Region\. For more information, see [Regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html) in the *Amazon Web Services General Reference*\.
 
-1. Choose **Configure availability settings** and provide the following information: 
-+ **Domain** – The domain for which to set interoperability between Amazon WorkMail and Microsoft Exchange\.
-+ **Exchange Web Services \(EWS\) URL** – The URL to which Amazon WorkMail sends HTTPS requests to access calendar free/busy information of users on Microsoft Exchange\. The EWS URL usually looks like the following: **https://*servername*\.com/EWS/Exchange\.asmx**\. You can obtain the EWS URL in one of the following ways:
-  + 
+1. In the navigation pane, choose **Organizations**, and then choose the name of an organization\.
 
-**Using Microsoft Outlook**
+1. In the navigation pane, choose **Organization settings**, and then choose the **Interoperability** tab\. 
 
-    1. Log in to Microsoft Outlook on Windows for any user on your Exchange environment\.
+1. Choose **Add availability setting**, and then enter the following information:
+   + **Using Microsoft Outlook:**
 
-    1. Hold the **Ctrl** key and open the context \(right\-click\) menu on the Microsoft Outlook icon in the task bar\.
+     1. Log in to Microsoft Outlook on Windows for any user on your Exchange environment\.
 
-    1. Choose **Test E\-mail AutoConfiguration**\.
+     1. Hold the **Ctrl** key and open the context \(right\-click\) menu on the Microsoft Outlook icon in the task bar\.
 
-    1. Enter the Microsoft Exchange user’s email address and password, and choose **Test**\.
+     1. Choose **Test E\-mail AutoConfiguration**\.
 
-    1. From the Results window, copy the value for the **Availability Service URL**\.
-  + 
+     1. Enter the Microsoft Exchange user’s email address and password, and choose **Test**\.
 
-**Using PowerShell**
-    + 
+     1. From the Results window, copy the value for the **Availability Service URL**\.
+   + **Using PowerShell:**
 
-      ```
-      Get-WebServicesVirtualDirectory |Select name, *url* | fl
-      ```
+     1. At the PowerShell prompt, run the following command:
 
-    The external URL returned by the above command is the EWS URL\.
-+ **User email address and password** – These are the credentials of the Microsoft Exchange service account and are encrypted and securely stored by Amazon WorkMail\. The email address of the Microsoft Exchange service account should use the Fully Qualified Domain Name \(FQDN\)\. For more information, see [Create service accounts in Microsoft Exchange and Amazon WorkMail](interoperability.md#create-serviceacct)\.
+       `Get-WebServicesVirtualDirectory |Select name, *url* | fl`
 
-  If your Active Directory domain is not the same as your Microsoft Exchange domain, use the User Principal Name \(UPN\) of the Microsoft Exchange Service account\. This can be obtained with the following PowerShell command:
-
-  ```
-  Get-ADUser exchange_service_account_username | select UserPrincipalName
-  ```
-
-  In the above example, **exchange\_service\_account\_username** is the username of the Microsoft Exchange Service account\.
+1. Choose **Save**\.
