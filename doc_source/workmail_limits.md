@@ -54,3 +54,4 @@ All messages that are sent to another user are considered when evaluating these 
 |  Maximum size of incoming message  | 25 MBThis is a hard quota and can't be changed\. | 
 | Maximum size of outgoing message | 25 MBThis is a hard quota and can't be changed\. | 
 |  Number of recipients per message  | 500This is a hard quota and can't be changed\. | 
+| Number of emails per 24 hour period | This is an unknown value. |
