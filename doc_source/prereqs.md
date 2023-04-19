@@ -3,12 +3,13 @@
 To act as an Amazon WorkMail administrator, you need an AWS account\. If you haven't signed up for AWS yet, complete the following tasks to get set up\.
 
 **Topics**
-+ [Get an AWS account and your root user credentials](#getting-started-signup)
-+ [Create AWS Identity and Access Management users and groups](#iam_users_groups)
++ [Sign up for an AWS account](#sign-up-for-aws)
++ [Create an administrative user](#create-an-admin)
++ [Grant IAM users permissions for Amazon WorkMail](#iam_policies_workmail)
 
-## Get an AWS account and your root user credentials<a name="getting-started-signup"></a>
+## Sign up for an AWS account<a name="sign-up-for-aws"></a>
 
-To access AWS, you must sign up for an AWS account\.
+If you do not have an AWS account, complete the following steps to create one\.
 
 **To sign up for an AWS account**
 
@@ -18,15 +19,34 @@ To access AWS, you must sign up for an AWS account\.
 
    Part of the sign\-up procedure involves receiving a phone call and entering a verification code on the phone keypad\.
 
- AWS sends you a confirmation email after the sign\-up process is complete\. At any time, you can view your current account activity and manage your account by going to [https://aws\.amazon\.com/](https://aws.amazon.com/) and choosing **My Account**\.
+   When you sign up for an AWS account, an *AWS account root user* is created\. The root user has access to all AWS services and resources in the account\. As a security best practice, [assign administrative access to an administrative user](https://docs.aws.amazon.com/singlesignon/latest/userguide/getting-started.html), and use only the root user to perform [tasks that require root user access](https://docs.aws.amazon.com/accounts/latest/reference/root-user-tasks.html)\.
 
-## Create AWS Identity and Access Management users and groups<a name="iam_users_groups"></a>
+AWS sends you a confirmation email after the sign\-up process is complete\. At any time, you can view your current account activity and manage your account by going to [https://aws\.amazon\.com/](https://aws.amazon.com/) and choosing **My Account**\.
 
-The AWS Management Console requires your username and password so that the service can determine whether you have permission to access its resources\. As a best practice, use AWS Identity and Access Management \(IAM\) to create an IAM user, and then add that user to an IAM group with administrative permissions\. You can then access the console using the credentials for the IAM user\. For more information, see [Creating your first IAM admin user and user group](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html) in the *IAM User Guide*\.
+## Create an administrative user<a name="create-an-admin"></a>
 
-**Important**  
-We don't recommend using root account credentials to access AWS because those credentials can't be revoked or limited in any way\.
+After you sign up for an AWS account, create an administrative user so that you don't use the root user for everyday tasks\.
 
-### Grant IAM users permissions for Amazon WorkMail<a name="iam_policies_workmail"></a>
+**Secure your AWS account root user**
+
+1.  Sign in to the [AWS Management Console](https://console.aws.amazon.com/) as the account owner by choosing **Root user** and entering your AWS account email address\. On the next page, enter your password\.
+
+   For help signing in by using root user, see [Signing in as the root user](https://docs.aws.amazon.com/signin/latest/userguide/console-sign-in-tutorials.html#introduction-to-root-user-sign-in-tutorial) in the *AWS Sign\-In User Guide*\.
+
+1. Turn on multi\-factor authentication \(MFA\) for your root user\.
+
+   For instructions, see [Enable a virtual MFA device for your AWS account root user \(console\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa_enable_virtual.html#enable-virt-mfa-for-root) in the *IAM User Guide*\.
+
+**Create an administrative user**
++ For your daily administrative tasks, grant administrative access to an administrative user in AWS IAM Identity Center \(successor to AWS Single Sign\-On\)\.
+
+  For instructions, see [Getting started](https://docs.aws.amazon.com/singlesignon/latest/userguide/getting-started.html) in the *AWS IAM Identity Center \(successor to AWS Single Sign\-On\) User Guide*\.
+
+**Sign in as the administrative user**
++ To sign in with your IAM Identity Center user, use the sign\-in URL that was sent to your email address when you created the IAM Identity Center user\.
+
+  For help signing in using an IAM Identity Center user, see [Signing in to the AWS access portal](https://docs.aws.amazon.com/signin/latest/userguide/iam-id-center-sign-in-tutorial.html) in the *AWS Sign\-In User Guide*\.
+
+## Grant IAM users permissions for Amazon WorkMail<a name="iam_policies_workmail"></a>
 
 By default, IAM users don't have permissions to manage Amazon WorkMail resources\. You must attach an AWS managed policy \(**AmazonWorkMailFullAccess** or **AmazonWorkMailReadOnlyAccess**\) or create a customer\-managed policy that explicitly grants IAM users those permissions\. You then attach the policy to the IAM users or groups that require those permissions\. For more information, see [Identity and access management for Amazon WorkMail](security-iam.md)\.

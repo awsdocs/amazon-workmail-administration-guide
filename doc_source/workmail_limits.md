@@ -51,6 +51,7 @@ All messages that are sent to another user are considered when evaluating these 
 
 | Resource  | Default quota  | 
 | --- | --- | 
-|  Maximum size of incoming message  | 25 MBThis is a hard quota and can't be changed\. | 
-| Maximum size of outgoing message | 25 MBThis is a hard quota and can't be changed\. | 
-|  Number of recipients per message  | 500This is a hard quota and can't be changed\. | 
+|  Maximum size of incoming message  | 29 MB of unencoded data\.Messages are received in a MIME format\. Maximum size of incoming MIME message is 40 MB\.This is a hard quota and can't be changed\. | 
+| Maximum size of outgoing message | 29 MB of unencoded data\.Messages are sent in a MIME format\. Maximum size of outgoing MIME message is 40 MB\.This is a hard quota and can't be changed\. | 
+|  Maximum number of recipients per message  | 500This is a hard quota and can't be changed\. | 
+|  Maximum number of attachments per message  | 500This is a hard quota and can't be changed\. | 

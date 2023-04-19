@@ -1,6 +1,6 @@
 # Working with access control rules<a name="access-rules"></a>
 
-Access control rules for Amazon WorkMail allow administrators to control how their organization's users are granted access to Amazon WorkMail\. Each Amazon WorkMail organization has a default access control rule that grants mailbox access to all users added to the organization, no matter which access protocol or IP address they use\. Administrators can edit or replace the default rule with one of their own, add a new rule, or delete a rule\.
+Access control rules for Amazon WorkMail allow administrators to control how their organization's users and impersonation roles are granted access to Amazon WorkMail\. Each Amazon WorkMail organization has a default access control rule that grants mailbox access to all users and impersonation roles added to the organization, no matter which access protocol or IP address they use\. Administrators can edit or replace the default rule with one of their own, add a new rule, or delete a rule\.
 
 **Warning**  
 If an administrator deletes all access control rules for an organization, Amazon WorkMail blocks all access to the organization's mailboxes\.
@@ -8,11 +8,13 @@ If an administrator deletes all access control rules for an organization, Amazon
 Administrators can apply access control rules that allow or deny access based on the following criteria:
 + **Protocols** – The protocol used to access the mailbox\. Examples include **Autodiscover**, **EWS**, **IMAP**, **SMTP**, **ActiveSync**, **Outlook for Windows**, and **Webmail**\. 
 + **IP addresses** – The IPv4 CIDR ranges used to access the mailbox\.
-+ **Amazon WorkMail users** – The user IDs in your organization that are used to access the mailbox\.
++ **Amazon WorkMail users** – The users in your organization that are used to access the mailbox\.
++ **Impersonation roles** – The impersonation roles in your organization that are used to access the mailbox\. For more information, see [Managing impersonation roles](managing-impersonation-roles.md)\.
 
 Administrators apply access control rules in addition to the user's mailbox and folder permissions\. For more information, see [Working with mailbox permissions](mail_perms_overview.md) and [Sharing folders and folder permissions](https://docs.aws.amazon.com/workmail/latest/userguide/share-folders.html) in the *Amazon WorkMail User Guide*\.
 
 **Note**  
+When you are enabling access for Outlook for Windows, it is recommended to also enable access for Autodiscover and EWS\.
 Access control rules do not apply to Amazon WorkMail console or SDK access\. Use AWS Identity and Access Management \(IAM\) roles or policies instead\. For more information, see [Identity and access management for Amazon WorkMail](security-iam.md)\.
 
 ## Creating access control rules<a name="create-acr"></a>
@@ -35,9 +37,9 @@ Create new access control rules from the Amazon WorkMail console\.
 
 1. For **Effect**, choose **Allow** or **Deny**\. This allows or denies access based on the conditions that you select in the following step\.
 
-1. For **This rule applies to requests that \.\.\.**, select the conditions to apply to the rule, such as whether to include or exclude specific protocols, IP addresses, or users\.
+1. For **This rule applies to requests that \.\.\.**, select the conditions to apply to the rule, such as whether to include or exclude specific protocols, IP addresses, or users, or impersonation roles\.
 
-1. \(Optional\) If you enter IP address ranges or user IDs, choose **Add** to add them to the rule\.
+1. \(Optional\) If you enter IP address ranges, users, or impersonation roles, choose **Add** to add them to the rule\.
 
 1. Choose **Create rule**\.
 
@@ -86,7 +88,9 @@ To see how your organization's access control rules are applied, test the rules 
 
 1. For **Source IP address**, enter the IP address to test for\.
 
-1. For **User**, enter the user to test for\.
+1. For **Request performed by**, choose **User** or **Impersonation role** to test for\.
+
+1. Select **User** or **Impersonation role** to test for\.
 
 1. Choose **Test**\.
 

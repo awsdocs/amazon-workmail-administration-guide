@@ -11,11 +11,9 @@ When you create an email flow rule, you specify a [*rule action*](#email-flows-r
 + [Creating email flow rules](create-email-rules.md)
 + [Editing email flow rules](edit-rules.md)
 + [Configuring AWS Lambda for Amazon WorkMail](lambda.md)
-+ [Tagging an organization](org-tag.md)
-+ [Working with access control rules](access-rules.md)
-+ [Setting mailbox retention policies](mailbox-retention-policy.md)
-+ [Editing your organization's mobile device policy](edit_organization_mobile_policy.md)
 + [Managing access to the Amazon WorkMail Message Flow API](lambda-content-access.md)
++ [Testing an email flow rule](test-email-flow-rule.md)
++ [Removing an email flow rule](remove-email-flow-rule.md)
 
 ## Inbound email rule actions<a name="email-flows-rule-actions"></a>
 
@@ -47,7 +45,7 @@ Inbound email is first delivered to Amazon SES, and then to Amazon WorkMail\. If
 
 You use outbound email flow rules to direct email messages via SMTP gateways, or to block senders from sending email messages to specified recipients\. For more information about SMTP gateways, see [Enabling SMTP gateways](smtp-gateway.md)\.
 
-You can also use outbound email flow rules to pass the email message to an AWS Lambda function for processing after the email is sent\. For more information about using Lambda with Amazon WorkMail, see [](lambda.md)\. For more information about Lambda, see the [https://docs.aws.amazon.com/lambda/latest/dg/welcome.html](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)\.
+You can also use outbound email flow rules to pass the email message to an AWS Lambda function for processing after the email is sent\.  For more information about Lambda, see the [https://docs.aws.amazon.com/lambda/latest/dg/welcome.html](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)\.
 
 The following rule actions define how outbound email is handled\. For each rule, you specify [sender and recipient patterns](#email-flows-patterns) together with one of the following actions\. 
 

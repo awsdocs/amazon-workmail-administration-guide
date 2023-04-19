@@ -34,7 +34,7 @@ For most mobile devices, a remote wipe resets the device to factory defaults\. A
 
 1. After the device is wiped, remove it from the devices list\. The steps in the next section explain how\. 
 **Important**  
-To return a wiped device to a user's list of devices, make sure you first remove it from the wipe list\. Otherwise, the system wipes the device again\.
+To return a wiped device to a user's list of devices, make sure you first remove it from the devices list\. Otherwise, the system wipes the device again\.
 
 ## Removing user devices from the devices list<a name="remove_mobile_device"></a>
 

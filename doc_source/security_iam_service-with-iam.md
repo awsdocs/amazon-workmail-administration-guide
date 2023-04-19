@@ -84,7 +84,7 @@ To see a list of Amazon WorkMail resource types and their ARNs, see [Resources d
 
 ### Condition keys<a name="security_iam_service-with-iam-id-based-policies-conditionkeys"></a>
 
-Amazon WorkMail does not provide any service\-specific condition keys, but it does support using the following global condition keys\.
+Amazon WorkMail supports the following global condition keys\.
 + `aws:CurrentTime`
 + `aws:EpochTime`
 + `aws:MultiFactorAuthAge`
@@ -133,6 +133,30 @@ The following example policy grants access to the Amazon WorkMail console only f
 
 To see all AWS global condition keys, see [AWS global condition context keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html) in the *IAM User Guide*\.
 
+`workmail:ImpersonationRoleId` is the only service\-specific condition key supported by Amazon WorkMail\.
+
+The following example policy scopes\-down `AssumeImpersonationRole` action to a particular WorkMail organization and impersonation role\.
+
+```
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "workmail:AssumeImpersonationRole"
+      ],
+      "Resource": "arn:aws:workmail:us-east-1:111122223333:organization/m-n1pq2345678r901st2u3vx45x6789yza",
+      "Condition": {
+        "StringEquals": {
+          "workmail:ImpersonationRoleId":"12345678-1234-1234-1234-123456789012"
+        }
+      }
+    }
+  ]
+}
+```
+
 ### Examples<a name="security_iam_service-with-iam-id-based-policies-examples"></a>
 
 
@@ -145,7 +169,7 @@ Amazon WorkMail does not support resource\-based policies\.
 
 ## Authorization based on Amazon WorkMail tags<a name="security_iam_service-with-iam-tags"></a>
 
-You can attach tags to Amazon WorkMail resources or pass tags in a request to Amazon WorkMail\. To control access based on tags, you provide tag information in the [condition element](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html) of a policy using the `workmail:ResourceTag/key-name`, `aws:RequestTag/key-name`, or `aws:TagKeys` condition keys\. For more information about tagging Amazon WorkMail resources, see [Tagging an organization](org-tag.md)\.
+You can attach tags to Amazon WorkMail resources or pass tags in a request to Amazon WorkMail\. To control access based on tags, you provide tag information in the [condition element](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html) of a policy using the `aws:ResourceTag/key-name`, `aws:RequestTag/key-name`, or `aws:TagKeys` condition keys\. For more information about tagging Amazon WorkMail resources, see [Tagging an organization](org-tag.md)\.
 
 ## Amazon WorkMail IAM roles<a name="security_iam_service-with-iam-roles"></a>
 

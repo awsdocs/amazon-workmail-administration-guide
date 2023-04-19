@@ -4,13 +4,13 @@
 *****Copyright &copy; Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
-Amazon's trademarks and trade dress may not be used in 
-     connection with any product or service that is not Amazon's, 
-     in any manner that is likely to cause confusion among customers, 
-     or in any manner that disparages or discredits Amazon. All other 
-     trademarks not owned by Amazon are the property of their respective
-     owners, who may or may not be affiliated with, connected to, or 
-     sponsored by Amazon.
+Amazon's trademarks and trade dress may not be used in
+connection with any product or service that is not Amazon's,
+in any manner that is likely to cause confusion among customers,
+or in any manner that disparages or discredits Amazon. All other
+trademarks not owned by Amazon are the property of their respective
+owners, who may or may not be affiliated with, connected to, or
+sponsored by Amazon.
 
 -----
 ## Contents
@@ -35,12 +35,13 @@ Amazon's trademarks and trade dress may not be used in
    + [Getting started with Amazon WorkMail](howto-start.md)
    + [Migrating to Amazon WorkMail](migration_overview.md)
    + [Interoperability between Amazon WorkMail and Microsoft Exchange](interoperability.md)
-      + [Enable email routing between Microsoft Exchange and Amazon WorkMail users](setup-msexchange.md)
-         + [Configure availability settings on Amazon WorkMail](enable_interop_wm.md)
-         + [Configure availability settings in Microsoft Exchange](enable_interop_ms.md)
-         + [Disabling interoperability mode and decommissioning your mail server](disable_interop.md)
-         + [Troubleshooting](troubleshooting_interop.md)
-      + [Amazon WorkMail quotas](workmail_limits.md)
+   + [Configure availability settings on Amazon WorkMail](enable_interop_wm.md)
+      + [Building a Custom Availability Provider Lambda function](building_cap.md)
+   + [Configure availability settings in Microsoft Exchange](enable_interop_ms.md)
+   + [Enable email routing between Microsoft Exchange and Amazon WorkMail users](setup-msexchange.md)
+   + [Disabling interoperability mode and decommissioning your mail server](disable_interop.md)
+   + [Troubleshooting](troubleshooting_interop.md)
+   + [Amazon WorkMail quotas](workmail_limits.md)
 + [Working with organizations](organizations_overview.md)
    + [Creating an organization](add_new_organization.md)
    + [Deleting an organization](delete_organization.md)
@@ -55,14 +56,13 @@ Amazon's trademarks and trade dress may not be used in
          + [Configuring AWS Lambda for Amazon WorkMail](lambda.md)
             + [Retrieving message content with AWS Lambda](lambda-content.md)
             + [Updating message content with AWS Lambda](update-with-lambda.md)
-         + [Tagging an organization](org-tag.md)
-         + [Working with access control rules](access-rules.md)
-         + [Setting mailbox retention policies](mailbox-retention-policy.md)
-         + [Editing your organization's mobile device policy](edit_organization_mobile_policy.md)
          + [Managing access to the Amazon WorkMail Message Flow API](lambda-content-access.md)
-      + [Testing an email flow rule](test-email-flow-rule.md)
-      + [Removing an email flow rule](remove-email-flow-rule.md)
-   + [Enforcing DMARC policies on incoming email](inbound-dmarc.md)
+         + [Testing an email flow rule](test-email-flow-rule.md)
+         + [Removing an email flow rule](remove-email-flow-rule.md)
+      + [Enforcing DMARC policies on incoming email](inbound-dmarc.md)
+   + [Tagging an organization](org-tag.md)
+   + [Working with access control rules](access-rules.md)
+   + [Setting mailbox retention policies](mailbox-retention-policy.md)
 + [Working with domains](domains_overview.md)
    + [Adding a domain](add_domain.md)
    + [Removing a domain](remove_domain.md)
@@ -84,6 +84,12 @@ Amazon's trademarks and trade dress may not be used in
    + [Removing users from a group](remove-group-users.md)
    + [Disable a group](disable-group.md)
    + [Deleting a group](delete-group.md)
++ [Working with resources](resources_overview.md)
+   + [Creating a resource](create_resource.md)
+   + [Editing resource details](edit_resource.md)
+   + [Disabling a resource](disable-resource.md)
+   + [Enabling a resource](enable-resource.md)
+   + [Deleting a resource](remove_resource.md)
 + [Working with mobile devices](work-with-mobile-devices.md)
    + [Editing your organization's mobile device policy](edit_mobile_policy.md)
    + [Managing mobile devices](manage-devices.md)
@@ -94,13 +100,10 @@ Amazon's trademarks and trade dress may not be used in
    + [About mailbox and folder permissions](mail_vs_folder.md)
    + [Managing mailbox permissions for users](enable_mail_perms.md)
    + [Managing mailbox permissions for groups](manage_group_perms.md)
++ [Programmatic access to mailboxes](mail_perms_programmatic.md)
+   + [Managing impersonation roles](managing-impersonation-roles.md)
+   + [Using impersonation roles](using-impersonation-roles.md)
 + [Exporting mailbox content](mail-export.md)
 + [Troubleshooting mail routing issues](troubleshooting.md)
-+ [Working with resources](resources_overview.md)
-   + [Creating a resource](create_resource.md)
-   + [Editing resource details](edit_resource.md)
-   + [Disabling a resource](disable-resource.md)
-   + [Enabling a resource](enable-resource.md)
-   + [Deleting a resource](remove_resource.md)
 + [Using email journaling with Amazon WorkMail](journaling_overview.md)
 + [Document history](DocumentHistory.md)

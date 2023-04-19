@@ -8,8 +8,6 @@ When you integrate Amazon WorkMail with your corporate Active Directory, or you 
 
    If necessary, change the AWS Region\. In the bar at the top of the console window, open the **Select a Region** list and choose a Region\. For more information, see [Regions and endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the *Amazon Web Services General Reference*\.
 
-1. In the navigation pane, choose **Organizations**, then choose the name of your organization\.
-
 1. In the navigation pane, choose **Organizations**, and then choose the name of your organization\.
 
 1. In the navigation pane, choose **Groups**\.

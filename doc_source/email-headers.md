@@ -4,7 +4,7 @@ The information in email headers can help you troubleshoot common user email iss
 
 **To view email headers in Amazon WorkMail**
 
-1. In the Amazon WorkMail web application, open the email message\.
+1. In the Amazon WorkMail web application, double\-click on the email message to open\.
 
 1. Choose **Message options** \(the gear and envelope icon\) located in the upper\-right corner of the message, next to the **Sent on** date\.
 

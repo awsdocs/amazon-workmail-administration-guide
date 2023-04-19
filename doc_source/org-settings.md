@@ -8,5 +8,4 @@ The following sections explain how to use the settings available for Amazon Work
 + [Enabling interoperability](enable-interop.md)
 + [Enabling SMTP gateways](smtp-gateway.md)
 + [Managing email flows](email-flows.md)
-+ [Testing an email flow rule](test-email-flow-rule.md)
-+ [Removing an email flow rule](remove-email-flow-rule.md)
++ [Enforcing DMARC policies on incoming email](inbound-dmarc.md)

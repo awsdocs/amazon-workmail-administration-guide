@@ -23,7 +23,7 @@ The following example includes example IDs for an ARN associated with an incomin
 arn:aws:workmailmessageflow:us-east-1:111122223333:message/m-n1pq2345678r901st2u3vx45x6789yza/incoming/d1234567-8e90-1f23-456g-hjk7lmnop8q9                
 ```
 
-You can use these ARNs as resources in the `Resource` section of your IAM user policies in order to manage access to Amazon WorkMail messages in transit\. For more information about granting IAM users permissions for Amazon WorkMail, see [Create AWS Identity and Access Management users and groups](prereqs.md#iam_users_groups)\.
+You can use these ARNs as resources in the `Resource` section of your IAM user policies in order to manage access to Amazon WorkMail messages in transit\.
 
 ## Example IAM policies for Amazon WorkMail message flow access<a name="lambda-content-policies"></a>
 

@@ -123,6 +123,23 @@ After you create the IAM role and policies in the preceding section, complete th
 
 When the mailbox export job state is **COMPLETED**, the exported mailbox items are available in a `.zip` file in the specified Amazon S3 bucket\.
 
+The following is an example of the output log from the exported mailbox:
+
+```
+{
+  "totalNonExportableItems" : "13",
+  "totalMessages" : "76",
+  "sha384Hash" : "4de93a***96a1dd",
+  "totalBytes" : "161892",
+  "totalFolders" : "15",
+  "startTime" : "168***380",
+  "endTime" : "168***384"
+}
+```
+
+**Note**  
+*totalNonExportableItems* are unsupported items like notes and contacts\.
+
 ## Considerations<a name="export-considerations"></a>
 
 The following considerations apply when exporting mailbox jobs for Amazon WorkMail:

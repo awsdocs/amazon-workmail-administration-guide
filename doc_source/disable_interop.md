@@ -11,7 +11,7 @@ Before disabling interoperability mode, ensure that you complete all the require
 
    If necessary, change the AWS Region\. In the bar at the top of the console window, open the **Select a Region** list and choose a Region\. For more information, see [Regions and endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the *Amazon Web Services General Reference*\.
 
-1. In the navigation pane, choose **Organizations**, and select the organization for which you want to disable interoperability mode\.
+1. In the navigation pane, choose **Organizations**, and then choose the organization for which you want to disable interoperability mode\.
 
 1. Under **Organization settings**, choose **Disable interoperability mode**\.
 
