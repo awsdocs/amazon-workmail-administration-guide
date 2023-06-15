@@ -1,3 +1,0 @@
-# Authenticating email with SPF<a name="authenticate_domain"></a>
-
-The Sender Policy Framework \(SPF\) is an email validation standard designed to combat email spoofing\. *Spoofing* is the act of making an email sent by a malicious actor look like one sent by a legitimate user\. For information about configuring SPF for your Amazon WorkMail\-enabled domain, see [Authenticating email with SPF in Amazon SES](https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-spf.html)\.
